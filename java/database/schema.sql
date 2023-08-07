@@ -16,7 +16,7 @@ CREATE TABLE customer (
     last_name varchar(20) NOT NULL,
     street_address varchar(50),
     city varchar(50),
-    phone_number varchar(10) NOT NULL,
+    phone_number varchar(15) NOT NULL,
     user_id int NOT NULL REFERENCES users(user_id)
 );
 
@@ -30,13 +30,13 @@ CREATE TABLE sale (
 CREATE TABLE pizza (
     pizza_id SERIAL PRIMARY KEY,
     sale_id int REFERENCES sale(sale_id),
-    size varchar(10) DEFAULT('Large'),
+    size varchar(10) DEFAULT('Large') NOT NULL ,
     pizza_name varchar(50) NOT NULL UNIQUE,
     sauce varchar(10),
-    crust varchar(10) DEFAULT('Hand Tossed'),
+    crust varchar(15) DEFAULT('Hand Tossed') NOT NULL,
     price numeric(4,2) NOT NULL,
     additional_instructions varchar(500),
-    is_visible boolean NOT NULL DEFAULT (TRUE)
+    is_visible boolean DEFAULT (TRUE) NOT NULL
 );
 
 CREATE TABLE topping (
