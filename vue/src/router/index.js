@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
 import store from '../store/index'
+import AdminHome from '../views/AdminHome.vue'
 
 Vue.use(Router)
 
@@ -50,6 +51,15 @@ const router = new Router({
       name: "register",
       component: Register,
       meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/admin-panel',
+      name: 'AdminHome',
+      component: AdminHome,
+      meta: {
+        //TODO: switch to true later. Auth is required and must have and admin ROLE.
         requiresAuth: false
       }
     }
