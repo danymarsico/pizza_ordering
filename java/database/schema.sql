@@ -50,7 +50,6 @@ CREATE TABLE current_pizza (
 CREATE TABLE topping (
     topping_name varchar(15) PRIMARY KEY,
     additional_price numeric(3,2),
-    is_visible boolean NOT NULL,
     is_premium boolean NOT NULL
 );
 
