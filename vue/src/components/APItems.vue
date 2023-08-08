@@ -3,9 +3,9 @@
       <table id="itemList">
         <tbody>
           <tr>
-            <td id="item"> Button</td>
-            <td class="checkbox"> Unavailable</td>
-            <td class="checkbox"> Delete</td>
+            <td id="item"> <button>Item</button> </td>
+            <td id="checkbox1"> <button>Unavailable</button> </td>
+            <td id="checkbox2"> <button>Delete</button> </td>
           </tr>
         </tbody>
       </table>
@@ -23,11 +23,24 @@ export default {
   display: flex;
   border-bottom: solid 1px black;
 }
+
 tr {
+  width: 80vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   
 }
 
+#item {
+  margin-left: 32vw;
+}
+
+#checkbox1 {
+  margin-left: 25vw;
+}
+
+#checkbox2 {
+  margin-left: 5vw;
+}
 
 </style>

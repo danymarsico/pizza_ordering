@@ -2,6 +2,7 @@
   <div id="apHome">
       <AP-header/>
       <AP-main />
+      <button id="addBtn">Add New Pizza</button>
   </div>
 </template>
 
@@ -20,6 +21,13 @@ name: 'AdminHome'
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
+}
+
+#addBtn {
+    width: 15vw;
+    height: 40px;
+    align-self: flex-end;
+    margin-right: 10vw;
 }
 </style>
