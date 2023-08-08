@@ -34,6 +34,7 @@ export default {
         username: '',
         password: '',
         confirmPassword: '',
+        //can change this to choose their role from user to admin
         role: 'user',
       },
       registrationErrors: false,
@@ -51,6 +52,7 @@ export default {
           .then((response) => {
             if (response.status == 201) {
               this.$router.push({
+                //this is where we change the path after registering
                 path: '/login',
                 query: { registration: 'success' },
               });
