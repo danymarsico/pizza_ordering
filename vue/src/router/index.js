@@ -6,6 +6,7 @@ import Logout from '../views/Logout.vue'
 import Register from '../views/Register.vue'
 import store from '../store/index'
 import AdminHome from '../views/AdminHome.vue'
+import PizzaDetails from '../views/PizzaDetails'
 
 Vue.use(Router)
 
@@ -58,6 +59,15 @@ const router = new Router({
       path: '/admin-panel',
       name: 'AdminHome',
       component: AdminHome,
+      meta: {
+        //TODO: switch to true later. Auth is required and must have and admin ROLE.
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/admin-panel/pizza-details',
+      name: 'PizzaDetails',
+      component: PizzaDetails,
       meta: {
         //TODO: switch to true later. Auth is required and must have and admin ROLE.
         requiresAuth: false
