@@ -1,6 +1,6 @@
 <template>
   <div id="main">
-      <h1 id="title">Current Menu</h1>
+      <h1 id="title">Current Items</h1>
       <AP-items />
   </div>
 </template>

@@ -7,6 +7,8 @@ import Register from '../views/Register.vue'
 import store from '../store/index'
 import AdminHome from '../views/AdminHome.vue'
 import PizzaDetails from '../views/PizzaDetails'
+import IngredientsHome from '../views/IngredientsHome'
+import IngredientDetails from '../views/IngredientDetails'
 
 Vue.use(Router)
 
@@ -56,7 +58,7 @@ const router = new Router({
       }
     },
     {
-      path: '/admin-panel',
+      path: '/admin-pizza',
       name: 'AdminHome',
       component: AdminHome,
       meta: {
@@ -65,9 +67,27 @@ const router = new Router({
       }
     },
     {
-      path: '/admin-panel/pizza-details',
+      path: '/pizza-details',
       name: 'PizzaDetails',
       component: PizzaDetails,
+      meta: {
+        //TODO: switch to true later. Auth is required and must have and admin ROLE.
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/admin-ingredients',
+      name: 'Ingredients',
+      component: IngredientsHome,
+      meta: {
+        //TODO: switch to true later. Auth is required and must have and admin ROLE.
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/ingredient-details',
+      name: 'IngredientDetails',
+      component: IngredientDetails,
       meta: {
         //TODO: switch to true later. Auth is required and must have and admin ROLE.
         requiresAuth: false
