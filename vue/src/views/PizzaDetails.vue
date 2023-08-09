@@ -2,16 +2,14 @@
   <div id="pizzaDtls">
       <AP-header />
       <div id="main">
-          <label for="">Pizza Name: </label>
-          <input type="text">
-          <label for="">Description: </label>
-          <input type="text">
-          <label for="">Price: </label>
-          <input type="text">
-          <label for="">Ingredients: </label>
-          <input type="text">
-          <label for="">Image Upload: </label>
-          <input type="text">
+          <label for="name">Pizza Name: </label>
+          <input id="name" type="text">
+          <label for="desc">Description: </label>
+          <textarea name="" id="" cols="10" rows="5"></textarea>
+          <label for="price">Price: </label>
+          <input id="price" type="number" min="10.00" step=".01">
+          <label for="img">Image Upload: </label>
+          <input id="img" type="text">
       </div>
 
       <button id="addBtn">Submit Pizza</button>
@@ -27,6 +25,10 @@ export default {
 </script>
 
 <style>
+label {
+    font-size: 25px;
+    font-weight: bold;
+}
 input {
     width: 20vw;
 }
@@ -45,6 +47,7 @@ input {
     height: 900px;
     border: 1px solid black;
     border-radius: 30px;
+    padding: 40px;
 }
 #addBtn {
     width: 15vw;
