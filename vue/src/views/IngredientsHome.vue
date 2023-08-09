@@ -2,7 +2,7 @@
   <div id="apHome">
       <AP-header />
       <AP-main />
-      <button id="addBtn">Add New Ingredient</button>
+      <button id="addBtn"><router-link :to="{name: 'IngredientDetails' }">Add New Ingredient</router-link></button>
   </div>
 </template>
 

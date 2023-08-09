@@ -2,7 +2,7 @@
   <div id="apHome">
       <AP-header/>
       <AP-main />
-      <button id="addBtn">Add New Pizza</button>
+      <button id="addBtn"><router-link :to="{name: 'PizzaDetails' }">Add New Pizza</router-link></button>
   </div>
 </template>
 
@@ -30,4 +30,5 @@ name: 'AdminHome'
     align-self: flex-end;
     margin-right: 10vw;
 }
+
 </style>

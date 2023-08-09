@@ -1,12 +1,13 @@
 <template>
   <div id="header">
-      <h1>Homepage</h1>
+      <h1>Dope Pizza Admin Panel</h1>
       <nav>
           <ul id="nav-list">
-              <li>Menu Items</li>
-              <li>Ingredients</li>
+              <li><router-link :to="{name: 'AdminHome' }">Menu Items</router-link></li>
+              <li><router-link :to="{name: 'Ingredients' }">Ingredients</router-link></li>
+              <!-- TODO Implement Reports page and add link -->
               <li>Reports</li>
-              <li>Logout</li>
+              <li><button>Logout</button></li>
           </ul>
       </nav>
   </div>
