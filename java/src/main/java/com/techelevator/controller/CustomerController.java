@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
 import java.util.List;
 
 @RestController
@@ -25,8 +26,9 @@ public class CustomerController {
     }
 
     @RequestMapping(path = "/customer-info", method = RequestMethod.POST)
-    public void create(@RequestBody Customer newCustomer){
+    public void create(@RequestBody Customer newCustomer, Principal principal){
         try {
+            String username = principal.getName();
             Customer customer = customerDao.getCustomerById(newCustomer.getCustomer_id());
             customerDao.create(newCustomer.getFirst_name().toLowerCase(), newCustomer.getLast_name().toLowerCase(), newCustomer.getStreet_address().toLowerCase(), newCustomer.getCity().toLowerCase(), newCustomer.getPhone_number());
         }catch (Exception ex){
