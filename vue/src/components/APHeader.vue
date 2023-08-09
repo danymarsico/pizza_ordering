@@ -21,14 +21,18 @@ export default {
 
 <style>
 #header {
+    background-image: url('../assets/banner.jpg');
+    background-size: ;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid 3px black;
+    border: solid 3px #75E8E7;
     border-radius: 30px;
-    background-color: aquamarine;
+    color: #75E8E7;
     margin: 20px;
+    height: 400px;
 }
 
 #nav-list {
@@ -36,6 +40,10 @@ export default {
     list-style: none;
     display: flex;
     justify-content: space-around;
+}
+
+li {
+    
 }
 
 
