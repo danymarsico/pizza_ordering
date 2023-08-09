@@ -45,7 +45,7 @@ input {
     margin: 40px;
     margin-top: 20px;
     height: 900px;
-    border: 1px solid black;
+    border: 1px solid #75E8E7;
     border-radius: 30px;
     padding: 40px;
 }
