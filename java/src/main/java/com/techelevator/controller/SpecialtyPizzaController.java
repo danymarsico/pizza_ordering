@@ -13,9 +13,9 @@ public class SpecialtyPizzaController {
         this.specialtyPizzaDao = specialtyPizzaDao;
     }
 
-   /* @RequestMapping(path="")
+    @RequestMapping(path="/")
     public String[] getPizzaDetails(int id) {
         String pizzaName = specialtyPizzaDao.getPizzaDetails(id)
-    }*/
+    }
 
 }

@@ -47,8 +47,12 @@ export default {
             this.$store.commit("SET_AUTH_TOKEN", response.data.token);
             this.$store.commit("SET_USER", response.data.user);
             //different router if has admin role
-            //if(response.data.user)
-            this.$router.push("/");
+            if(response.data.user.authorities[0].name === "ROLE_ADMIN"){
+              this.$router.push({name: 'AdminHome'})
+            } else {
+              this.$router.push("/");
+            }
+            
           }
         })
         .catch(error => {
