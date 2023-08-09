@@ -12,11 +12,15 @@ import java.util.List;
 @RestController
 @RequestMapping("/customers")
 public class CustomerController {
+
     @Autowired
     private CustomerDao customerDao;
+
 
     @RequestMapping(path = "", method = RequestMethod.GET)
     public List<Customer> listCustomer() {
         return customerDao.getAllCustomers();
     }
+
+
 }

@@ -53,7 +53,7 @@ export default {
             if (response.status == 201) {
               this.$router.push({
                 //this is where we change the path after registering
-                path: '/login',
+                path: '/customer-info',
                 query: { registration: 'success' },
               });
             }

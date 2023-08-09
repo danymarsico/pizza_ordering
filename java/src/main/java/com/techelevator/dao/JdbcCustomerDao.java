@@ -23,7 +23,15 @@ public class JdbcCustomerDao implements CustomerDao {
 
     @Override
     public Customer create(String first_name, String last_name, String street_address, String city, String phone_number) {
-        return null;
+        Customer customer = null;
+        String sql = "";
+
+        try {
+
+        }catch (Exception ex){
+            System.out.println("Something Went Wrong");
+        }
+        return customer;
     }
 
     @Override
