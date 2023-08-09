@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.security.Principal;
 
 //TODO: GET ACTUAL SQL QUERIES - DOUBLE CHECK IN PGADMIN
 
@@ -26,12 +27,11 @@ public class JdbcCustomerDao implements CustomerDao {
 
 
     @Override
-    public Customer create(String first_name, String last_name, String street_address, String city, String phone_number) {
+    public Customer create(String first_name, String last_name, String street_address, String city, String phone_number,int user_id) {
         Customer newCustomer = null;
-        //TODO fix getting the user ID
-//        User user =
-//        int userId = userDao.findIdByUsername(user.getUsername());
-        String sql = "INSERT INTO customer (first_name, last_name, street_address, city, phone_number,) \n" +
+
+
+        String sql = "INSERT INTO customer (first_name, last_name, street_address, city, phone_number, user_id) \n" +
                 "VALUES (?,?,?,?,?,?)RETURNING customer_id;";
         try {
             int newCustomerId = jdbcTemplate.queryForObject(sql, int.class, newCustomer.getFirst_name().toLowerCase(),newCustomer.getLast_name().toLowerCase(), newCustomer.getStreet_address().toLowerCase(), newCustomer.getCity().toLowerCase(), newCustomer.getPhone_number());
