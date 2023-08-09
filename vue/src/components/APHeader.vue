@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-      <img src="../assets/namelesspi.png" alt="">
+      <img id="logo" src="../assets/namelesspi.png" alt="">
       <nav>
           <ul id="nav-list">
               <li><router-link :to="{name: 'AdminHome' }">Menu Items</router-link></li>
@@ -36,7 +36,7 @@ export default {
 }
 
 #logo {
-    width: 100vw;
+    width: 75vw;
 }
 
 #nav-list {

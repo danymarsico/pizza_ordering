@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        <AP-header />
         <div id="info">
             <!-- TODO make method for submit -->
             <form v-on:submit.prevent="method">
@@ -31,9 +31,11 @@
 </template>
 
 <script>
-
+import APHeader from '../components/APHeader.vue'
 export default {
-    
+    components:{
+        APHeader
+    },
     name: 'CustomerInfo',
     data(){
         return {
