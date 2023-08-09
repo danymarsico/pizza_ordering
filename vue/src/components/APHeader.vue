@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-      <h1>Dope Pizza Admin Panel</h1>
+      <img src="../assets/title.png" alt="">
       <nav>
           <ul id="nav-list">
               <li><router-link :to="{name: 'AdminHome' }">Menu Items</router-link></li>
@@ -22,7 +22,7 @@ export default {
 <style>
 #header {
     background-image: url('../assets/banner.jpg');
-    background-size: ;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;

@@ -46,6 +46,8 @@ export default {
           if (response.status == 200) {
             this.$store.commit("SET_AUTH_TOKEN", response.data.token);
             this.$store.commit("SET_USER", response.data.user);
+            //different router if has admin role
+            //if(response.data.user)
             this.$router.push("/");
           }
         })
@@ -62,6 +64,9 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  color: #75E8E7;
+}
 .form-input-group {
   margin-bottom: 1rem;
 }

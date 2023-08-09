@@ -28,6 +28,7 @@ export default {
 label {
     font-size: 25px;
     font-weight: bold;
+    color: #75E8E7;
 }
 input {
     width: 20vw;
