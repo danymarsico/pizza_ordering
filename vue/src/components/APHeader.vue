@@ -35,6 +35,10 @@ export default {
     height: 400px;
 }
 
+#logo {
+    width: 100vw;
+}
+
 #nav-list {
     width: 90vw ;
     list-style: none;
