@@ -2,6 +2,7 @@ package com.techelevator.dao;
 
 import com.techelevator.model.Customer;
 import com.techelevator.model.Customer;
+import com.techelevator.model.User;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,9 @@ import java.util.List;
 public class JdbcCustomerDao implements CustomerDao {
 
     private final JdbcTemplate jdbcTemplate;
+    private UserDao userDao;
+
+
 
     public JdbcCustomerDao(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -23,15 +27,26 @@ public class JdbcCustomerDao implements CustomerDao {
 
     @Override
     public Customer create(String first_name, String last_name, String street_address, String city, String phone_number) {
-        Customer customer = null;
-        String sql = "";
-
+        Customer newCustomer = null;
+        //TODO fix getting the user ID
+//        User user =
+//        int userId = userDao.findIdByUsername(user.getUsername());
+        String sql = "INSERT INTO customer (first_name, last_name, street_address, city, phone_number,) \n" +
+                "VALUES (?,?,?,?,?,?)RETURNING customer_id;";
         try {
+            int newCustomerId = jdbcTemplate.queryForObject(sql, int.class, newCustomer.getFirst_name().toLowerCase(),newCustomer.getLast_name().toLowerCase(), newCustomer.getStreet_address().toLowerCase(), newCustomer.getCity().toLowerCase(), newCustomer.getPhone_number());
+            newCustomer = getCustomerById(newCustomerId);
+
+            //TODO do we need this code? referencing the tenmo app jdbcUserDao
+//            if(newCustomer != null){
+//                sql = "";
+//                jdbcTemplate.update(sql, newCustomerId);
+//            }
 
         }catch (Exception ex){
             System.out.println("Something Went Wrong");
         }
-        return customer;
+        return newCustomer;
     }
 
     @Override
@@ -41,7 +56,10 @@ public class JdbcCustomerDao implements CustomerDao {
 
     @Override
     public Customer getCustomerById(int customerId) {
-        String sql = "";
+
+        String sql = "SELECT first_name, last_name, street_address, city, phone_number, user_id\n" +
+                "FROM customer\n" +
+                "WHERE customer_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, customerId);
         if (results.next()) {
             return mapRowToCustomer(results);
