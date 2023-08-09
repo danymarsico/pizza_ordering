@@ -9,6 +9,7 @@ import AdminHome from '../views/AdminHome.vue'
 import PizzaDetails from '../views/PizzaDetails'
 import IngredientsHome from '../views/IngredientsHome'
 import IngredientDetails from '../views/IngredientDetails'
+import CustomerInfo from '../views/CustomerInfo'
 
 Vue.use(Router)
 
@@ -92,7 +93,15 @@ const router = new Router({
         //TODO: switch to true later. Auth is required and must have and admin ROLE.
         requiresAuth: false
       }
-    }
+    },
+    {
+      path: '/customer-info',
+      name: 'CustomerInfo',
+      component: CustomerInfo,
+      meta: {
+        requiresAuth: false
+      }
+    },
   ]
 })
 
