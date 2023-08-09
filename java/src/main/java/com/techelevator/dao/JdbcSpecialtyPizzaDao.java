@@ -1,5 +1,6 @@
 package com.techelevator.dao;
 
+import com.techelevator.dao.Exception.DaoException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -28,13 +29,13 @@ public class JdbcSpecialtyPizzaDao implements SpecialtyPizzaDao {
             while(rowSet.next()){
                 pizzaList.add(rowSet.getString("pizza_name"));
             }
-        } /*catch (CannotGetJdbcConnectionException ex){
+        } catch (CannotGetJdbcConnectionException ex){
             throw new DaoException("Unable to connect to server or database", ex);
-        }*/ catch (DataIntegrityViolationException ex){
+        } catch (DataIntegrityViolationException ex){
             throw new DataIntegrityViolationException("Data Integrity Violation",ex);
-        } /*catch (Exception ex) {
-            throw new DaoExpection("Something went wrong",ex);
-        }*/
+        } catch (Exception ex) {
+            throw new DaoException("Something went wrong",ex);
+        }
 
         return pizzaList;
     }
