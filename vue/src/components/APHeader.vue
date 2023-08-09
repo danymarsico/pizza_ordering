@@ -1,6 +1,6 @@
 <template>
   <div id="header">
-      <img src="../assets/title.png" alt="">
+      <img src="../assets/namelesspi.png" alt="">
       <nav>
           <ul id="nav-list">
               <li><router-link :to="{name: 'AdminHome' }">Menu Items</router-link></li>
