@@ -9,6 +9,7 @@ INSERT INTO customer (first_name,last_name,street_address,city,phone_number,user
 INSERT INTO customer_order (total,is_delivery,date, is_active,customer_id) VALUES ( 420.00,'TRUE','2023-07-26','TRUE',1);
 
 INSERT INTO specialty_pizza (price,pizza_name) VALUES ( 20.00,'The Butcher');
+INSERT INTO specialty_pizza (price,pizza_name) VALUES ( 18.00,'The G.O.A.T.');
 
 INSERT INTO current_pizza (order_id,size,pizza_name,sauce,crust,price,specialty_id,additional_instructions) VALUES (1,DEFAULT,'The Butcher','Marinara',DEFAULT,20.00,1,'Please do not add onions');
 

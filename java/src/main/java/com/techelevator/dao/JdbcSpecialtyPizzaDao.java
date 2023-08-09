@@ -25,16 +25,16 @@ public class JdbcSpecialtyPizzaDao implements SpecialtyPizzaDao {
 
         try{
             SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
-            if(rowSet.next()){
+            while(rowSet.next()){
                 pizzaList.add(rowSet.getString("pizza_name"));
             }
-        } catch (CannotGetJdbcConnectionException ex){
+        } /*catch (CannotGetJdbcConnectionException ex){
             throw new DaoException("Unable to connect to server or database", ex);
-        } catch (DataIntegrityViolationException ex){
+        }*/ catch (DataIntegrityViolationException ex){
             throw new DataIntegrityViolationException("Data Integrity Violation",ex);
-        } catch (Exception ex) {
+        } /*catch (Exception ex) {
             throw new DaoExpection("Something went wrong",ex);
-        }
+        }*/
 
         return pizzaList;
     }
