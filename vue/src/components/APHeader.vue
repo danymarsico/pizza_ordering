@@ -37,6 +37,7 @@ export default {
 
 #logo {
     width: 75vw;
+    margin: -50px;
 }
 
 #nav-list {
