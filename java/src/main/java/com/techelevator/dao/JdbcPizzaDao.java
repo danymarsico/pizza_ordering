@@ -5,7 +5,6 @@ import com.techelevator.model.Crust;
 import com.techelevator.model.Pizza;
 import com.techelevator.model.Sauce;
 import com.techelevator.model.Size;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -15,8 +14,12 @@ import java.math.BigDecimal;
 
 @Component
 public class JdbcPizzaDao implements PizzaDao {
-    @Autowired
-    JdbcTemplate jdbcTemplate;
+
+    private final JdbcTemplate jdbcTemplate;
+
+    public JdbcPizzaDao(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     @Override
     public Pizza getPizzaById(int pizzaId) {

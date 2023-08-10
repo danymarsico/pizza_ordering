@@ -1,18 +1,21 @@
 package com.techelevator.controller;
 
+import com.techelevator.dao.JdbcPizzaDao;
 import com.techelevator.dao.PizzaDao;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.techelevator.model.Pizza;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/pizza-order")
+@CrossOrigin
 public class PizzaController {
-    private final PizzaDao pizzaDao;
+    @Autowired
+    private JdbcPizzaDao jdbcPizzaDao;
 
-    private final path = "/pizza-order";
-
-    public PizzaController(PizzaDao pizzaDao) {
-        this.pizzaDao = pizzaDao;
+    @RequestMapping(path = "/{pizzaId}", method = RequestMethod.GET)
+    public Pizza getPizzaById(@PathVariable int pizzaId){
+        return jdbcPizzaDao.getPizzaById(pizzaId);
     }
-
-    @RequestMapping(path = path + "/{id}")
 }
