@@ -6,14 +6,11 @@ public class SpecialtyPizza {
 
     private String pizzaDesc = "";
 
-    private double pizzaPrice = 0.00;
+    public SpecialtyPizza() {};
 
-    //TODO: add ingredients model to populate ingredients list also in the SpecialtyPizza model
-
-    public SpecialtyPizza(String pizzaName, String pizzaDesc, double pizzaPrice) {
+    public SpecialtyPizza(String pizzaName, String pizzaDesc) {
         this.pizzaName = pizzaName;
         this.pizzaDesc = pizzaDesc;
-        this.pizzaPrice = pizzaPrice;
     };
 
     public String getPizzaName() {
@@ -32,13 +29,12 @@ public class SpecialtyPizza {
         this.pizzaDesc = pizzaDesc;
     }
 
-    public double getPizzaPrice() {
-        return pizzaPrice;
-    }
 
-    public void setPizzaPrice(double pizzaPrice) {
-        this.pizzaPrice = pizzaPrice;
+    @Override
+    public String toString() {
+        return "SpecialtyPizza{" +
+                "pizzaName='" + pizzaName + '\'' +
+                ", pizzaDesc='" + pizzaDesc + '\'' +
+                '}';
     }
-
-    //TODO: add a toString method for JSON
 }
