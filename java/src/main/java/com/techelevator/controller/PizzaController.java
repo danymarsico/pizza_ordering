@@ -1,4 +1,4 @@
 package com.techelevator.controller;
 
-public class CustomPizzaController {
+public class PizzaController {
 }
