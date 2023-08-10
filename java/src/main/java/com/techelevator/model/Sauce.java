@@ -10,6 +10,7 @@ public class Sauce {
         this.sauceName = sauceName;
         this.saucePrice = saucePrice;
     }
+    public Sauce() {}
 
     public String getSauceName() {
         return sauceName;

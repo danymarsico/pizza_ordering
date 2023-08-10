@@ -10,6 +10,7 @@ public class Size {
         this.sizeName = sizeName;
         this.sizePrice = sizePrice;
     }
+    public Size () {}
 
     public String getSizeName() {
         return sizeName;

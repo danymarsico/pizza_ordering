@@ -10,6 +10,7 @@ public class Crust {
         this.crustName = crustName;
         this.crustPrice = crustPrice;
     }
+    public Crust() {}
 
     public String getCrustName() {
         return crustName;

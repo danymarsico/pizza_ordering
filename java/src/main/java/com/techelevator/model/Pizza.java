@@ -26,6 +26,7 @@ public class Pizza {
         this.orderStatus = orderStatus;
         this.price = price;
     }
+    public Pizza() {}
 
     //Getters and Setters
 
