@@ -18,6 +18,7 @@ public class CustomerController {
 
     @Autowired
     private JdbcCustomerDao customerDao;
+    @Autowired
     private JdbcUserDao jdbcUserDao;
 
 
@@ -33,9 +34,9 @@ public class CustomerController {
             String username = principal.getName();
             int newCustUserId = jdbcUserDao.findIdByUsername(username);
 
-            customerDao.create(newCustomer.getFirst_name().toLowerCase(), newCustomer.getLast_name().toLowerCase(), newCustomer.getStreet_address().toLowerCase(), newCustomer.getCity().toLowerCase(), newCustomer.getPhone_number(),newCustUserId );
+            customerDao.create(newCustomer, newCustUserId);
         }catch (Exception ex){
-            System.out.println("Cannot create customer");
+            System.out.println("Error in customer controller");
         }
 
     }

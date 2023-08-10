@@ -6,23 +6,25 @@ package com.techelevator.model;
 public class Customer {
 
     private int customer_id;
-    private String first_name;
-    private String last_name;
-    private String street_address;
+    private String firstName;
+    private String lastName;
+    private String streetAddress;
     private String city;
-    private String phone_number;
+    private String phoneNumber;
+    private int userId;
 
     public Customer() {
 
     }
 
-    public Customer(int customer_id, String first_name, String last_name, String street_address, String city, String phone_number) {
+    public Customer(int customer_id, String firstName, String lastName, String streetAddress, String city, String phoneNumber, int userId) {
         this.customer_id = customer_id;
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.street_address = street_address;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.streetAddress = streetAddress;
         this.city = city;
-        this.phone_number = phone_number;
+        this.phoneNumber = phoneNumber;
+        this.userId = userId;
     }
 
     public int getCustomer_id() {
@@ -33,28 +35,28 @@ public class Customer {
         this.customer_id = customer_id;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
-    public String getStreet_address() {
-        return street_address;
+    public String getStreetAddress() {
+        return streetAddress;
     }
 
-    public void setStreet_address(String street_address) {
-        this.street_address = street_address;
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
     }
 
     public String getCity() {
@@ -65,23 +67,31 @@ public class Customer {
         this.city = city;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     @Override
     public String toString() {
         return "Customer{" +
                 "customer_id=" + customer_id +
-                ", first_name='" + first_name + '\'' +
-                ", last_name='" + last_name + '\'' +
-                ", street_address='" + street_address + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", streetAddress='" + streetAddress + '\'' +
                 ", city='" + city + '\'' +
-                ", phone_number='" + phone_number + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
 }

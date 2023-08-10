@@ -54,13 +54,15 @@ export default {
         authService
           .register(this.user)
           .then((response) => {
-            if (response.status == 201) {
+            this.$store.commit("SET_AUTH_TOKEN", response.data.token);
+            this.$store.commit("SET_USER", response.data.user);
+            // if (response.status == 201) {
               this.$router.push({
                 //this is where we change the path after registering
                 path: '/customer-info',
                 query: { registration: 'success' },
               });
-            }
+            // }
           })
           .catch((error) => {
             const response = error.response;

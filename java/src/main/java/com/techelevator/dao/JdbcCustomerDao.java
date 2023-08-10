@@ -27,14 +27,14 @@ public class JdbcCustomerDao implements CustomerDao {
 
 
     @Override
-    public Customer create(String first_name, String last_name, String street_address, String city, String phone_number, int user_id) {
+    public Customer create(Customer customer, int userId) {
         Customer newCustomer = null;
 
 
         String sql = "INSERT INTO customer (first_name, last_name, street_address, city, phone_number, user_id) \n" +
                 "VALUES (?,?,?,?,?,?)RETURNING customer_id;";
         try {
-            int newCustomerId = jdbcTemplate.queryForObject(sql, int.class, newCustomer.getFirst_name().toLowerCase(),newCustomer.getLast_name().toLowerCase(), newCustomer.getStreet_address().toLowerCase(), newCustomer.getCity().toLowerCase(), newCustomer.getPhone_number());
+            int newCustomerId = jdbcTemplate.queryForObject(sql, int.class, customer.getFirstName().toLowerCase(),customer.getLastName().toLowerCase(), customer.getStreetAddress().toLowerCase(), customer.getCity().toLowerCase(), customer.getPhoneNumber(), userId);
             newCustomer = getCustomerById(newCustomerId);
 
             //TODO do we need this code? referencing the tenmo app jdbcUserDao
@@ -44,13 +44,13 @@ public class JdbcCustomerDao implements CustomerDao {
 //            }
 
         }catch (Exception ex){
-            System.out.println("Something Went Wrong");
+            System.out.println("Error in customer jdbc dao");
         }
         return newCustomer;
     }
 
     @Override
-    public Customer update(String first_name, String last_name, String street_address, String city, String phone_number) {
+    public Customer update(String firstName, String lastName, String streetAddress, String city, String phoneNumber) {
         return null;
     }
 
@@ -69,9 +69,9 @@ public class JdbcCustomerDao implements CustomerDao {
     }
 
     @Override
-    public Customer getCustomerByName(String first_name, String last_name) {
+    public Customer getCustomerByName(String firstName, String lastName) {
         String sql = "";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, first_name, last_name);
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, firstName, lastName);
         if (results.next()) {
             return mapRowToCustomer(results);
         } else {
@@ -93,12 +93,12 @@ public class JdbcCustomerDao implements CustomerDao {
 
     private Customer mapRowToCustomer(SqlRowSet rs) {
         Customer customer = new Customer();
-        customer.setCustomer_id(rs.getInt("customer_id"));
-        customer.setFirst_name(rs.getString("first_name"));
-        customer.setLast_name(rs.getString("last_name"));
-        customer.setStreet_address(rs.getString("street_address"));
+        customer.setUserId(rs.getInt("user_id"));
+        customer.setFirstName(rs.getString("first_name"));
+        customer.setLastName(rs.getString("last_name"));
+        customer.setStreetAddress(rs.getString("street_address"));
         customer.setCity(rs.getString("city"));
-        customer.setPhone_number(rs.getString("phone_number"));
+        customer.setPhoneNumber(rs.getString("phone_number"));
         return customer;
     }
 }

@@ -6,15 +6,14 @@ import java.util.List;
 
 public interface CustomerDao {
 
-    Customer create(String first_name, String last_name, String street_address,
-                   String city, String phone_number, int user_id);
+    Customer create(Customer customer, int userId);
 
-    Customer update(String first_name, String last_name, String street_address,
-                String city, String phone_number);
+    Customer update(String firstName, String lastName, String streetAddress,
+                String city, String phoneNumber);
 
     Customer getCustomerById(int customerId);
 
-    Customer getCustomerByName(String first_name, String last_name);
+    Customer getCustomerByName(String firstName, String lastName);
 
     List<Customer> getAllCustomers();
 
