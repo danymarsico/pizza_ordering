@@ -23,7 +23,7 @@ public class JdbcToppingsDao implements ToppingsDao{
     public List<Toppings> getAllToppings() {
         List<Toppings> allToppings = new ArrayList<>();
 
-        String sql = "";
+        String sql = "SELECT * FROM topping;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
         while (results.next()) {
             Toppings topping = mapRowToToppings(results);
