@@ -32,6 +32,7 @@ INSERT INTO customer_order (total,is_delivery,date,customer_id) VALUES ( 420.00,
 
 INSERT INTO pizza (additional_instructions, size_name, sauce_name, crust_name, order_id, price, order_status, specialty_id) VALUES ('Instructions',DEFAULT,'Tomato',DEFAULT,1,20.00,DEFAULT, NULL);
 INSERT INTO pizza (additional_instructions, size_name, sauce_name, crust_name, order_id, price, order_status, specialty_id) VALUES ('Instructions',DEFAULT,'Tomato',DEFAULT,1,14.00,DEFAULT, NULL);
+INSERT INTO pizza (additional_instructions, size_name, sauce_name, crust_name, order_id, price, order_status, specialty_id) VALUES ('Instructions',DEFAULT, DEFAULT, DEFAULT,2,44.00,DEFAULT, 1);
 
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('pepperoni',1.25,FALSE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('sausage',1.25,FALSE);

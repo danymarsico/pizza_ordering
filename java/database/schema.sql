@@ -53,7 +53,7 @@ CREATE TABLE pizza (
     pizza_id SERIAL PRIMARY KEY,
     additional_instructions varchar(500),
     size_name varchar(15) DEFAULT('LARGE') NOT NULL REFERENCES size(size_name) ,
-    sauce_name varchar(15)DEFAULT('No Sauce') NOT NULL REFERENCES sauce(sauce_name),
+    sauce_name varchar(15)DEFAULT('None') NOT NULL REFERENCES sauce(sauce_name),
     crust_name varchar(15) DEFAULT('Hand Tossed') NOT NULL REFERENCES crust(crust_name),
     order_id int NOT NULL REFERENCES customer_order(order_id),
     price numeric(6,2) NOT NULL,
