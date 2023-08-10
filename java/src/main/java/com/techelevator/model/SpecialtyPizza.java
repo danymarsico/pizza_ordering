@@ -6,11 +6,14 @@ public class SpecialtyPizza {
 
     private String pizzaDesc = "";
 
+    private int specialtyPizzaId = 0;
+
     public SpecialtyPizza() {};
 
-    public SpecialtyPizza(String pizzaName, String pizzaDesc) {
+    public SpecialtyPizza(String pizzaName, String pizzaDesc, int specialtyPizzaId) {
         this.pizzaName = pizzaName;
         this.pizzaDesc = pizzaDesc;
+        this.specialtyPizzaId = specialtyPizzaId;
     };
 
     public String getPizzaName() {
@@ -29,12 +32,20 @@ public class SpecialtyPizza {
         this.pizzaDesc = pizzaDesc;
     }
 
+    public int getSpecialtyPizzaId() {
+        return specialtyPizzaId;
+    }
+
+    public void setSpecialtyPizzaId(int specialtyPizzaId) {
+        this.specialtyPizzaId = specialtyPizzaId;
+    }
 
     @Override
     public String toString() {
         return "SpecialtyPizza{" +
                 "pizzaName='" + pizzaName + '\'' +
                 ", pizzaDesc='" + pizzaDesc + '\'' +
+                ", specialtyPizzaId=" + specialtyPizzaId +
                 '}';
     }
 }

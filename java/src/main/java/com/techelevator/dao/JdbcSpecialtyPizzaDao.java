@@ -1,6 +1,7 @@
 package com.techelevator.dao;
 
 import com.techelevator.dao.Exception.DaoException;
+import com.techelevator.model.SpecialtyPizza;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -40,13 +41,30 @@ public class JdbcSpecialtyPizzaDao implements SpecialtyPizzaDao {
         return pizzaList;
     }
 
-    @Override
-    public String[] getPizzaDetails(int id) {
-        return new String[0];
-    }
 
     @Override
-    public void createPizza(String pizzaName, String pizzaDesc, double pizzaPrice) {
+    public SpecialtyPizza getSpecialtyPizzaById(int id) {
+        SpecialtyPizza newSpecialtyPizza = null;
+        String sql = "SELECT * FROM specialty_pizza\n" +
+                "WHERE specialty_id =?;";
+        try {
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, id);
 
+            if (rowSet.next()) {
+                newSpecialtyPizza = mapRowToSpecialtyPizza(rowSet);
+            }
+
+        } catch(Exception ex) {
+            System.out.println("Something went wrong in Specialty Pizza Dao");
+        }
+        return newSpecialtyPizza;
     }
+
+        private SpecialtyPizza mapRowToSpecialtyPizza(SqlRowSet rs) {
+            SpecialtyPizza specialtyPizza = new SpecialtyPizza();
+            specialtyPizza.setSpecialtyPizzaId(rs.getInt("specialty_id"));
+            specialtyPizza.setPizzaDesc(rs.getString("pizza_desc"));
+            specialtyPizza.setPizzaName(rs.getString("pizza_name"));
+            return specialtyPizza;
+        }
 }

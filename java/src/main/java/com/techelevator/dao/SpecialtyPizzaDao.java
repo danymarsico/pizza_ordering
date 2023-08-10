@@ -1,11 +1,13 @@
 package com.techelevator.dao;
 
+import com.techelevator.model.SpecialtyPizza;
+
 import java.util.ArrayList;
 
 public interface SpecialtyPizzaDao {
 
     ArrayList<String> getPizzas();
-    String[] getPizzaDetails(int id);
 
-    void createPizza(String pizzaName, String pizzaDesc, double pizzaPrice);
+    SpecialtyPizza getSpecialtyPizzaById(int id);
+
 }

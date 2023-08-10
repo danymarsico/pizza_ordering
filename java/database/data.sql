@@ -21,10 +21,10 @@ INSERT INTO sauce (sauce_name, sauce_price) VALUES ('Pesto', 0.75);
 INSERT INTO sauce (sauce_name, sauce_price) VALUES ('Buffalo', 0.75);
 INSERT INTO sauce (sauce_name, sauce_price) VALUES ('White Garlic', 0.75);
 
-INSERT INTO specialty_pizza (pizza_name, pizza_desc) VALUES ('The Butcher', '');
-INSERT INTO specialty_pizza (pizza_name, pizza_desc) VALUES ('The G.O.A.T.', '');
-INSERT INTO specialty_pizza (pizza_name, pizza_desc) VALUES ('OG NAMELESS', '');
-INSERT INTO specialty_pizza (pizza_name, pizza_desc) VALUES ('Playlist Deluxe', '');
+INSERT INTO specialty_pizza (pizza_name, pizza_desc) VALUES ('The Butcher', 'One');
+INSERT INTO specialty_pizza (pizza_name, pizza_desc) VALUES ('The G.O.A.T.', 'Two');
+INSERT INTO specialty_pizza (pizza_name, pizza_desc) VALUES ('OG NAMELESS', 'Three');
+INSERT INTO specialty_pizza (pizza_name, pizza_desc) VALUES ('Playlist Deluxe', 'Four');
 
 INSERT INTO customer_order (total, is_delivery, date, customer_id) VALUES (75.00,TRUE,'2023-08-09', 1);
 INSERT INTO customer_order (total,is_delivery,date,customer_id) VALUES ( 420.00,TRUE,'2023-07-26',1);
