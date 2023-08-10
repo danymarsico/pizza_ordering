@@ -7,7 +7,7 @@ import java.util.List;
 public interface CustomerDao {
 
     Customer create(String first_name, String last_name, String street_address,
-                   String city, String phone_number,int user_id);
+                   String city, String phone_number, int user_id);
 
     Customer update(String first_name, String last_name, String street_address,
                 String city, String phone_number);

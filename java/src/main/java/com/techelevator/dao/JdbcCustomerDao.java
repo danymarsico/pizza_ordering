@@ -27,7 +27,7 @@ public class JdbcCustomerDao implements CustomerDao {
 
 
     @Override
-    public Customer create(String first_name, String last_name, String street_address, String city, String phone_number,int user_id) {
+    public Customer create(String first_name, String last_name, String street_address, String city, String phone_number, int user_id) {
         Customer newCustomer = null;
 
 

@@ -1,5 +1,6 @@
 <template>
   <div id="login">
+    <AP-header />
     <form @submit.prevent="login">
       <h1 >Please Sign In</h1>
       <div role="alert" v-if="invalidCredentials">
@@ -25,10 +26,13 @@
 
 <script>
 import authService from "../services/AuthService";
+import APHeader from '../components/APHeader.vue'
 
 export default {
   name: "login",
-  components: {},
+  components:{
+        APHeader,
+    },
   data() {
     return {
       user: {

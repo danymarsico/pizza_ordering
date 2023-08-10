@@ -3,7 +3,7 @@
         <AP-header />
         <div id="info">
             <!-- TODO make method for submit -->
-            <form v-on:submit.prevent="method">
+            <form v-on:submit.prevent="createCustomer()">
                 <div>
                     <label for="first-name">First Name</label>
                     <input type="text" id="first-name" name="first-name" v-model="customer.firstName" required autofocus/>
@@ -32,9 +32,12 @@
 
 <script>
 import APHeader from '../components/APHeader.vue'
+import AuthService from '../services/AuthService';
+
+
 export default {
     components:{
-        APHeader
+        APHeader,
     },
     name: 'CustomerInfo',
     data(){
@@ -49,6 +52,11 @@ export default {
         };
     },
     methods: {
+        createCustomer(){
+            AuthService.setUserInfo(this.customer).then((response)=>{
+                console.log(response.data);
+            });
+        }
 
     }
 
