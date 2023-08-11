@@ -9,8 +9,7 @@ export default {
   register(user) {
     return axios.post('/register', user)
   },
-
-  //todo make post for customer 
+ 
   setUserInfo(user){
     return axios.post('/customers/customer-info', user);
   }
