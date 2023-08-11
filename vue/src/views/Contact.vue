@@ -1,6 +1,7 @@
 <template>
   <div>
     <Header />
+    <Cust-nav />
     <div id="main">
     <h2>Want to talk about distrupting the pizza ecosystem?</h2>
     <h3>Call Us at 123-456-7890</h3>
@@ -19,10 +20,12 @@
 </template>
 <script>
 import Header from '../components/Header.vue';
+import CustNav from "../components/CustNav.vue";
 
 export default {
    components: {
     Header,
+    CustNav,
   },
   name: "Contact",
   data() {
