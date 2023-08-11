@@ -33,7 +33,7 @@
           </div>
           <button type="submit">Sign in</button>
         </div>
-        
+
         <p>
           <router-link :to="{ name: 'register' }"
             >Need an account? Sign up.</router-link
@@ -98,7 +98,7 @@ h1 {
 .form-input-group {
   margin-bottom: 1rem;
 }
-#input-container{
+#input-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +107,7 @@ h1 {
   height: 150px;
   background-color: #64379f;
   border-radius: 15px;
-   border: solid 3px #75e8e7;
+  border: solid 3px #75e8e7;
 }
 label {
   margin-right: 0.5rem;
