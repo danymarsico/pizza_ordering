@@ -11,6 +11,7 @@ import IngredientsHome from '../views/IngredientsHome'
 import IngredientDetails from '../views/IngredientDetails'
 import CustomerInfo from '../views/CustomerInfo'
 import Menu from '../views/Menu'
+import Contact from '../views/Contact'
 
 Vue.use(Router)
 
@@ -107,6 +108,14 @@ const router = new Router({
       path: '/menu',
       name: 'Menu',
       component: Menu,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/contact',
+      name: 'Contact',
+      component: Contact,
       meta: {
         requiresAuth: false
       }
