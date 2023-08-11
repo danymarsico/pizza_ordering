@@ -48,7 +48,7 @@ body {
   }
 
   tbody {
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -67,7 +67,8 @@ body {
   #item {
     align-items: center;
     display: flex;
-    
+    width: 100px;
+    justify-content: right;
 
   }
   
@@ -82,4 +83,5 @@ body {
   h2 {
     font-size: 16px;
     color: #75E8E7;
+    padding-right: 0;
   }
