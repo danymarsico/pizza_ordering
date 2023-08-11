@@ -1,6 +1,6 @@
 <template>
   <div id="ingredientDtls">
-      <AP-header />
+      <Header />
       <div id="main">
           <label for="name">Ingredient Name: </label>
           <input id="name" type="text">
@@ -20,9 +20,9 @@
 </template>
 
 <script>
-import APHeader from '../components/APHeader.vue'
+import Header from '../components/Header.vue'
 export default {
-  components: { APHeader },
+  components: { Header },
 
 }
 </script>
@@ -52,7 +52,7 @@ input {
     margin: 40px;
     margin-top: 20px;
     height: 900px;
-    border: 1px solid #75E8E7;
+    border: 3px solid #75E8E7;
     border-radius: 30px;
     padding: 40px;
 }

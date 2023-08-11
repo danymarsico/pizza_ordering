@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <AP-header />
+    <Header />
     <h1>Home</h1>
     <p>If you are seeing this, you are authenticated.</p>
   </div>
 </template>
 
 <script>
-import APHeader from '../components/APHeader.vue'
+import Header from '../components/Header.vue'
 export default {
   components:{
-        APHeader,
+        Header,
     },
   name: "home"
 };

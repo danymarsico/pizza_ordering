@@ -1,6 +1,6 @@
 <template>
   <div id="register" class="text-center">
-    <AP-header />
+    <Header />
     <form @submit.prevent="register">
       <h1>Create Account</h1>
       <div role="alert" v-if="registrationErrors">
@@ -26,11 +26,11 @@
 
 <script>
 import authService from '../services/AuthService';
-import APHeader from '../components/APHeader.vue'
+import Header from '../components/Header.vue'
 export default {
   name: 'register',
   components:{
-        APHeader,
+        Header,
     },
   data() {
     return {

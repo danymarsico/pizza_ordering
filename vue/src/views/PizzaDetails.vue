@@ -1,6 +1,6 @@
 <template>
   <div id="pizzaDtls">
-      <AP-header />
+      <Header />
       <div id="main">
           <label for="name">Pizza Name: </label>
           <input id="name" type="text">
@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import APHeader from '../components/APHeader.vue'
+import Header from '../components/Header.vue'
 export default {
-    components: { APHeader },
+    components: { Header },
 }
 </script>
 

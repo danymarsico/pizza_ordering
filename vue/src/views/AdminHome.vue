@@ -1,17 +1,19 @@
 <template>
   <div id="apHome">
-      <AP-header/>
+      <Header/>
+      <AP-nav />
       <AP-main />
       <button id="addBtn"><router-link :to="{name: 'PizzaDetails' }">Add New Pizza</router-link></button>
   </div>
 </template>
 
 <script>
-import APHeader from '../components/APHeader.vue'
+import Header from '../components/Header.vue'
 import APMain from '../components/APMain.vue'
+import APNav from '../components/APNav.vue'
 
 export default {
-components: { APHeader, APMain },
+components: { Header, APNav, APMain },
 name: 'AdminHome'
 }
 </script>

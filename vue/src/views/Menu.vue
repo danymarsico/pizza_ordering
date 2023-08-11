@@ -1,16 +1,15 @@
 <template>
   <div>
-      <cust-pgs-header />
+      <Header />
+      <Cust-nav />
   </div>
 </template>
 
 <script>
-import CustPgsHeader from '../components/CustPgsHeader.vue'
-
+import Header from '../components/Header.vue'
+import CustNav from '../components/CustNav.vue'
 export default {
-components: {
-    CustPgsHeader
-}
+components: { Header, CustNav}
 
 
 }

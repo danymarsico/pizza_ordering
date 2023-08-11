@@ -1,6 +1,6 @@
 <template>
   <div id="login">
-    <AP-header />
+    <Header />
 
     <div id="log-in-container">
       <form @submit.prevent="login">
@@ -46,12 +46,12 @@
 
 <script>
 import authService from "../services/AuthService";
-import APHeader from "../components/APHeader.vue";
+import Header from "../components/Header.vue";
 
 export default {
   name: "login",
   components: {
-    APHeader,
+    Header,
   },
   data() {
     return {

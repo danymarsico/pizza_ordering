@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AP-header />
+    <Header />
     <div id="info">
       <!-- TODO make method for submit -->
       <form v-on:submit.prevent="createCustomer()">
@@ -66,12 +66,12 @@
 </template>
 
 <script>
-import APHeader from "../components/APHeader.vue";
+import Header from "../components/Header.vue";
 import AuthService from "../services/AuthService";
 
 export default {
   components: {
-    APHeader,
+    Header,
   },
   name: "CustomerInfo",
   data() {

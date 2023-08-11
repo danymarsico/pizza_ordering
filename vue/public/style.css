@@ -9,7 +9,7 @@ body {
     margin: 40px;
     margin-top: 20px;
     height: 900px;
-    border: 1px solid #75E8E7;
+    border: 3px solid #75E8E7;
     border-radius: 30px;
     background-color: #64379f;
 }
@@ -43,7 +43,8 @@ body {
 
 #itemList {
     display: flex;
-    border: solid 1px #75E8E7;
+    border: solid 3px #75E8E7;
+    border-radius: 30px;
     vertical-align: middle;
   }
 
