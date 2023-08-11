@@ -1,7 +1,9 @@
 <template>
   <div>
     <Header />
-    <h2>Want to talk about distrupting the pizza ecosystem? Send us a message:</h2>
+    <div id="main">
+    <h2>Want to talk about distrupting the pizza ecosystem?</h2>
+    <h3>Call Us at 123-456-7890</h3>
     <form @submit.prevent="sendEmail">
       <label>Your Name</label><br>
       <input type="text" v-model="name"><br>
@@ -12,6 +14,7 @@
       <button type="submit">Send</button>
       <button type="reset" @click="resetForm">Reset</button>
     </form>
+    </div>
   </div>
 </template>
 <script>
@@ -36,8 +39,24 @@ export default {
   </script>
 
   <style>
+  #main {
+      display: grid;
+      background-image: url('../assets/contactus.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #27104e
+  }
   h2 {
-    font-size: 18pt;
+    font-size: 22pt;
+    color: #27104e
+
+  }
+  h3 {
+    font-size: 22pt;
+    color: #75e8e7
+
   }
   
   </style>
+
+  
