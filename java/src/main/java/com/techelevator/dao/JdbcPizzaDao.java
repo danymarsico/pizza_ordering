@@ -11,6 +11,7 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 @Component
 public class JdbcPizzaDao implements PizzaDao {
@@ -42,18 +43,72 @@ public class JdbcPizzaDao implements PizzaDao {
     }
 
     @Override
-    public Size getAllSizes() {
-        return null;
+    public ArrayList<Size> getAllSizes() {
+        ArrayList<Size> sizesList = new ArrayList<>();
+
+        String sql = "SELECT * FROM size;\n";
+
+        try{
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
+
+            while (rowSet.next()){
+                sizesList.add(mapRowToSize(rowSet));
+            }
+
+        } catch (CannotGetJdbcConnectionException ex) {
+            throw new DaoException("Unable to connect to server or database", ex);
+        }catch (Exception ex) {
+            throw new DaoException("Something went wrong", ex);
+        }
+
+
+        return sizesList;
     }
 
     @Override
-    public Crust getAllCrusts() {
-        return null;
+    public ArrayList<Crust> getAllCrusts() {
+        ArrayList<Crust> crustsList = new ArrayList<>();
+
+        String sql = "SELECT * FROM crust;\n";
+
+        try{
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
+
+            while (rowSet.next()){
+                crustsList.add(mapRowToCrust(rowSet));
+            }
+
+        } catch (CannotGetJdbcConnectionException ex) {
+            throw new DaoException("Unable to connect to server or database", ex);
+        }catch (Exception ex) {
+            throw new DaoException("Something went wrong", ex);
+        }
+
+
+        return crustsList;
     }
 
     @Override
-    public Sauce getAllSauces() {
-        return null;
+    public ArrayList<Sauce> getAllSauces() {
+        ArrayList<Sauce> saucesList = new ArrayList<>();
+
+        String sql = "SELECT * FROM sauce;\n";
+
+        try{
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
+
+            while (rowSet.next()){
+                saucesList.add(mapRowToSauce(rowSet));
+            }
+
+        } catch (CannotGetJdbcConnectionException ex) {
+            throw new DaoException("Unable to connect to server or database", ex);
+        }catch (Exception ex) {
+            throw new DaoException("Something went wrong", ex);
+        }
+
+
+        return saucesList;
     }
 
     @Override
@@ -76,5 +131,26 @@ public class JdbcPizzaDao implements PizzaDao {
         return pizza;
     }
 
-    //test comment for Marina issue
+    private Size mapRowToSize(SqlRowSet rs) {
+        Size size = new Size();
+        size.setSizeName(rs.getString("size_name"));
+        size.setSizePrice(rs.getBigDecimal("size_price"));
+
+        return size;
+    }
+    private Crust mapRowToCrust(SqlRowSet rs) {
+        Crust crust = new Crust();
+        crust.setCrustName(rs.getString("crust_name"));
+        crust.setCrustPrice(rs.getBigDecimal("crust_price"));
+
+        return crust;
+    }
+    private Sauce mapRowToSauce(SqlRowSet rs) {
+        Sauce sauce = new Sauce();
+        sauce.setSauceName(rs.getString("sauce_name"));
+        sauce.setSaucePrice(rs.getBigDecimal("sauce_price"));
+
+        return sauce;
+    }
+
 }

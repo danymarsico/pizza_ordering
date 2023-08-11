@@ -5,15 +5,17 @@ import com.techelevator.model.Pizza;
 import com.techelevator.model.Sauce;
 import com.techelevator.model.Size;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public interface PizzaDao {
     Pizza getPizzaById(int pizzaId);
-    Size getAllSizes();
+     ArrayList<Size> getAllSizes();
 //    Size getSizeSelected(String sizeName);
-    Crust getAllCrusts();
+    ArrayList<Crust> getAllCrusts();
 //    Crust getCrustSelected(String crustName);
-    Sauce getAllSauces();
+    ArrayList<Sauce> getAllSauces();
 //    Sauce getSauceSelected(String sauceName);
     BigDecimal calculatePrice();
 }
