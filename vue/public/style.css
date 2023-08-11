@@ -1,3 +1,6 @@
+/************ MAIN SECTION ***********/
+
+
 body {
     background-color: #27104E;
 }
@@ -11,9 +14,11 @@ body {
     background-color: #64379f;
 }
 
+/************ SITE TITLE/HEADER SECTION ***********/
 #title {
     margin-left: 20px;
     color: #75E8E7;
+    text-align: center;
 }
 
 #header {
@@ -47,31 +52,47 @@ body {
     background-image: linear-gradient(231deg,#e982df,#2099ff);
 }
 
+/************ TABLE SECTION ***********/
+
 #itemList {
     display: flex;
-  }
-  
-  tr {
-    width: 80vw;
-    display: flex;
-    justify-content: flex-start;
     border: solid 1px #75E8E7;
-    border-radius: 3px;
+    vertical-align: middle;
+  }
+
+  tbody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  tr {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
     margin-bottom: 5px;
-    
+    justify-content: center;
+    align-items: center;
   }
   
   #item {
-    margin-left: 32vw;
+    align-items: center;
+    display: flex;
     
+
   }
   
   #checkbox1 {
-    margin-left: 25vw;
-    border-left: solid 1px #75E8E7;
     padding-left: 22px;
   }
   
   #checkbox2 {
     margin-left: 5vw;
+  }
+
+  h2 {
+    font-size: 16px;
+    color: #75E8E7;
   }
