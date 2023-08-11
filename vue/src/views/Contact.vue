@@ -38,7 +38,8 @@ export default {
   };
   </script>
 
-  <style>
+<style scoped>
+
   #main {
       display: grid;
       background-image: url('../assets/contactus.gif');
