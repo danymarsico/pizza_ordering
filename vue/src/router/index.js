@@ -10,6 +10,7 @@ import PizzaDetails from '../views/PizzaDetails'
 import IngredientsHome from '../views/IngredientsHome'
 import IngredientDetails from '../views/IngredientDetails'
 import CustomerInfo from '../views/CustomerInfo'
+import Menu from '../views/Menu'
 
 Vue.use(Router)
 
@@ -102,6 +103,14 @@ const router = new Router({
         requiresAuth: false
       }
     },
+    {
+      path: '/menu',
+      name: 'Menu',
+      component: Menu,
+      meta: {
+        requiresAuth: false
+      }
+    }
   ]
 })
 
