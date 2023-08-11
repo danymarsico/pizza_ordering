@@ -119,7 +119,15 @@ const router = new Router({
       meta: {
         requiresAuth: false
       }
-    }
+    },
+    // {
+    //   path: '/story',
+    //   name: 'Story',
+    //   component: Story,
+    //   meta: {
+    //     requiresAuth: false
+    //   }
+    // }
   ]
 })
 
