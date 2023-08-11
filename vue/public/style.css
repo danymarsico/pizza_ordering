@@ -21,20 +21,7 @@ body {
     text-align: center;
 }
 
-#header {
-    background-image: url('../assets/banner.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid 3px #75E8E7;
-    border-radius: 30px;
-    color: #75E8E7;
-    margin: 20px;
-    height: 400px;
-}
+
 
 #logo {
     width: 75vw;
