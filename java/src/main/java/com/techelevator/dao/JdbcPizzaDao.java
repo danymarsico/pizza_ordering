@@ -112,9 +112,21 @@ public class JdbcPizzaDao implements PizzaDao {
     }
 
     @Override
+    public int createPizza() {
+        return 0;
+    }
+
+    @Override
     public BigDecimal calculatePrice() {
         return null;
     }
+
+  /*  @Override
+    public int createPizza(String additionalInstructions, String sizeName, String sauceName, String crustName,int orderId, BigDecimal price, String orderStatus, int specialtyId) {
+        int newPizzaId;
+
+        return newPizzaId;
+    }*/
 
     private Pizza mapRowToPizza(SqlRowSet rs) {
         Pizza pizza = new Pizza();

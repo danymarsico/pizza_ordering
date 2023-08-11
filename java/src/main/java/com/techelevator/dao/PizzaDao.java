@@ -12,10 +12,8 @@ import java.util.ArrayList;
 public interface PizzaDao {
     Pizza getPizzaById(int pizzaId);
      ArrayList<Size> getAllSizes();
-//    Size getSizeSelected(String sizeName);
     ArrayList<Crust> getAllCrusts();
-//    Crust getCrustSelected(String crustName);
     ArrayList<Sauce> getAllSauces();
-//    Sauce getSauceSelected(String sauceName);
+    int createPizza();
     BigDecimal calculatePrice();
 }
