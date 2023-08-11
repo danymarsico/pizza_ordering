@@ -76,5 +76,4 @@ public class JdbcPizzaDao implements PizzaDao {
         return pizza;
     }
 
-    //test comment for Marina issue
 }

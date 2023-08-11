@@ -2,6 +2,7 @@ package com.techelevator.dao;
 
 import com.techelevator.dao.Exception.DaoException;
 import com.techelevator.model.SpecialtyPizza;
+import com.techelevator.model.Toppings;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -9,6 +10,7 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class JdbcSpecialtyPizzaDao implements SpecialtyPizzaDao {
@@ -60,7 +62,18 @@ public class JdbcSpecialtyPizzaDao implements SpecialtyPizzaDao {
         return newSpecialtyPizza;
     }
 
-        private SpecialtyPizza mapRowToSpecialtyPizza(SqlRowSet rs) {
+    @Override
+    public SpecialtyPizza addSpecialtyPizza(SpecialtyPizza pizza) {
+        SpecialtyPizza newSpecialtyPizza = null;
+        String sql = "INSERT INTO specialty_pizza(pizza_name, pizza_desc)\n" +
+                "VALUES(?, ?) RETURNING specialty_id;";
+        int newPizzaId = jdbcTemplate.queryForObject(sql, int.class, pizza.getPizzaName(), pizza.getPizzaDesc());
+        newSpecialtyPizza = getSpecialtyPizzaById(newPizzaId);
+
+        return newSpecialtyPizza;
+    }
+
+    private SpecialtyPizza mapRowToSpecialtyPizza(SqlRowSet rs) {
             SpecialtyPizza specialtyPizza = new SpecialtyPizza();
             specialtyPizza.setSpecialtyPizzaId(rs.getInt("specialty_id"));
             specialtyPizza.setPizzaDesc(rs.getString("pizza_desc"));

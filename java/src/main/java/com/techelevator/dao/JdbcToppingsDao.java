@@ -73,6 +73,18 @@ public class JdbcToppingsDao implements ToppingsDao{
         return null;
     }
 
+//    @Override
+//    public Toppings addSpecialtyIngredients(Toppings newTopping, int id) {
+//        Toppings toppings = null;
+//        String sql = "INSERT INTO specialty_topping(specialty_id, topping_name)\n" +
+//                "VALUES(?, ?) RETURNING topping_name;";
+//
+//        try {
+//            String returnTopping = jdbcTemplate.queryForObject(sql, String.class, id, newTopping.getToppingName();
+//
+//
+//    }
+//
     private Toppings mapRowToToppings(SqlRowSet rs) {
         Toppings toppings = new Toppings();
         toppings.setAdditionalPrice(rs.getBigDecimal(("additional_price")));
