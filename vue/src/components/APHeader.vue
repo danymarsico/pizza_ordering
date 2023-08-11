@@ -7,7 +7,7 @@
               <li><router-link :to="{name: 'Ingredients' }">Ingredients</router-link></li>
               <!-- TODO Implement Reports page and add link -->
               <li>Reports</li>
-              <li><button>Logout</button></li>
+              <li><button id="logoutBtn">Logout</button></li>
           </ul>
       </nav>
   </div>
@@ -47,8 +47,8 @@ export default {
     justify-content: space-around;
 }
 
-li {
-    
+#logoutBtn {
+    background-image: linear-gradient(231deg,#e982df,#2099ff);
 }
 
 

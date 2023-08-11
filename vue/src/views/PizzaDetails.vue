@@ -55,5 +55,7 @@ input {
     height: 40px;
     align-self: flex-end;
     margin-right: 10vw;
+    background-image: linear-gradient(231deg,#e982df,#2099ff);
+    text-decoration: none;
 }
 </style>
