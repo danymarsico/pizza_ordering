@@ -1,3 +1,77 @@
 body {
     background-color: #27104E;
 }
+
+#main {
+    margin: 40px;
+    margin-top: 20px;
+    height: 900px;
+    border: 1px solid #75E8E7;
+    border-radius: 30px;
+    background-color: #64379f;
+}
+
+#title {
+    margin-left: 20px;
+    color: #75E8E7;
+}
+
+#header {
+    background-image: url('../assets/banner.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px #75E8E7;
+    border-radius: 30px;
+    color: #75E8E7;
+    margin: 20px;
+    height: 400px;
+}
+
+#logo {
+    width: 75vw;
+    margin: -50px;
+}
+
+#nav-list {
+    width: 90vw ;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#logoutBtn {
+    background-image: linear-gradient(231deg,#e982df,#2099ff);
+}
+
+#itemList {
+    display: flex;
+  }
+  
+  tr {
+    width: 80vw;
+    display: flex;
+    justify-content: flex-start;
+    border: solid 1px #75E8E7;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    
+  }
+  
+  #item {
+    margin-left: 32vw;
+    
+  }
+  
+  #checkbox1 {
+    margin-left: 25vw;
+    border-left: solid 1px #75E8E7;
+    padding-left: 22px;
+  }
+  
+  #checkbox2 {
+    margin-left: 5vw;
+  }
