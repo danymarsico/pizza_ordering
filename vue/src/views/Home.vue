@@ -19,7 +19,7 @@
       </div>
       <div id="group3" class="group-container">
         <div id="third-img" >
-          <img src="../assets/cat-dj.gif">
+          <img src="../assets/Frank-Franklin.jpg">
         </div>
         <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum minus sit, perspiciatis neque eius dolorem! Magni, natus. Totam alias rerum ut odio consequuntur quod eveniet quam impedit, tenetur perferendis ex!</h3>
       </div>

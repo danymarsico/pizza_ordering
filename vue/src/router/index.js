@@ -13,6 +13,7 @@ import CustomerInfo from '../views/CustomerInfo'
 import Menu from '../views/Menu'
 import Contact from '../views/Contact'
 import Story from '../views/Story'
+import Order from '../views/Order'
 
 Vue.use(Router)
 
@@ -125,6 +126,14 @@ const router = new Router({
       path: '/story',
       name: 'Story',
       component: Story,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/order',
+      name: 'order',
+      component: Order,
       meta: {
         requiresAuth: false
       }

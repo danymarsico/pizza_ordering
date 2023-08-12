@@ -3,9 +3,11 @@
           <ul id="nav-list">
               <li><router-link :to="{name: 'home' }">Home</router-link></li>
               <li><router-link :to="{name: 'Menu' }">Menu</router-link></li>
+              <li><router-link :to="{name: 'order'}">Order Now</router-link></li>
               <li><router-link :to="{name: 'Story' }">Our Story</router-link></li>
               <li><router-link :to="{name: 'Contact' }">Contact Info</router-link></li>
-              <li><router-link :to="{name: 'Login' }">Login</router-link></li>
+              <li><router-link :to="{name: 'logout' }">Logout</router-link></li>
+              
           </ul>
       </nav>
 </template>
