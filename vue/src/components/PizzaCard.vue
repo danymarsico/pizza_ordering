@@ -10,6 +10,7 @@
         <p>{{pizza.desc}}</p>
         <p>Comes with: {{pizza.specialtyToppings}}</p>
         <p>Starting from: ${{pizza.price}}</p>
+        <button @click="selectPizza(pizza)">Order Now</button>
       </div>
     </div>
 
@@ -20,6 +21,11 @@
 export default {
   props: {
     pizza: Object,
+  },
+  methods: {
+    selectPizza(pizza) {
+      this.$router.push({name: 'order', params: { selectedPizza: pizza.pizzaName}});
+    }
   }
 };
 </script>
@@ -32,7 +38,7 @@ export default {
   justify-content: space-evenly;
   border: solid 3px #75e8e7;
   border-radius: 30px;
-  background-image: linear-gradient(231deg,#2099ff,#e982df);
+  background-image: linear-gradient(231deg,#e982df, #2099ff);
 }
 
 .group {
@@ -40,7 +46,25 @@ export default {
     text-shadow: #75e8e7 3px 0 5px;
 }
 
-p, h2 {
+h2 {
   color: #27104e;
+  font-size: 30px;
 }
+
+p {
+  color: #27104e;
+  font-size: 25px;
+}
+button {
+    background-image: linear-gradient(231deg,#75e8e7,#2099ff);
+    font-family: fantasy;
+    color: #27104e;
+    letter-spacing: 1px;
+    font-size: 15pt;
+    padding: 10px;
+    margin-left: 83%;
+  }
+  img {
+    margin-top: 50%;
+  }
 </style>

@@ -85,7 +85,7 @@ export default {
     color: #27104e;
     letter-spacing: 1px;
     font-size: 24pt;
-    padding: px;
+    padding: 10px;
     margin-right: 8px;
   }
   

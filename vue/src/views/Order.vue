@@ -6,12 +6,8 @@
       <form id="order-form">
         <div>
           <label for="select-pizza">Select Pizza</label>
-          <select name="select-pizza" id="select-pizza">
-            <option value="butcher">The Butcher</option>
-            <option value="goat">The G.O.A.T.</option>
-            <option value="og-nameless">O.G. NAMELESS</option>
-            <option value="playlist">Playlist Deluxe</option>
-            <option value="custom">Create Your Own</option>
+          <select name="select-pizza" id="select-pizza" v-model="selectedPizza">
+            <option v-for="pizza in $store.state.specialtyPizzas" v-bind:key="pizza.pizzaName" v-bind:value="pizza.pizzaName">{{pizza.pizzaName}}</option>
           </select>
         </div>
         <div>
@@ -107,10 +103,18 @@
 import Header from "../components/Header.vue";
 import CustNav from "../components/CustNav.vue";
 export default {
+  data() {
+    return {
+      selectedPizza: ''
+    };
+  },
   components: {
     Header,
     CustNav,
   },
+  created() {
+    this.selectedPizza = this.$route.params.selectedPizza;
+  }
 };
 </script>
 
