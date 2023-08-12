@@ -2,7 +2,7 @@
   <div>
     <div id="pizzaCard">
       <div class="group">
-        <img src={{}} width="200" alt="" />
+        <img :src="pizza.imgsrc" width="200" alt="" />
       </div>
 
       <div class="group">
