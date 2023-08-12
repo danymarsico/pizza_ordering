@@ -73,6 +73,11 @@ public class JdbcSpecialtyPizzaDao implements SpecialtyPizzaDao {
         return newSpecialtyPizza;
     }
 
+    @Override
+    public Toppings addSpecialtyIngredients(List<Toppings> newToppings) {
+        return null;
+    }
+
     private SpecialtyPizza mapRowToSpecialtyPizza(SqlRowSet rs) {
             SpecialtyPizza specialtyPizza = new SpecialtyPizza();
             specialtyPizza.setSpecialtyPizzaId(rs.getInt("specialty_id"));

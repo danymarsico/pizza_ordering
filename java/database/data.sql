@@ -37,29 +37,29 @@ INSERT INTO pizza (additional_instructions, size_name, sauce_name, crust_name, o
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('pepperoni',1.25,FALSE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('sausage',1.25,FALSE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('ham',1.25,FALSE);
-INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('olive',1.25,FALSE);
-INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('green pepper',1.25,FALSE);
-INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('onion',1.25,FALSE);
+INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('olives',1.25,FALSE);
+INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('green peppers',1.25,FALSE);
+INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('onions',1.25,FALSE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('egg',1.25,FALSE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('gold leaf',20.00,TRUE);
-INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('chanterelle mushroom',2.25,TRUE);
+INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('chanterelle mushrooms',2.25,TRUE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('black truffle',2.25,TRUE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('prosciutto',2.25,TRUE);
-INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('cheese',0.00,TRUE);
+INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('cheese',1.00,FALSE);
 
 INSERT INTO pizza_topping (pizza_id,topping_name) VALUES (1,'pepperoni');
 INSERT INTO pizza_topping (pizza_id,topping_name) VALUES (2,'ham');
-INSERT INTO pizza_topping (pizza_id,topping_name) VALUES (2,'olive');
+INSERT INTO pizza_topping (pizza_id,topping_name) VALUES (2,'olives');
 
 INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (1,'prosciutto');
 INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (1,'pepperoni');
 INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (1,'sausage');
 INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (1,'ham');
 
-INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (2,'olive');
-INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (2,'green pepper');
-INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (2,'onion');
-INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (2,'chanterelle mushroom');
+INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (2,'olives');
+INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (2,'green peppers');
+INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (2,'onions');
+INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (2,'chanterelle mushrooms');
 
 INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (3,'black truffle');
 INSERT INTO specialty_topping (specialty_id,topping_name) VALUES (3,'gold leaf');
