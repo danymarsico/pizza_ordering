@@ -34,6 +34,10 @@
           <button type="submit">Sign in</button>
         </div>
 
+        <audio style="my_audio" controls autoplay>
+      <source :src="audioPath" type="audio/mpeg">
+    </audio>
+
         <p>
           <router-link :to="{ name: 'register' }"
             >Need an account? Sign up.</router-link
@@ -55,12 +59,18 @@ export default {
   },
   data() {
     return {
+      audioPath: require('@/assets/partyrock.mp3'),
       user: {
         username: "",
         password: "",
       },
       invalidCredentials: false,
     };
+  },
+  mounted () {
+    window.onload = function() {
+    document.getElementById("my_audio").play();
+}
   },
   methods: {
     login() {
