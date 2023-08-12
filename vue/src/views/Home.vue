@@ -29,7 +29,6 @@
           <img src="../assets/holding-pizza.jpg">
         </div>
       </div>
-      
     </div>
   </div>
 </template>
