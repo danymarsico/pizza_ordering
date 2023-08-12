@@ -12,6 +12,7 @@ import IngredientDetails from '../views/IngredientDetails'
 import CustomerInfo from '../views/CustomerInfo'
 import Menu from '../views/Menu'
 import Contact from '../views/Contact'
+import Story from '../views/Story'
 
 Vue.use(Router)
 
@@ -120,14 +121,14 @@ const router = new Router({
         requiresAuth: false
       }
     },
-    // {
-    //   path: '/story',
-    //   name: 'Story',
-    //   component: Story,
-    //   meta: {
-    //     requiresAuth: false
-    //   }
-    // }
+    {
+      path: '/story',
+      name: 'Story',
+      component: Story,
+      meta: {
+        requiresAuth: false
+      }
+    }
   ]
 })
 
