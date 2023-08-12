@@ -48,19 +48,48 @@ export default {
       background-image: url('../assets/contactus.gif');
       background-size: cover;
       background-repeat: no-repeat;
-      color: #27104e
+      color: #27104e;
+      max-height: 1000px;
   }
   h2 {
-    font-size: 22pt;
-    color: #27104e
+    font-size: 65pt;
+    font-family:fantasy;
+    color: #27104e;
+    margin: 0px;
+    width: 75%;
+    text-shadow: 6px 4px #75e8e7;
+    letter-spacing: 6pt;
 
   }
   h3 {
-    font-size: 22pt;
-    color: #75e8e7
+    font-size: 28pt;
+    color: #27104e;
+    letter-spacing: 6px;
+    font-family: fantasy;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    text-shadow: 3px 3px #75e8e7;
+  }
+  form {
+    font-family: fantasy;
+  }
+  label {
+    color: #27104e;
+    text-shadow: 2px 2px #75e8e7;
+    letter-spacing: 1px;
+  }
 
+  button {
+    background-image: linear-gradient(231deg,#75e8e7,#2099ff);
+    font-family: fantasy;
+    color: #27104e;
+    letter-spacing: 1px;
+    font-size: 24pt;
+    padding: px;
+    margin-right: 8px;
   }
   
   </style>
 
+  
   
