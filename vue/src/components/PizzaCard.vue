@@ -2,32 +2,26 @@
   <div>
     <div id="pizzaCard">
       <div class="group">
-        <img src="../assets/butcher.png" width="200" alt="" />
+        <img src={{}} width="200" alt="" />
       </div>
 
       <div class="group">
-        <h2>Pizza Name</h2>
-        <p>Description of the current Pizza</p>
-        <p>Starting from:</p>
+        <h2>{{pizza.pizzaName}}</h2>
+        <p>{{pizza.desc}}</p>
+        <p>Comes with: {{pizza.specialtyToppings}}</p>
+        <p>Starting from: ${{pizza.price}}</p>
       </div>
     </div>
 
-    <div id="pizzaCard">
-      <div class="group">
-        <h2>Pizza Name</h2>
-        <p>Description of the current Pizza</p>
-        <p>Starting from:</p>
-      </div>
-
-      <div class="group">
-        <img src="../assets/butcher.png" width="200" alt="" />
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    pizza: Object,
+  }
+};
 </script>
 
 <style scoped>

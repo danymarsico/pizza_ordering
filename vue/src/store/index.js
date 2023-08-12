@@ -20,16 +20,50 @@ export default new Vuex.Store({
   state: {
     token: currentToken || '',
     user: currentUser || {},
+    
+    pizza: {
+      pizzaId: 0,
 
-    pizzas: [
+    },
+    specialtyPizzas: [
       {
-        pizzaName: '',
-        price: '',
-        desc:'',
-        ingredients:'',
+        pizzaName: 'The Butcher',
+        price: 17.00,
+        desc:'Immerse yourself in the neon-lit allure of "The Butcher" – a carnivore\'s paradise orchestrating a symphony of prosciutto, pepperoni, sausage, and ham, dancing flawlessly on a hand-stretched dough stage. Every savory bite propels you through a time-traveling adventure, capturing the glitchy indulgence of these meaty constellations orbiting a molten mozzarella universe. This slice of vaporwave-inspired delight propels your taste buds into a retro-futuristic escapade, evoking a wave of nostalgia with each flavorful sensation.',
+        specialtyToppings:'prosciutto, sausage, ham, pepperoni, cheese',
+        imgsrc:'../assets/butcher.png'
+      },
+      {
+        pizzaName: 'The G.O.A.T.',
+        price: 17.00,
+        desc:'Venture into the kaleidoscopic domain of "The G.O.A.T." – a vegetarian masterpiece harmonizing olives, green peppers, onions, and chanterelle mushrooms on a skillfully stretched dough canvas. Each delectable bite unfolds a journey across a vivid garden, as these vibrant ingredients unite beneath a blanket of melted mozzarella. Embark on a taste-packed odyssey that defies the constraints of time, capturing the essence of retro-futuristic aesthetics while embracing the exquisite flavors of nature\'s harvest.',
+        specialtyToppings:'cheese,olives, green peppers, onions, chanterelle mushrooms',
+        imgsrc:'../assets/goat.png'
+      },
+      {
+        pizzaName: 'O.G. NAMELESS',
+        price: 33.25,
+        desc:'Indulge in a world of culinary opulence with the "O.G. Nameless" – an original creation that transcends conventional boundaries, adorned with the luxurious flavors of black truffle and the regal charm of edible gold leaf. Envision a hand-stretched dough canvas where these lavish elements unite in flawless harmony, crafting a gastronomic marvel worthy of royalty. With each delectable bite, you\'re transported to a realm of refined flavors and timeless elegance, as the "O.G. Nameless" encapsulates opulence within a single, unforgettable slice.',
+        specialtyToppings:'cheese,gold leaf, black truffle',
+        imgsrc:''
+      },
+      {
+        pizzaName: 'Playlist Deluxe',
+        price: 18.25,
+        desc:'Step into a symphony of taste with the "Playlist Deluxe" – a deluxe pizza that harmonizes succulent Italian sausage, robust pepperoni, caramelized onions, roasted green peppers, and earthy mushrooms beneath a golden canopy of melted mozzarella on a meticulously hand-stretched dough canvas. Imagine relishing the opulent blend of these premium ingredients, expertly orchestrated to create a culinary masterpiece that embodies both indulgence and sophistication. With every sumptuous bite, you\'re invited to experience a culinary symphony akin to a lavishly orchestrated musical opus, as the "Playlist Deluxe" guides your taste buds through the pinnacle of flavor and lavishness.',
+        specialtyToppings:'cheese, sausage, pepperoni, onions, green peppers, chanterelle mushrooms',
         img:''
       }
-    ]
+    ],
+    toppings: [
+      {
+        toppingName: '',
+        toppingPrice: '',
+        isPremium: false,
+      }
+
+    ],
+
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
@@ -47,6 +81,6 @@ export default new Vuex.Store({
       state.token = '';
       state.user = {};
       axios.defaults.headers.common = {};
-    }
+    },
   }
 })

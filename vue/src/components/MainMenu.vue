@@ -2,8 +2,7 @@
   <div id="menuDiv">
     <h2 id="menuHead">Menu</h2>
     <div></div>
-    <Pizza-card id="card" />
-    <Pizza-card id="card" />
+    <Pizza-card id="card" v-bind:pizza="pizza" v-for="pizza in $store.state.specialtyPizzas" v-bind:key="pizza.pizzaName" />
   </div>
 </template>
 

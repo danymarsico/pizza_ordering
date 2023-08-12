@@ -34,7 +34,7 @@
           <button type="submit">Sign in</button>
         </div>
 
-        <audio style="my_audio" controls autoplay>
+        <audio id="my_audio" controls >
       <source :src="audioPath" type="audio/mpeg">
     </audio>
 
