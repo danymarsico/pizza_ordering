@@ -45,7 +45,7 @@ INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('gold lea
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('chanterelle mushroom',2.25,TRUE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('black truffle',2.25,TRUE);
 INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('prosciutto',2.25,TRUE);
-
+INSERT INTO topping (topping_name,additional_price,is_premium) VALUES ('cheese',0.00,TRUE);
 
 INSERT INTO pizza_topping (pizza_id,topping_name) VALUES (1,'pepperoni');
 INSERT INTO pizza_topping (pizza_id,topping_name) VALUES (2,'ham');
