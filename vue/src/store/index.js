@@ -57,13 +57,123 @@ export default new Vuex.Store({
     ],
     toppings: [
       {
-        toppingName: '',
-        toppingPrice: '',
+        toppingName: 'Cheese',
+        toppingPrice: 1.00,
         isPremium: false,
-      }
-
+      },
+      {
+        toppingName: 'Pepperoni',
+        toppingPrice: 1.25,
+        isPremium: false,
+      },
+      {
+        toppingName: 'Sausage',
+        toppingPrice: 1.25,
+        isPremium: false,
+      },
+      {
+        toppingName: 'Ham',
+        toppingPrice: 1.25,
+        isPremium: false,
+      },
+      {
+        toppingName: 'Olives',
+        toppingPrice: 1.25,
+        isPremium: false,
+      },
+      {
+        toppingName: 'Green Peppers',
+        toppingPrice: 1.25,
+        isPremium: false,
+      },
+      {
+        toppingName: 'Onions',
+        toppingPrice: 1.25,
+        isPremium: false,
+      },
+      {
+        toppingName: 'Eggs',
+        toppingPrice: 1.25,
+        isPremium: false,
+      },
+      {
+        toppingName: 'Gold Leaf',
+        toppingPrice: 20.00,
+        isPremium: true,
+      },      
+      {
+        toppingName: 'Chanterelle Mushrooms',
+        toppingPrice: 2.25,
+        isPremium: true,
+      },
+      {
+        toppingName: 'Prosciutto',
+        toppingPrice: 2.25,
+        isPremium: true,
+      },
+      {
+        toppingName: 'Black Truffle',
+        toppingPrice: 2.25,
+        isPremium: true,
+      },
     ],
 
+    size: [
+      {
+        sizeName: 'Small',
+        sizePrice: 10.00
+      },
+      {
+        sizeName: 'Medium',
+        sizePrice: 14.00
+      },
+      {
+        sizeName: 'Large',
+        sizePrice: 18.00
+      },
+    ],
+    
+    sauce: [
+      {
+        sauceName: 'None',
+        saucePrice: 0.00
+      },
+      {
+        sauceName: 'Tomato',
+        saucePrice: 0.00
+      },
+      {
+        sauceName: 'Pesto',
+        saucePrice: 0.75
+      },
+      {
+        sauceName: 'Buffalo',
+        saucePrice: 0.75
+      },
+      {
+        sauceName: 'White Garlic',
+        saucePrice: 0.75
+      },
+    ],
+
+    crust: [
+      {
+        crustName: 'Hand Tossed',
+        crustPrice: 0.00
+      },
+      {
+        crustName: 'Thin',
+        crustPrice: 0.00
+      },
+      {
+        crustName: 'Pan',
+        crustPrice: 1.00
+      },
+      {
+        crustName: 'Stuffed',
+        crustPrice: 2.00
+      },
+    ]
   },
   mutations: {
     SET_AUTH_TOKEN(state, token) {
