@@ -7,6 +7,7 @@
         <div id="select-pizza">
           <label for="select-pizza">Select Pizza</label>
           <select name="select-pizza" id="select-pizza" v-model="selectedPizza">
+            <option selected disabled>Choose a pizza</option>
             <option
               v-for="pizza in $store.state.specialtyPizzas"
               v-bind:key="pizza.pizzaName"
@@ -18,7 +19,7 @@
         </div>
         <div id="size">
           <label for="size">Size</label>
-          <select name="size" id="size">
+          <select required name="size" id="size" v-model="selectedSize">
             <option
               v-for="size in $store.state.size"
               v-bind:key="size.sizeName"
@@ -30,7 +31,7 @@
         </div>
         <div id="crust">
           <label for="crust">Crust</label>
-          <select name="crust" id="crust">
+          <select required name="crust" id="crust" v-model="selectedCrust">
             <option
               v-for="crust in $store.state.crust"
               v-bind:key="crust.crustName"
@@ -48,7 +49,7 @@
             v-bind:value="sauce.sauceName"
           >
             <label for="none">{{ sauce.sauceName }}</label>
-            <input type="radio" name="sauce" id="none" />
+            <input required type="radio" name="sauce" id="none" v-bind:value="sauce.sauceName" v-model="selectedSauce"/>
           </div>
         </div>
         
@@ -60,8 +61,8 @@
             <div class="topping-list">
               <h2>Regular Toppings</h2>
               <div v-for="topping in regularToppings" v-bind:key="topping.toppingName">
-                <label for="cheese">{{topping.toppingName}}</label>
-                <input type="checkbox" name="cheese" id="cheese" />
+                <label>{{topping.toppingName}}</label>
+                <input type="checkbox" name="" id="" v-bind:value="topping.toppingName" v-model="selectedToppings" />
               </div>
             </div>
 
@@ -69,8 +70,8 @@
             <div class="topping-list">
               <h2>Premium Toppings</h2>
               <div v-for="topping in premiumToppings" v-bind:key="topping.toppingName">
-                <label for="cheese">{{topping.toppingName}}</label>
-                <input type="checkbox" name="cheese" id="cheese" />
+                <label>{{topping.toppingName}}</label>
+                <input type="checkbox" name="" id="" v-bind:value="topping.toppingName" v-model="selectedToppings"  />
               </div>
             </div>          
           </div>
@@ -82,14 +83,20 @@
             id="instructions"
             cols="30"
             rows="10"
+            v-model="additionalInfo"
           ></textarea>
         </div>
         <div id="myOrder">
           <h2>My Order</h2>
           <div>
-            <h2>my order goes here</h2>
+            <h2>
+              Selected size: {{selectedSize}} <br>
+              Selected crust: {{selectedCrust}} <br>
+              Selected sauce: {{selectedSauce}} <br>
+              Selected Toppings: {{selectedToppings}} <br>
+              </h2>
           </div>
-          <input type="submit" value="submit" />
+          <input type="submit" value="submit" @click.prevent="setCurrentPizzaInfo()" />
         </div>
       </form>
     </div>
@@ -102,11 +109,27 @@ export default {
   data() {
     return {
       selectedPizza: "",
+      selectedToppings: [],
+      selectedSize: '',
+      selectedCrust: '',
+      selectedSauce: '',
+      additionalInfo: ''
     };
   },
   components: {
     Header,
     CustNav,
+  },
+  methods: {
+    setCurrentPizzaInfo(){
+      this.$store.commit('SET_PIZZA_INFO', 
+      { selectedSize: this.selectedSize, 
+        selectedCrust: this.selectedCrust,
+        selectedSauce: this.selectedSauce,
+        selectedToppings: this.selectedToppings,
+        selectedPizza: this.selectedPizza
+      })
+    }
   },
   computed: {
     regularToppings() {
@@ -189,8 +212,11 @@ export default {
   display: flex;
 }
 .topping-list {
-  margin: 25px;
-  border: red 1px solid;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 25px;
+  border: solid 5px #75e8e7;
+  border-style: ridge;
 }
 input {
   width: 50px;

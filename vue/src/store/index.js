@@ -23,6 +23,13 @@ export default new Vuex.Store({
     
     pizza: {
       pizzaId: 0,
+      pizzaSize: '',
+      pizzaCrust: '',
+      pizzaSauce: '',
+      selectedToppings: [],
+      pizzaPrice: 0.00,
+      pizzaName: '',
+      additionalInfo: ''
 
     },
     specialtyPizzas: [
@@ -30,21 +37,21 @@ export default new Vuex.Store({
         pizzaName: 'The Butcher',
         price: 17.00,
         desc:'Immerse yourself in the neon-lit allure of "The Butcher" – a carnivore\'s paradise orchestrating a symphony of prosciutto, pepperoni, sausage, and ham, dancing flawlessly on a hand-stretched dough stage. Every savory bite propels you through a time-traveling adventure, capturing the glitchy indulgence of these meaty constellations orbiting a molten mozzarella universe. This slice of vaporwave-inspired delight propels your taste buds into a retro-futuristic escapade, evoking a wave of nostalgia with each flavorful sensation.',
-        specialtyToppings:'prosciutto, sausage, ham, pepperoni, cheese',
+        specialtyToppings:'cheese, prosciutto, sausage, ham, pepperoni',
         imgsrc: require('@/assets/butcher.png')
       },
       {
         pizzaName: 'The G.O.A.T.',
         price: 17.00,
         desc:'Venture into the kaleidoscopic domain of "The G.O.A.T." – a vegetarian masterpiece harmonizing olives, green peppers, onions, and chanterelle mushrooms on a skillfully stretched dough canvas. Each delectable bite unfolds a journey across a vivid garden, as these vibrant ingredients unite beneath a blanket of melted mozzarella. Embark on a taste-packed odyssey that defies the constraints of time, capturing the essence of retro-futuristic aesthetics while embracing the exquisite flavors of nature\'s harvest.',
-        specialtyToppings:'cheese,olives, green peppers, onions, chanterelle mushrooms',
+        specialtyToppings:'cheese, olives, green peppers, onions, chanterelle mushrooms',
         imgsrc: require('@/assets/goat.png')
       },
       {
         pizzaName: 'O.G. NAMELESS',
         price: 33.25,
         desc:'Indulge in a world of culinary opulence with the "O.G. Nameless" – an original creation that transcends conventional boundaries, adorned with the luxurious flavors of black truffle and the regal charm of edible gold leaf. Envision a hand-stretched dough canvas where these lavish elements unite in flawless harmony, crafting a gastronomic marvel worthy of royalty. With each delectable bite, you\'re transported to a realm of refined flavors and timeless elegance, as the "O.G. Nameless" encapsulates opulence within a single, unforgettable slice.',
-        specialtyToppings:'cheese,gold leaf, black truffle',
+        specialtyToppings:'cheese, gold leaf, black truffle',
         imgsrc: require('@/assets/ognameless.png')
       },
       {
@@ -192,5 +199,14 @@ export default new Vuex.Store({
       state.user = {};
       axios.defaults.headers.common = {};
     },
+    SET_PIZZA_INFO(state, payload) {
+      state.pizza.pizzaSize = payload.selectedSize;
+      state.pizza.pizzaCrust = payload.selectedCrust;
+      state.pizza.pizzaSauce = payload.selectedSauce;
+      state.pizza.pizzaName = payload.selectedPizza;
+      state.pizza.additionalInfo = payload.additionalInfo;
+      state.pizza.selectedToppings = payload.selectedToppings;
+
+    }
   }
 })
