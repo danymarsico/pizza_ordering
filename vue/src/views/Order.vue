@@ -119,11 +119,9 @@ export default {
 #order-form {
   display: grid;
   grid-template-areas:
-    "select-pizza  sauce-list"
-    "size  toppings"
-    "crust  toppings"
-    "instructions  toppings"
-    "myOrder .";
+    "select-pizza  sauce-list myOrder"
+    "size  toppings myOrder"
+    "crust  toppings instructions";
   justify-content: center;
   justify-items: left;
   align-items: center;
@@ -159,6 +157,7 @@ export default {
   border-radius: 25px;
   border: solid 3px #75E8E7;
   margin: 5px;
+  ;
 }
 #instructions {
   grid-area: instructions;
