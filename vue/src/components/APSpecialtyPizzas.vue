@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1 id="title">Current Items</h1>
+      <h1 id="title">Current Specialty Pizzas</h1>
     <table id="itemList">
       <tbody>
         <tr v-for="(item, index) in items" :key="index">
@@ -22,12 +22,10 @@ export default {
  data() {
    return {
      items: [
-       { name: 'Pepperoni', buttonText: 'Make Unavailble' },
-       { name: 'Sausage', buttonText: 'Make Unavailble' },
-       { name: 'Ham', buttonText: 'Make Unavailble' },
-       { name: 'Olive', buttonText: 'Make Unavailble' },
-       { name: 'Green Pepper', buttonText: 'Make Unavailble' },
-       { name: 'Onion', buttonText: 'Make Unavailble' },
+       { name: 'The Butcher', buttonText: 'Make Unavailble' },
+       { name: 'The G.O.A.T.', buttonText: 'Make Unavailble' },
+       { name: 'O.G. NAMELESS', buttonText: 'Make Unavailble' },
+       { name: 'Playlist Deluxe', buttonText: 'Make Unavailble' },
      ]
     };
    },

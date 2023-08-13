@@ -1,6 +1,7 @@
 <template>
   <div id="ingredientDtls">
       <Header />
+      <AP-nav />
       <div id="main">
           <label for="name">Ingredient Name: </label>
           <input id="name" type="text">
@@ -21,8 +22,10 @@
 
 <script>
 import Header from '../components/Header.vue'
+import APNav from '../components/APNav.vue'
+
 export default {
-  components: { Header },
+  components: { Header, APNav },
 
 }
 </script>
@@ -51,6 +54,7 @@ input {
     flex-direction: column;
     margin: 40px;
     margin-top: 20px;
+    margin-bottom: 0px;
     height: 900px;
     border: 3px solid #75E8E7;
     border-radius: 30px;

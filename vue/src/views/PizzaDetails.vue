@@ -1,6 +1,7 @@
 <template>
   <div id="pizzaDtls">
       <Header />
+       <AP-nav />
       <div id="main">
           <label for="name">Pizza Name: </label>
           <input id="name" type="text">
@@ -19,8 +20,10 @@
 
 <script>
 import Header from '../components/Header.vue'
+import APNav from '../components/APNav.vue'
+
 export default {
-    components: { Header },
+    components: { Header, APNav },
 }
 </script>
 
