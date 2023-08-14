@@ -2,10 +2,15 @@
   <div>
     <Header />
     <Cust-nav />
-    <div id="story-main">
+    <div id="story-main" >
       <h1>Our Story</h1>
       <div id="img-container">
-        <img src="../assets/pizza-shop.jpg" alt="" />
+        <img src="../assets/pizza-shop.jpg" class="pizza-slides" />
+        <img src="../assets/pizza-shop2.jpg" class="pizza-slides" />
+        <img src="../assets/making-pizza.jpg" class="pizza-slides" />
+        <img src="../assets/pizza-champion.jpg" class="pizza-slides" />
+        <button>&#10094;</button>
+        <button>&#10095;</button>
         <div class="text">
             <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
@@ -22,10 +27,34 @@
 <script>
 import Header from "../components/Header.vue";
 import CustNav from "../components/CustNav.vue";
+let slideIndex = 0;
+
+
+
 export default {
   components: {
     Header,
     CustNav,
+  },
+  methods: {
+    carousel(){
+
+      let slides = document.getElementsByClassName("pizza-slides");
+      for(let i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+      }
+
+      slideIndex++;
+      if(slideIndex > slides.length) {
+         slideIndex = 1
+         }
+      slides[slideIndex -1].style.display = "block";
+      setTimeout(this.carousel, 4000);
+
+    }
+  },
+  created: function(){
+    this.carousel();
   },
 };
 </script>
@@ -48,6 +77,7 @@ export default {
   margin: 25px;
   width: 80vw;
   flex-grow: 1;
+  position: relative;
 }
 img {
   width: 80vw;
@@ -62,8 +92,8 @@ h1 {
   color: white;
   width:50%;
   position: absolute;
-  bottom: -390px;
-  left: 320px;
+  bottom: 25px;
+  left: 20vw;
   background-color: blueviolet;
   border: solid 3px #75e8e7;
   border-radius: 25px;
