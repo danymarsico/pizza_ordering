@@ -8,10 +8,10 @@
         <div id="first-img" >
           <img src="../assets/pizza-chef.jpg">
         </div>
-        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam laudantium dolores eveniet tempora blanditiis perferendis perspiciatis voluptatibus sint eius? Vero necessitatibus, obcaecati voluptates temporibus non et corrupti est qui sapiente!</h3>
+        <h3>Step into the neon-drenched realm of N*A*M*E*L*E*S*S*Π Pizza, where culinary innovation merges with retro-futuristic aesthetics! Our menu invites you on an exhilarating journey through time, presenting a symphony of flavors that pay homage to the neon-soaked nostalgia of yesteryears. Savor "The Butcher," a carnivore's delight featuring a tantalizing blend of cheeses, pepperoni, sausage, ham, and prosciutto, all dancing harmoniously atop a perfectly baked crust. Embark on a voyage of taste as you explore the "Create Your Own" option, where you wield the power to curate your very own pixel-perfect pizza masterpiece. Immerse yourself in this gastronomic pixel paradise and uncover the full menu by visiting our Menu page – an extraordinary vaporwave-inspired pizza experience awaits with just a click!</h3>
       </div>
       <div id="group2" class="group-container">
-        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque error voluptates aut facere, aliquid nulla quibusdam sint odio quo excepturi totam quaerat accusamus odit id qui nihil culpa? Ipsum, tenetur!</h3>
+        <h3>Welcome back, fellow traveler of the digital cosmos! If you've graced our pixelated realm before, then consider yourself part of the elite vanguard. Skip the introductory stardust and journey straight to the pulsating heart of flavor – our Order Now page. Synthwave through the formalities and dive headfirst into the neon-tinted symphony of taste.</h3>
         <div id="second-img" >
           <img src="../assets/pizza-turntables.gif">
         </div>
@@ -21,10 +21,10 @@
         <div id="third-img" >
           <img src="../assets/Frank-Franklin.jpg">
         </div>
-        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum minus sit, perspiciatis neque eius dolorem! Magni, natus. Totam alias rerum ut odio consequuntur quod eveniet quam impedit, tenetur perferendis ex!</h3>
+        <h3>Venture beyond the neon horizon and explore the genesis of our cosmic pizzeria on the Our Story page. Unearth the legend of our visionary founder, Frank Franklin, as he forged a path through the digital cosmos to create an epochal pixelated pizzeria experience. Embark on this vaporwave odyssey and let the pixels of our past illuminate your present.</h3>
       </div>
       <div id="group4" class="group-container">
-        <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime eveniet veritatis voluptate enim, possimus molestiae natus nulla, fugiat id est sunt asperiores. Perspiciatis quos exercitationem at consequatur. Optio, at illum.</h3>
+        <h3>Dare to ride the neon wave of culinary innovation and reshape the pizza universe with us? Seek the path to pixelated enlightenment and unravel the mysteries of flavor on our Contact Us page. Whether you're a renegade taste explorer or simply want to drop a virtual hi-fi, this is your portal to the vaporwave frontier. Embrace the glitch, ride the vibe, and let's reshape the gastronomic cosmos together.</h3>
         <div id="fourth-img" >
           <img src="../assets/holding-pizza.jpg">
         </div>
