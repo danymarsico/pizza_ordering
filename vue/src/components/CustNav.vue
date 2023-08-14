@@ -47,6 +47,8 @@ a:link, a:visited {
 a:hover, a:active {
     color: #75e8e7;
     text-shadow: 6px 4px #64379f;
+        -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #2099ff;
 }
 
 </style>
