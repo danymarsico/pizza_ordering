@@ -16,7 +16,7 @@
       <div id="group2" class="group-container">
         <div>
           <h3 class="text-blurb">If you've graced our pixelated realm before, welcome back, fellow traveler of the digital cosmos! Consider yourself part of the elite vanguard. Skip the introductory stardust and journey straight to the pulsating heart of flavor – our Order Now page. Synthwave through the formalities and dive headfirst into the neon-tinted symphony of taste.</h3>
-          <button>I want pizza NOW</button>
+          <router-link :to="{name: 'order'}"><button>I want pizza NOW</button></router-link>
         </div>
         <div id="second-img" >
           <img src="../assets/pizzanbeer.png">
@@ -29,13 +29,13 @@
         </div>
         <div>
           <h3 class="text-blurb">Venture beyond the neon horizon and explore the genesis of our cosmic pizzeria on the Our Story page. Unearth the legend of our visionary founder, Frank Franklin, as he forged a path through the digital cosmos to create an epochal pixelated pizzeria experience. Embark on this vaporwave odyssey and let the pixels of our past illuminate your present.</h3>
-          <button>Travel back in time</button>
+          <router-link :to="{name: 'Story'}"><button>Travel back in time</button></router-link>
         </div>
       </div>
       <div id="group4" class="group-container">
         <div>
           <h3 class="text-blurb">Dare to ride the neon wave of culinary innovation and reshape the pizza universe with us? Seek the path to pixelated enlightenment and unravel the mysteries of flavor on our Contact Info page. Whether you're a renegade taste explorer or simply want to drop a virtual hi-fi, this is your portal to the vaporwave frontier. Embrace the glitch, ride the vibe, and let's reshape the gastronomic cosmos together.</h3>
-          <button>Let's disrupt the pizza ecosystem</button>
+          <router-link :to="{name: 'Contact'}"><button>Let's disrupt the pizza ecosystem</button></router-link>
         </div>
         <div id="fourth-img" >
           <img src="../assets/callus-home.gif">
