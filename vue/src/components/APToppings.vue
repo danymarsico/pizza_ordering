@@ -1,10 +1,10 @@
 <template>
   <div>
-      <h1 id="title">Current Items</h1>
+      <h1 id="title">Current Toppings</h1>
     <table id="itemList">
       <tbody>
-        <tr v-for="(item, index) in items" :key="index">
-          <td id="item"><h2>{{item.name}}</h2></td>
+        <tr v-for="topping in $store.state.toppings" :key="topping.toppingName">
+          <td id="item"><h2>{{topping.toppingName}}</h2></td>
           <td id="checkbox1">
             <button v-on:click.prevent="toggleAvailability(index)">
               {{ item.buttonText }}
