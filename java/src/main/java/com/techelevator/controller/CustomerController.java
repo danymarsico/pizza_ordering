@@ -29,7 +29,6 @@ public class CustomerController {
 
     @RequestMapping(path = "/customer-info", method = RequestMethod.POST)
     public void create(@RequestBody Customer newCustomer, Principal principal){
-        //TODO Principal is returning null nullpointerexception thrown
         try {
             String username = principal.getName();
             int newCustUserId = jdbcUserDao.findIdByUsername(username);

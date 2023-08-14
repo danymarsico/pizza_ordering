@@ -387,6 +387,7 @@ input[type="radio"] {
   border-radius: 25px;
   border: solid 3px #75e8e7;
   margin: 5px;
+  padding: 10px;
 }
 #instructions {
   grid-area: instructions;

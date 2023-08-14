@@ -3,8 +3,11 @@
     <Header />
 
     <div id="log-in-container">
+      <audio id="my_audio" controls>
+          <source :src="audioPath" type="audio/mpeg" />
+        </audio>
       <form @submit.prevent="login">
-        <h1>Please Sign In</h1>
+        
         <div role="alert" v-if="invalidCredentials">
           Invalid username and password!
         </div>
@@ -12,6 +15,7 @@
           Thank you for registering, please sign in.
         </div>
         <div id="input-container">
+          <h1>Please Sign In</h1>
           <div class="form-input-group">
             <input
               type="text"
@@ -30,25 +34,24 @@
               placeholder="Password"
               required
             />
+            <p>
+              <router-link :to="{ name: 'register' }"
+                >Need an account? Sign up.</router-link
+              >
+            </p>
+            <button type="submit">Sign in</button>
           </div>
-          <button type="submit">Sign in</button>
+          
+          
         </div>
 
-        <audio id="my_audio" controls >
-      <source :src="audioPath" type="audio/mpeg">
-    </audio>
-
-        <p>
-          <router-link :to="{ name: 'register' }"
-            >Need an account? Sign up.</router-link
-          >
-        </p>
+        
       </form>
     </div>
   </div>
 </template>
 
-<script>
+<script scoped>
 import authService from "../services/AuthService";
 import Header from "../components/Header.vue";
 
@@ -59,7 +62,7 @@ export default {
   },
   data() {
     return {
-      audioPath: require('@/assets/partyrock.mp3'),
+      audioPath: require("@/assets/partyrock.mp3"),
       user: {
         username: "",
         password: "",
@@ -67,10 +70,10 @@ export default {
       invalidCredentials: false,
     };
   },
-  mounted () {
-    window.onload = function() {
-    document.getElementById("my_audio").play();
-}
+  mounted() {
+    window.onload = function () {
+      document.getElementById("my_audio").play();
+    };
   },
   methods: {
     login() {
@@ -107,6 +110,7 @@ h1 {
 }
 .form-input-group {
   margin-bottom: 1rem;
+  text-align: center;
 }
 #input-container {
   display: flex;
@@ -114,10 +118,11 @@ h1 {
   align-items: center;
   flex-direction: column;
   padding: 15px;
-  height: 150px;
+  height: 200px;
   background-color: #64379f;
   border-radius: 15px;
   border: solid 3px #75e8e7;
+  
 }
 label {
   margin-right: 0.5rem;
@@ -131,14 +136,15 @@ label {
 #log-in-container {
   background-image: url("../assets/cat-dj.gif");
   background-size: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: #9854cb;
   border-radius: 25px;
   margin: 20px;
   border: solid 3px #75e8e7;
-  height: 400px;
+  height: 600px;
 }
+
 </style>
