@@ -14,6 +14,7 @@ import Menu from '../views/Menu'
 import Contact from '../views/Contact'
 import Story from '../views/Story'
 import Order from '../views/Order'
+import Cart from '../views/Cart'
 
 Vue.use(Router)
 
@@ -32,7 +33,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: Home,
       meta: {
         requiresAuth: true
@@ -40,7 +41,7 @@ const router = new Router({
     },
     {
       path: "/login",
-      name: "login",
+      name: "Login",
       component: Login,
       meta: {
         requiresAuth: false
@@ -48,7 +49,7 @@ const router = new Router({
     },
     {
       path: "/logout",
-      name: "logout",
+      name: "Logout",
       component: Logout,
       meta: {
         requiresAuth: false
@@ -56,7 +57,7 @@ const router = new Router({
     },
     {
       path: "/register",
-      name: "register",
+      name: "Register",
       component: Register,
       meta: {
         requiresAuth: false
@@ -132,8 +133,16 @@ const router = new Router({
     },
     {
       path: '/order',
-      name: 'order',
+      name: 'Order',
       component: Order,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/cart',
+      name: 'Cart',
+      component: Cart,
       meta: {
         requiresAuth: false
       }
