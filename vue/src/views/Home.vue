@@ -6,14 +6,20 @@
     <div id="home-container">
       <div id="group1" class="group-container">
         <div id="first-img" >
-          <img src="../assets/pizza-chef.jpg">
+          <img src="../assets/neonsign-home.jpg">
         </div>
-        <h3>Step into the neon-drenched realm of N*A*M*E*L*E*S*S*Π Pizza, where culinary innovation merges with retro-futuristic aesthetics! Our menu invites you on an exhilarating journey through time, presenting a symphony of flavors that pay homage to the neon-soaked nostalgia of yesteryears. Savor "The Butcher," a carnivore's delight featuring a tantalizing blend of cheeses, pepperoni, sausage, ham, and prosciutto, all dancing harmoniously atop a perfectly baked crust. Embark on a voyage of taste as you explore the "Create Your Own" option, where you wield the power to curate your very own pixel-perfect pizza masterpiece. Immerse yourself in this gastronomic pixel paradise and uncover the full menu by visiting our Menu page – an extraordinary vaporwave-inspired pizza experience awaits with just a click!</h3>
+        <div>
+          <h3 class="text-blurb">Step into the neon-drenched realm of N*A*M*E*L*E*S*S*Π Pizza, where culinary innovation merges with retro-futuristic aesthetics! Our menu invites you on an exhilarating journey through time, presenting a symphony of flavors that pay homage to the neon-soaked nostalgia of yesteryears. Savor "The Butcher," a carnivore's delight featuring a tantalizing blend of cheeses, pepperoni, sausage, ham, and prosciutto, all dancing harmoniously atop a perfectly baked crust. Embark on a voyage of taste as you explore the "Create Your Own" option, where you wield the power to curate your very own pixel-perfect pizza masterpiece. Immerse yourself in this gastronomic pixel paradise and uncover the full menu by visiting our Menu page – an extraordinary vaporwave-inspired pizza experience awaits with just a click!</h3>
+          <button>Teleport me to the menu</button>
+        </div>
       </div>
       <div id="group2" class="group-container">
-        <h3>Welcome back, fellow traveler of the digital cosmos! If you've graced our pixelated realm before, then consider yourself part of the elite vanguard. Skip the introductory stardust and journey straight to the pulsating heart of flavor – our Order Now page. Synthwave through the formalities and dive headfirst into the neon-tinted symphony of taste.</h3>
+        <div>
+          <h3 class="text-blurb">If you've graced our pixelated realm before, welcome back, fellow traveler of the digital cosmos! Consider yourself part of the elite vanguard. Skip the introductory stardust and journey straight to the pulsating heart of flavor – our Order Now page. Synthwave through the formalities and dive headfirst into the neon-tinted symphony of taste.</h3>
+          <button>I want pizza NOW</button>
+        </div>
         <div id="second-img" >
-          <img src="../assets/pizza-turntables.gif">
+          <img src="../assets/pizzanbeer.png">
         </div>
         
       </div>
@@ -21,12 +27,18 @@
         <div id="third-img" >
           <img src="../assets/Frank-Franklin.jpg">
         </div>
-        <h3>Venture beyond the neon horizon and explore the genesis of our cosmic pizzeria on the Our Story page. Unearth the legend of our visionary founder, Frank Franklin, as he forged a path through the digital cosmos to create an epochal pixelated pizzeria experience. Embark on this vaporwave odyssey and let the pixels of our past illuminate your present.</h3>
+        <div>
+          <h3 class="text-blurb">Venture beyond the neon horizon and explore the genesis of our cosmic pizzeria on the Our Story page. Unearth the legend of our visionary founder, Frank Franklin, as he forged a path through the digital cosmos to create an epochal pixelated pizzeria experience. Embark on this vaporwave odyssey and let the pixels of our past illuminate your present.</h3>
+          <button>Travel back in time</button>
+        </div>
       </div>
       <div id="group4" class="group-container">
-        <h3>Dare to ride the neon wave of culinary innovation and reshape the pizza universe with us? Seek the path to pixelated enlightenment and unravel the mysteries of flavor on our Contact Us page. Whether you're a renegade taste explorer or simply want to drop a virtual hi-fi, this is your portal to the vaporwave frontier. Embrace the glitch, ride the vibe, and let's reshape the gastronomic cosmos together.</h3>
+        <div>
+          <h3 class="text-blurb">Dare to ride the neon wave of culinary innovation and reshape the pizza universe with us? Seek the path to pixelated enlightenment and unravel the mysteries of flavor on our Contact Info page. Whether you're a renegade taste explorer or simply want to drop a virtual hi-fi, this is your portal to the vaporwave frontier. Embrace the glitch, ride the vibe, and let's reshape the gastronomic cosmos together.</h3>
+          <button>Let's disrupt the pizza ecosystem</button>
+        </div>
         <div id="fourth-img" >
-          <img src="../assets/holding-pizza.jpg">
+          <img src="../assets/callus-home.gif">
         </div>
       </div>
     </div>
@@ -45,8 +57,7 @@ export default {
 };
 </script>
 
-<style>
-
+<style scoped>
 .home{
   text-align: center;
 }
@@ -61,14 +72,21 @@ export default {
   height: 100%;
   background-image: url('../assets/planets-moon-vaporwave-Favim.com-7224376.gif');
   background-size: cover;
+  padding: 50px;
 }
 .group-container{
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.group-container h3{
-  color:white;
+
+.text-blurb{
+  color: #75e8e7;
+  background-color: #27104e;
+  border: ridge 3px #75e8e7;
+  border-radius: 25px;
+  padding: 15px;
+  width: 800px;
 }
 
 .group-container img{
@@ -78,4 +96,13 @@ export default {
   border-radius: 25px;
 }
 
+button{
+  background-image: linear-gradient(231deg,#e982df,#2099ff);
+  margin: -50px 0px 0px 0px;
+  font-family: Gerogia;
+  font-size: 13pt;
+  color: #27104e;
+  font-weight: bold;
+  text-shadow: 1px 1px #75e8e7;
+}
 </style>
