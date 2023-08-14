@@ -275,6 +275,9 @@ textarea {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  background-color: #64379f;
+  border-radius: 25px;
+  border: solid 3px #75e8e7;
 }
 
 #sauce-list input[type="radio"] {
@@ -315,6 +318,9 @@ input[type="radio"] {
 }
 
 #myOrder {
+  background-color: #64379f;
+  border-radius: 25px;
+  border: solid 3px #75e8e7;
   text-align: center;
   margin-top: 20px; /* Add margin to create space between Additional Instructions and My Order */
 }
@@ -342,6 +348,9 @@ input[type="radio"] {
   flex-direction: column;
   justify-content: center;
   background-color: #9854cb;
+  background-image: url('../assets/planets-moon-vaporwave-Favim.com-7224376.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 25px;
   margin: 20px;
   border: solid 3px #75e8e7;
