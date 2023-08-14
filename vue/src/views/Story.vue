@@ -9,8 +9,8 @@
         <img src="../assets/pizza-shop2.jpg" class="pizza-slides" />
         <img src="../assets/making-pizza.jpg" class="pizza-slides" />
         <img src="../assets/pizza-champion.jpg" class="pizza-slides" />
-        <button>&#10094;</button>
-        <button>&#10095;</button>
+        <!-- <button>&#10094;</button>
+        <button>&#10095;</button> -->
         <div class="text">
             <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
@@ -53,7 +53,7 @@ export default {
 
     }
   },
-  created: function(){
+  mounted: function(){
     this.carousel();
   },
 };
@@ -76,6 +76,7 @@ export default {
 #img-container {
   margin: 25px;
   width: 80vw;
+  
   flex-grow: 1;
   position: relative;
 }
@@ -83,6 +84,7 @@ img {
   width: 80vw;
   border: solid 3px #75e8e7;
   border-radius: 25px;
+  height: 600px;
 }
 h1 {
   color: #75e8e7;
