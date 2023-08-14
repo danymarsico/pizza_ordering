@@ -94,6 +94,9 @@
               Selected crust: {{selectedCrust}} <br>
               Selected sauce: {{selectedSauce}} <br>
               Selected Toppings: {{selectedToppings}} <br>
+              <br>
+              <br>
+              Subtotal: 0
               </h2>
           </div>
           <input type="submit" value="submit" @click.prevent="setCurrentPizzaInfo()" />
@@ -108,12 +111,12 @@ import CustNav from "../components/CustNav.vue";
 export default {
   data() {
     return {
-      selectedPizza: "",
+      selectedPizza: '',
       selectedToppings: [],
       selectedSize: '',
       selectedCrust: '',
       selectedSauce: '',
-      additionalInfo: ''
+      additionalInfo: '',
     };
   },
   components: {
@@ -138,10 +141,59 @@ export default {
     premiumToppings() {
       return this.$store.state.toppings.filter((topping) => topping.isPremium);
     },
+    calculateSubtotal(){
+      let subtotal = 0;
+
+      // Calculate pizza price based on size
+      const size = this.$store.state.size.find(item => item.sizeName === this.selectedSize);
+      subtotal += size.sizePrice;
+
+      // Calculate topping prices
+      this.selectedToppings.forEach(toppingName => {
+        const topping = this.$store.state.toppings.find(item => item.toppingName === toppingName);
+        subtotal += topping.toppingPrice;
+      });
+
+      // Calculate sauce price
+      const sauce = this.$store.state.sauce.find(item => item.sauceName === this.selectedSauce);
+      subtotal += sauce.saucePrice;
+
+      // Calculate crust price
+      const crust = this.$store.state.crust.find(item => item.crustName === this.selectedCrust);
+      subtotal += crust.crustPrice;
+
+      return subtotal;
+    },
+    subtotal() {
+      return this.calculateSubtotal();
+    }
+    //Function that first checks what specialtyPizza has been selected,
+    //then based on that has a forEach loop that adds all the toppings
+    //associated to the specific specialtyPizza into the selectedToppings array
+    // preselectToppings() {
+    //   if(this.selectedPizza === "The Butcher") +{
+    //    this.selectedToppings = this.$store.state.specialtyPizzas.specialtyToppings;
+    //   }
+    // }
   },
   created() {
     this.selectedPizza = this.$route.params.selectedPizza;
-  },
+
+    //TODO These are hardcoded statements but ideally would be a dynamic function that pull the
+    //toppings of the selectedPizza based either on its name or ID
+    if(this.selectedPizza === "The Butcher") {
+       this.selectedToppings = this.$store.state.specialtyPizzas[0].specialtyToppings;
+  }
+  if(this.selectedPizza === "The G.O.A.T.") {
+       this.selectedToppings = this.$store.state.specialtyPizzas[1].specialtyToppings;
+  }
+  if(this.selectedPizza === "O.G. NAMELESS") {
+       this.selectedToppings = this.$store.state.specialtyPizzas[2].specialtyToppings;
+  }
+  if(this.selectedPizza === "Playlist Deluxe") {
+       this.selectedToppings = this.$store.state.specialtyPizzas[3].specialtyToppings;
+  }
+  }
 };
 </script>
 <style scoped>
