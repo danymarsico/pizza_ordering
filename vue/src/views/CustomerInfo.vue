@@ -1,66 +1,67 @@
 <template>
   <div>
     <Header />
-    <div id="info">
-      <!-- TODO make method for submit -->
-      <form v-on:submit.prevent="createCustomer()">
-        <div>
-          <label for="first-name">First Name</label>
-          <input
-            type="text"
-            id="first-name"
-            name="first-name"
-            v-model="customer.firstName"
-            required
-            autofocus
-          />
-        </div>
-        <div>
-          <label for="last-name">Last Name</label>
-          <input
-            type="text"
-            id="last-name"
-            name="last-name"
-            v-model="customer.lastName"
-            required
-            autofocus
-          />
-        </div>
-        <div>
-          <label for="street-address">Street Address</label>
-          <input
-            type="text"
-            id="street-address"
-            name="street-address"
-            v-model="customer.streetAddress"
-            required
-            autofocus
-          />
-        </div>
-        <div>
-          <label for="city">City</label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            v-model="customer.city"
-            required
-            autofocus
-          />
-        </div>
-        <div>
-          <label for="phone-number">Phone Number</label>
-          <input
-            type="text"
-            id="phone-number"
-            name="phone-number"
-            v-model="customer.phoneNumber"
-            required
-            autofocus
-          />
-        </div>
-        <input type="submit" value="Submit" />
-      </form>
+    <div id="container">
+      <div id="info">
+        <form v-on:submit.prevent="createCustomer()">
+          <div>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              v-model="customer.firstName"
+              placeholder="First Name"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              v-model="customer.lastName"
+              placeholder="Last Name"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="street-address"
+              name="street-address"
+              v-model="customer.streetAddress"
+              placeholder="Street Address"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              v-model="customer.city"
+              placeholder="City"
+              required
+              autofocus
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="phone-number"
+              name="phone-number"
+              v-model="customer.phoneNumber"
+              placeholder="Phone Number"
+              required
+              autofocus
+            />
+          </div>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     </div>
   </div>
 </template>
@@ -100,4 +101,30 @@ export default {
 </script>
 
 <style>
+#container{
+  background-image: url("../assets/cat-dj.gif");
+  background-size: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #9854cb;
+  border-radius: 25px;
+  margin: 20px;
+  border: solid 3px #75e8e7;
+  height: 500px;
+}
+#info {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  height: auto;
+  width: 20vw;
+  background-color: #64379f;
+  border-radius: 15px;
+  border: solid 3px #75e8e7;
+}
 </style>
