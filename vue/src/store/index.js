@@ -33,7 +33,7 @@ export default new Vuex.Store({
 
     },
     cart: [
-      
+
     ],
     specialtyPizzas: [
       {
@@ -62,6 +62,13 @@ export default new Vuex.Store({
         price: 18.25,
         desc:'Step into a symphony of taste with the "Playlist Deluxe" – a deluxe pizza that harmonizes succulent Italian sausage, robust pepperoni, caramelized onions, roasted green peppers, and earthy mushrooms beneath a golden canopy of melted mozzarella on a meticulously hand-stretched dough canvas. Imagine relishing the opulent blend of these premium ingredients, expertly orchestrated to create a culinary masterpiece that embodies both indulgence and sophistication. With every sumptuous bite, you\'re invited to experience a culinary symphony akin to a lavishly orchestrated musical opus, as the "Playlist Deluxe" guides your taste buds through the pinnacle of flavor and lavishness.',
         specialtyToppings:['Cheese', 'Sausage', 'Pepperoni', 'Onions', 'Green Peppers', 'Chanterelle Mushrooms'],
+        imgsrc: require('@/assets/playlistdeluxe.png')
+      },
+      {
+        pizzaName: 'Custom Pizza',
+        price: 10.00,
+        desc:'Embark on a neon-infused flavor odyssey with "Create Your Own" – an edible artist\'s playground where every topping combination becomes a work of vaporwave-inspired culinary art. Unleash your taste bud creativity and curate a symphony of flavors that defy convention and tantalize the senses. From pixelated pepperoni to glitched-out gold leaf, this customizable adventure invites you to sculpt your own taste masterpiece in a kaleidoscope of delicious possibilities',
+        specialtyToppings:'Add your toppings',
         imgsrc: require('@/assets/playlistdeluxe.png')
       }
     ],
@@ -202,14 +209,17 @@ export default new Vuex.Store({
       state.user = {};
       axios.defaults.headers.common = {};
     },
-    SET_PIZZA_INFO(state, payload) {
-      state.pizza.pizzaSize = payload.selectedSize;
-      state.pizza.pizzaCrust = payload.selectedCrust;
-      state.pizza.pizzaSauce = payload.selectedSauce;
-      state.pizza.pizzaName = payload.selectedPizza;
-      state.pizza.additionalInfo = payload.additionalInfo;
-      state.pizza.selectedToppings = payload.selectedToppings;
+    ADD_TO_CART(state, payload) {
+      let pizza = {};
+      pizza.pizzaSize = payload.selectedSize;
+      pizza.pizzaCrust = payload.selectedCrust;
+      pizza.pizzaSauce = payload.selectedSauce;
+      pizza.pizzaName = payload.selectedPizza;
+      pizza.additionalInfo = payload.additionalInfo;
+      pizza.selectedToppings = payload.selectedToppings;
+      pizza.price = payload.price;
 
-    }
+      state.cart.push(pizza);
+    },
   }
 })

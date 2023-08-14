@@ -4,7 +4,7 @@
               <li class="nav"><router-link :to="{name: 'Home' }">Home</router-link></li>
               <li class="nav"><router-link :to="{name: 'Menu' }">Menu</router-link></li>
               <li class="nav"><router-link :to="{name: 'Order'}">Order Now</router-link></li>
-              <li class="nav"><router-link :to="{name: 'Story' }">Our Story</router-link></li>
+              <li class="nav"><router-link :to="{name: 'Story' }">Backstory</router-link></li>
               <li class="nav"><router-link :to="{name: 'Contact' }">Contact Info</router-link></li>
               <li><router-link :to="{name: 'Cart' }"><img src="../assets/neon-cart.png" /></router-link></li>
               <li class="nav"><router-link :to="{name: 'Logout' }">Logout</router-link></li>

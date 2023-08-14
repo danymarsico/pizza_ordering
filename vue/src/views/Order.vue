@@ -4,6 +4,7 @@
     <Cust-nav />
     <div id="main-section">
       <form id="order-form">
+<<<<<<< Updated upstream
         <div id="top-selections">
           <div id="select-pizza">
             <label for="select-pizza">Select Pizza: </label>
@@ -11,6 +12,16 @@
               name="select-pizza"
               class="selection"
               v-model="selectedPizza"
+=======
+        <div id="select-pizza">
+          <label for="select-pizza">Select Pizza</label>
+          <select name="select-pizza" id="select-pizza" v-model="selectedPizza" selected="Custom Pizza">
+            <option selected disabled>Choose a pizza</option>
+            <option
+              v-for="pizza in $store.state.specialtyPizzas"
+              v-bind:key="pizza.pizzaName"
+              v-bind:value="pizza.pizzaName"
+>>>>>>> Stashed changes
             >
               <option selected disabled>Choose a pizza</option>
               <option
@@ -150,6 +161,7 @@
               Subtotal: {{ subtotal.toFixed(2) }}
             </h2>
           </div>
+<<<<<<< Updated upstream
 
           <input
             type="submit"
@@ -158,6 +170,10 @@
             :disabled="!selectedSize || !selectedCrust || !selectedSauce"
             title="Please select at least a size, sauce, and crust type in order to submit"
           />
+=======
+          <input type="submit" value="Submit" @click.prevent="setCurrentPizzaInfo()" :disabled="!selectedPizza || !selectedSize || !selectedCrust || !selectedSauce"
+      title="Please select at least a size, sauce, and crust type in order to submit" />
+>>>>>>> Stashed changes
         </div>
       </form>
     </div>
@@ -185,15 +201,27 @@ export default {
     CustNav,
   },
   methods: {
+<<<<<<< Updated upstream
     setCurrentPizzaInfo() {
       this.$store.commit("SET_PIZZA_INFO", {
         selectedSize: this.selectedSize,
+=======
+    setCurrentPizzaInfo(){
+      this.$store.commit('ADD_TO_CART', 
+      { selectedSize: this.selectedSize, 
+>>>>>>> Stashed changes
         selectedCrust: this.selectedCrust,
         selectedSauce: this.selectedSauce,
         selectedToppings: this.selectedToppings,
         selectedPizza: this.selectedPizza,
         additionalInfo: this.additionalInfo,
+<<<<<<< Updated upstream
       });
+=======
+        price: this.subtotal,
+      });
+      this.$router.push('/cart')
+>>>>>>> Stashed changes
     },
   },
   computed: {
@@ -277,6 +305,7 @@ export default {
 
     //TODO These are hardcoded statements but ideally would be a dynamic function that pull the
     //toppings of the selectedPizza based either on its name or ID
+<<<<<<< Updated upstream
     if (this.selectedPizza === "The Butcher") {
       this.selectedToppings =
         this.$store.state.specialtyPizzas[0].specialtyToppings;
@@ -294,6 +323,24 @@ export default {
         this.$store.state.specialtyPizzas[3].specialtyToppings;
     }
   },
+=======
+    if(this.selectedPizza === "The Butcher") {
+       this.selectedToppings = this.$store.state.specialtyPizzas[0].specialtyToppings;
+  }
+  if(this.selectedPizza === "The G.O.A.T.") {
+       this.selectedToppings = this.$store.state.specialtyPizzas[1].specialtyToppings;
+  }
+  if(this.selectedPizza === "O.G. NAMELESS") {
+       this.selectedToppings = this.$store.state.specialtyPizzas[2].specialtyToppings;
+  }
+  if(this.selectedPizza === "Playlist Deluxe") {
+       this.selectedToppings = this.$store.state.specialtyPizzas[3].specialtyToppings;
+  }
+  },
+  mounted() {
+    this.selectedPizza = "Custom Pizza"
+  }
+>>>>>>> Stashed changes
 };
 </script>
 

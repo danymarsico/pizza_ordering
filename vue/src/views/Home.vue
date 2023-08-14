@@ -28,7 +28,7 @@
           <img src="../assets/Frank-Franklin.jpg">
         </div>
         <div>
-          <h3 class="text-blurb">Venture beyond the neon horizon and explore the genesis of our cosmic pizzeria on the Our Story page. Unearth the legend of our visionary founder, Frank Franklin, as he forged a path through the digital cosmos to create an epochal pixelated pizzeria experience. Embark on this vaporwave odyssey and let the pixels of our past illuminate your present.</h3>
+          <h3 class="text-blurb">Venture beyond the neon horizon and explore the genesis of our cosmic pizzeria on the Backstory page. Unearth the legend of our visionary founder, Frank Franklin, as he forged a path through the digital cosmos to create an epochal pixelated pizzeria experience. Embark on this vaporwave odyssey and let the pixels of our past illuminate your present.</h3>
           <router-link :to="{name: 'Story'}"><button>Travel back in time</button></router-link>
         </div>
       </div>
