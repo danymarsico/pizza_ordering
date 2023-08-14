@@ -2,6 +2,10 @@
   <div>
       <Header />
       <Cust-nav />
+      <h2>Pizzas In Your Cart</h2>
+      <div>
+          
+      </div>
   </div>
 </template>
 
@@ -13,6 +17,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>

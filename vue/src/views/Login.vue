@@ -35,7 +35,7 @@
               required
             />
             <p>
-              <router-link :to="{ name: 'register' }"
+              <router-link :to="{ name: 'Register' }"
                 >Need an account? Sign up.</router-link
               >
             </p>

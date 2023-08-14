@@ -16,7 +16,7 @@
       <div id="group2" class="group-container">
         <div>
           <h3 class="text-blurb">If you've graced our pixelated realm before, welcome back, fellow traveler of the digital cosmos! Consider yourself part of the elite vanguard. Skip the introductory stardust and journey straight to the pulsating heart of flavor – our Order Now page. Synthwave through the formalities and dive headfirst into the neon-tinted symphony of taste.</h3>
-          <router-link :to="{name: 'order'}"><button>I want pizza NOW</button></router-link>
+          <router-link :to="{name: 'Order'}"><button>I want pizza NOW</button></router-link>
         </div>
         <div id="second-img" >
           <img src="../assets/pizzanbeer.png">

@@ -38,7 +38,7 @@
         </div>
         <button type="submit">Create Account</button>
         <p>
-          <router-link :to="{ name: 'login' }"
+          <router-link :to="{ name: 'Login' }"
             >Already have an account? Log in.</router-link
           >
         </p>

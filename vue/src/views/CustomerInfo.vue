@@ -90,7 +90,7 @@ export default {
       AuthService.setUserInfo(this.customer).then((response) => {
         console.log(response.data);
         const route = {
-          name: "home",
+          name: "Home",
         };
         this.$router.push(route);
       });

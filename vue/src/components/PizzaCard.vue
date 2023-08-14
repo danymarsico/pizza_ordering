@@ -24,7 +24,7 @@ export default {
   },
   methods: {
     selectPizza(pizza) {
-      this.$router.push({name: 'order', params: { selectedPizza: pizza.pizzaName}});
+      this.$router.push({name: 'Order', params: { selectedPizza: pizza.pizzaName}});
     }
   }
 };
