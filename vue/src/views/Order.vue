@@ -134,7 +134,8 @@ export default {
         selectedCrust: this.selectedCrust,
         selectedSauce: this.selectedSauce,
         selectedToppings: this.selectedToppings,
-        selectedPizza: this.selectedPizza
+        selectedPizza: this.selectedPizza,
+        additionalInfo: this.additionalInfo,
       })
     }
   },

@@ -10,7 +10,7 @@
         </div>
         <div>
           <h3 class="text-blurb">Step into the neon-drenched realm of N*A*M*E*L*E*S*S*Π Pizza, where culinary innovation merges with retro-futuristic aesthetics! Our menu invites you on an exhilarating journey through time, presenting a symphony of flavors that pay homage to the neon-soaked nostalgia of yesteryears. Savor "The Butcher," a carnivore's delight featuring a tantalizing blend of cheeses, pepperoni, sausage, ham, and prosciutto, all dancing harmoniously atop a perfectly baked crust. Embark on a voyage of taste as you explore the "Create Your Own" option, where you wield the power to curate your very own pixel-perfect pizza masterpiece. Immerse yourself in this gastronomic pixel paradise and uncover the full menu by visiting our Menu page – an extraordinary vaporwave-inspired pizza experience awaits with just a click!</h3>
-          <button>Teleport me to the menu</button>
+          <router-link :to="{name: 'Menu'}"><button>Teleport me to the menu</button></router-link>
         </div>
       </div>
       <div id="group2" class="group-container">
