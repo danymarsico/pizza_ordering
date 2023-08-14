@@ -32,6 +32,9 @@ export default new Vuex.Store({
       additionalInfo: ''
 
     },
+    cart: [
+      
+    ],
     specialtyPizzas: [
       {
         pizzaName: 'The Butcher',
