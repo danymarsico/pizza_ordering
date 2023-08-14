@@ -96,15 +96,19 @@
               Selected Toppings: {{selectedToppings}} <br>
               <br>
               <br>
-              Subtotal: 0
+              Subtotal: {{subtotal.toFixed(2)}}
               </h2>
           </div>
-          <input type="submit" value="submit" @click.prevent="setCurrentPizzaInfo()" />
+          <input type="submit" value="Submit" @click.prevent="setCurrentPizzaInfo()" :disabled="!selectedSize || !selectedCrust || !selectedSauce"
+      title="Please select at least a size, sauce, and crust type in order to submit" />
         </div>
       </form>
     </div>
   </div>
 </template>
+
+
+
 <script>
 import Header from "../components/Header.vue";
 import CustNav from "../components/CustNav.vue";
@@ -141,32 +145,56 @@ export default {
     premiumToppings() {
       return this.$store.state.toppings.filter((topping) => topping.isPremium);
     },
-    calculateSubtotal(){
-      let subtotal = 0;
+    sizePrice() {
+    const size = this.$store.state.size.find(item => item.sizeName === this.selectedSize);
+    return size ? size.sizePrice : 0;
+  },
+  crustPrice() {
+    const crust = this.$store.state.crust.find(item => item.crustName === this.selectedCrust);
+    return crust ? crust.crustPrice : 0;
+  },
+  saucePrice() {
+    const sauce = this.$store.state.sauce.find(item => item.sauceName === this.selectedSauce);
+    return sauce ? sauce.saucePrice : 0;
+  },
+  toppingPrices() {
+    let totalToppingPrice = 0;
+    this.selectedToppings.forEach(toppingName => {
+      const topping = this.$store.state.toppings.find(item => item.toppingName === toppingName);
+      totalToppingPrice += topping ? topping.toppingPrice : 0;
+    });
+    return totalToppingPrice;
+  },
+  subtotal() {
+    return this.sizePrice + this.crustPrice + this.saucePrice + this.toppingPrices;
+  },
+  //Deprecated function
+    // calculateSubtotal(){
+    //   let subtotal = 0;
 
-      // Calculate pizza price based on size
-      const size = this.$store.state.size.find(item => item.sizeName === this.selectedSize);
-      subtotal += size.sizePrice;
+    //   // Calculate pizza price based on size
+    //   const size = this.$store.state.size.find(item => item.sizeName === this.selectedSize);
+    //   subtotal += size.sizePrice;
 
-      // Calculate topping prices
-      this.selectedToppings.forEach(toppingName => {
-        const topping = this.$store.state.toppings.find(item => item.toppingName === toppingName);
-        subtotal += topping.toppingPrice;
-      });
+    //   // Calculate topping prices
+    //   this.selectedToppings.forEach(toppingName => {
+    //     const topping = this.$store.state.toppings.find(item => item.toppingName === toppingName);
+    //     subtotal += topping.toppingPrice;
+    //   });
 
-      // Calculate sauce price
-      const sauce = this.$store.state.sauce.find(item => item.sauceName === this.selectedSauce);
-      subtotal += sauce.saucePrice;
+    //   // Calculate sauce price
+    //   const sauce = this.$store.state.sauce.find(item => item.sauceName === this.selectedSauce);
+    //   subtotal += sauce.saucePrice;
 
-      // Calculate crust price
-      const crust = this.$store.state.crust.find(item => item.crustName === this.selectedCrust);
-      subtotal += crust.crustPrice;
+    //   // Calculate crust price
+    //   const crust = this.$store.state.crust.find(item => item.crustName === this.selectedCrust);
+    //   subtotal += crust.crustPrice;
 
-      return subtotal;
-    },
-    subtotal() {
-      return this.calculateSubtotal();
-    }
+    //   return subtotal;
+    // },
+    // subtotal() {
+    //   return this.calculateSubtotal();
+    // }
     //Function that first checks what specialtyPizza has been selected,
     //then based on that has a forEach loop that adds all the toppings
     //associated to the specific specialtyPizza into the selectedToppings array
@@ -200,6 +228,127 @@ export default {
 #order-form {
   display: grid;
   grid-template-areas:
+    "select-pizza sauce-list myOrder"
+    "size toppings myOrder"
+    "crust toppings instructions";
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#select-pizza,
+#size,
+#crust,
+#sauce-list,
+#instructions,
+#myOrder {
+  margin-bottom: 20px;
+}
+
+#select-pizza,
+#size,
+#crust,
+#sauce-list h2 {
+  font-size: 18px;
+}
+
+select,
+label,
+input[type="checkbox"],
+input[type="radio"],
+textarea {
+  font-size: 16px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#sauce-list h2 {
+  text-decoration: underline;
+  margin-right: 8px;
+}
+
+#sauce-list label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#sauce-list input[type="radio"] {
+  margin-right: 5px;
+  align-self: center;
+}
+
+#toppings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #64379f;
+  border-radius: 25px;
+  border: solid 3px #75e8e7;
+  padding: 10px;
+}
+
+.topping-list {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 25px;
+  border: solid 5px #75e8e7;
+  border-style: ridge;
+}
+
+.topping-list label {
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: middle;
+}
+
+#instructions {
+  grid-area: instructions;
+}
+
+#myOrder {
+  text-align: center;
+  margin-top: 20px; /* Add margin to create space between Additional Instructions and My Order */
+}
+
+.order-summary {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  margin-top: 10px;
+}
+
+.styled-button {
+  padding: 10px 20px;
+  background-color: #9854cb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #9854cb;
+  border-radius: 25px;
+  margin: 20px;
+  border: solid 3px #75e8e7;
+  padding: 20px;
+}
+/*#order-form {
+  display: grid;
+  grid-template-areas:
     "select-pizza  sauce-list myOrder"
     "size  toppings myOrder"
     "crust  toppings instructions";
@@ -226,8 +375,8 @@ export default {
   margin: 20px;
   border: solid 3px #75e8e7;
   height: 100%;
-  /* background-image: url("../assets/planets-moon-vaporwave-Favim.com-7224376.gif"); */
-  background-size: cover;
+   background-image: url("../assets/planets-moon-vaporwave-Favim.com-7224376.gif");
+   background-size: cover;
 }
 #sauce-list {
   grid-area: sauce-list;
@@ -272,7 +421,7 @@ export default {
 }
 input {
   width: 50px;
-}
+}*/
 </style>
 
 
