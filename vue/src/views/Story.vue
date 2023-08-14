@@ -49,7 +49,7 @@ export default {
          slideIndex = 1
          }
       slides[slideIndex -1].style.display = "block";
-      setTimeout(this.carousel, 4000);
+      setTimeout(this.carousel, 8000);
 
     }
   },
