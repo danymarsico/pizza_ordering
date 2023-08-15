@@ -17,6 +17,7 @@
                 v-for="pizza in $store.state.specialtyPizzas"
                 v-bind:key="pizza.pizzaName"
                 v-bind:value="pizza.pizzaName"
+                v-bind="selectToppings()"
               >
                 {{ pizza.pizzaName }}
               </option>
@@ -185,6 +186,24 @@ export default {
       });
       this.$router.push('/cart')
     },
+    selectToppings() {
+      if (this.selectedPizza === "The Butcher") {
+      this.selectedToppings =
+        this.$store.state.specialtyPizzas[0].specialtyToppings;
+    }
+    if (this.selectedPizza === "The G.O.A.T.") {
+      this.selectedToppings =
+        this.$store.state.specialtyPizzas[1].specialtyToppings;
+    }
+    if (this.selectedPizza === "O.G. NAMELESS") {
+      this.selectedToppings =
+        this.$store.state.specialtyPizzas[2].specialtyToppings;
+    }
+    if (this.selectedPizza === "Playlist Deluxe") {
+      this.selectedToppings =
+        this.$store.state.specialtyPizzas[3].specialtyToppings;
+    }
+    }
   },
   computed: {
     regularToppings() {
