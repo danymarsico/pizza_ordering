@@ -13,16 +13,16 @@
         <button>&#10095;</button> -->
         <div id="text-container">
             <p class="text">
-            text 1
+            In the bustling metropolis of Tech Elevator City, where the fusion of technology and innovation propels the cityscape to new heights, a man named Frank Franklin found himself at a crossroads. Frank had always been captivated by the pulsating rhythms of vaporwave culture and the nostalgic allure of the 80s. Yet, he was trapped in a mundane corporate job that left him yearning for something more. One fateful day, as he sipped on a fluorescent-lit latte in a pastel-colored cafe, he met Luna Echo, a life coach with an aura as vibrant as the city itself.
             </p>
             <p class="text">
-            text 2
+            Luna Echo was a beacon of hip wisdom in Tech Elevator City, known for her enigmatic advice and captivating vaporwave-inspired sessions. She sensed Frank's inner turmoil and encouraged him to embrace his passions, to let the retro beats of his heart guide him towards a more fulfilling path. "Dive into the neon sea of your dreams," she urged, her voice a soothing blend of whispering synths. Inspired by her words, Frank embarked on a journey of self-discovery that would reshape his destiny.
             </p>
             <p class="text">
-            text 3
+            Guided by Luna, Frank decided to disrupt the pizza ecosystem that had long grown stagnant. With a sprinkle of stardust and a dash of pixelated creativity, he founded "NAMELESS PI," a pizza joint unlike any other. The restaurant's ambiance was a symphony of holographic posters, glitch art, and holograms playing retro arcade games. Each slice of pizza bore a neon resemblance to its former self, the flavors a fusion of classic recipes and futuristic culinary techniques.
             </p>
             <p class="text">
-            text 4
+            As word spread through Tech Elevator City about the enigmatic pizzeria, Frank found himself at the forefront of a cultural revolution. NAMELESS PI became a haven for the city's avant-garde, a place where those seeking a slice of the past and a bite of the future could come together in harmonious satisfaction. Frank's journey from a stifled corporate drone to a pioneer of gastronomical artistry was a testament to the power of embracing one's true passions, and he owed it all to Luna Echo's transcendent wisdom.
             </p>
         </div>
       </div>
