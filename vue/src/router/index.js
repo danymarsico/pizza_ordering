@@ -15,6 +15,7 @@ import Contact from '../views/Contact'
 import Story from '../views/Story'
 import Order from '../views/Order'
 import Cart from '../views/Cart'
+import Reports from '../views/Reports'
 
 Vue.use(Router)
 
@@ -143,6 +144,14 @@ const router = new Router({
       path: '/cart',
       name: 'Cart',
       component: Cart,
+      meta: {
+        requiresAuth: false
+      }
+    },
+    {
+      path: '/reports',
+      name: 'Reports',
+      component:Reports,
       meta: {
         requiresAuth: false
       }

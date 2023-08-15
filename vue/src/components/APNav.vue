@@ -4,8 +4,9 @@
               <li><router-link :to="{name: 'AdminHome' }">Menu Items</router-link></li>
               <li><router-link :to="{name: 'Ingredients' }">Ingredients</router-link></li>
               <!-- TODO Implement Reports page and add link -->
-              <li>Reports</li>
-              <li><button id="logoutBtn">Logout</button></li>
+              <li><router-link :to="{name: 'Reports'}">Reports</router-link></li>
+              <!-- <li><button id="logoutBtn">Logout</button></li> -->
+              <li><router-link id="logoutBtn" :to="{name: 'Logout'}">Log Out</router-link></li>
           </ul>
       </nav>
 </template>
@@ -31,4 +32,5 @@ a:link, a:visited {
 a:hover, a:active {
     color: #75e8e7;
 }
+
 </style>

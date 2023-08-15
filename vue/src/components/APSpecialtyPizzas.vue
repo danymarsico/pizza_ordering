@@ -51,7 +51,8 @@ export default {
 
 <style>
 tbody {
-  background-color:#64379f
+  background-color:#64379f;
+  border-radius: 30px;
 }
 button {
   margin-top: 8px;
