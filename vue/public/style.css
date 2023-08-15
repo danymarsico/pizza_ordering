@@ -2,15 +2,10 @@
 
 
 body {
-  /* display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  justify-content: center; */
-  text-align: center;
-  width: 80vw;
+  display: flex;
+  justify-content: center;
   background-color: #27104E;
-  padding: 0px;
-  /* margin-left: 200px; */
+ 
 }
 
 

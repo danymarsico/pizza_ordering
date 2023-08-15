@@ -30,7 +30,7 @@ export default {
     display: flex;
     flex-direction: column;
     border: solid 3px #75e8e7;
-    border-radius: 30px;
+    border-radius: 25px;
     background-image: url('../assets/planets-moon-vaporwave-Favim.com-7224376.gif');
     background-size: cover;
     padding: 0px 0px 77px 0px;
