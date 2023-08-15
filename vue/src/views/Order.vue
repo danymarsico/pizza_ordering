@@ -137,7 +137,7 @@
               Selected size: {{ selectedSize }} <br />
               Selected crust: {{ selectedCrust }} <br />
               Selected sauce: {{ selectedSauce }} <br />
-              Selected Toppings: {{ selectedToppings }} <br />
+              Selected Toppings: {{ toppingsToString }} <br />
               <br />
               <br />
               Subtotal: {{ subtotal.toFixed(2) }}
@@ -245,7 +245,16 @@ export default {
       return (
         this.sizePrice + this.crustPrice + this.saucePrice + this.toppingPrices
       );
+      
     },
+    toppingsToString () {
+      let toppings = '';
+      this.selectedToppings.forEach(topping => {
+        toppings += topping + ', ';
+      });
+      toppings = toppings.substring(0, toppings.length-2);
+      return toppings
+    }
     // toppingToString() {
     //     this.selectedToppings.forEach(topping => {
     //       this.toppingString += topping + ', ';
