@@ -161,7 +161,7 @@ import CustNav from "../components/CustNav.vue";
 export default {
   data() {
     return {
-      selectedPizza: "",
+      selectedPizza: "Custom Pizza",
       selectedToppings: [],
       selectedSize: "",
       selectedCrust: "",
@@ -277,12 +277,12 @@ export default {
     // }
   },
   created() {
-    if(this.selectedPizza === ''){
-      this.selectedPizza = 'Custom Pizza'
-    }
     this.selectedPizza = this.$route.params.selectedPizza;
     //TODO These are hardcoded statements but ideally would be a dynamic function that pull the
     //toppings of the selectedPizza based either on its name or ID
+    
+  },
+  mounted () {
     if (this.selectedPizza === "The Butcher") {
       this.selectedToppings =
         this.$store.state.specialtyPizzas[0].specialtyToppings;
@@ -299,7 +299,13 @@ export default {
       this.selectedToppings =
         this.$store.state.specialtyPizzas[3].specialtyToppings;
     }
-  },
+    if(this.selectedPizza != 'The Butcher' && 
+       this.selectedPizza != 'The G.O.A.T.' &&
+       this.selectedPizza != 'O.G. NAMELESS' &&
+       this.selectedPizza != 'Playlist Deluxe') {
+         this.selectedPizza = 'Custom Pizza'
+       }
+  }
 };
 </script>
 <style scoped>
