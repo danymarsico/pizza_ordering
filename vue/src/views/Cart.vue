@@ -54,6 +54,7 @@ h1 {
   padding: 10px;
 }
 button {
+    background-image: linear-gradient(231deg,#e982df,#2099ff);
     width: 150px;
     text-decoration: none;
     color: #64379f;
