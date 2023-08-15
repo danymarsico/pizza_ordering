@@ -258,6 +258,9 @@ export default {
     // }
   },
   created() {
+    if(this.selectedPizza === ''){
+      this.selectedPizza = 'Custom Pizza'
+    }
     this.selectedPizza = this.$route.params.selectedPizza;
     //TODO These are hardcoded statements but ideally would be a dynamic function that pull the
     //toppings of the selectedPizza based either on its name or ID
@@ -278,11 +281,6 @@ export default {
         this.$store.state.specialtyPizzas[3].specialtyToppings;
     }
   },
-  mounted() {
-    if(this.selectedPizza === ""){
-    this.selectedPizza = "Custom Pizza";
-    }
-  }
 };
 </script>
 <style scoped>
