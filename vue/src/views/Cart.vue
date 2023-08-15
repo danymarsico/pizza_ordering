@@ -4,6 +4,11 @@
       <Cust-nav />
       <div id="main-section">
           <h1>Your Cart</h1>
+          <div>
+              <h2>
+                  Your Cart Is Currently Empty
+              </h2>
+          </div>
           <div id="pizza" v-for="pizza in $store.state.cart" v-bind:key="pizza">
               <h2>
              Pizza Name: {{pizza.pizzaName}} | Size: {{pizza.pizzaSize}} | Crust: {{pizza.pizzaCrust}} | Sauce: {{pizza.pizzaSauce}} | Toppings: {{pizza.selectedToppings}}              <br>
@@ -20,7 +25,12 @@
 import Header from '../components/Header.vue'
 import CustNav from '../components/CustNav.vue'
 export default {
-    components: { Header, CustNav }
+    components: { Header, CustNav },
+    data() {
+        return {
+            hasOrder: false,
+        }
+    }
 }
 </script>
 

@@ -167,6 +167,7 @@ export default {
       selectedCrust: "",
       selectedSauce: "",
       additionalInfo: "",
+      toppingString: ''
     };
   },
   components: {
@@ -245,6 +246,12 @@ export default {
         this.sizePrice + this.crustPrice + this.saucePrice + this.toppingPrices
       );
     },
+    // toppingToString() {
+    //     this.selectedToppings.forEach(topping => {
+    //       this.toppingString += topping + ', ';
+    //     })
+    //     return this.toppingString;
+    //   }
     //Deprecated function
     // calculateSubtotal(){
     //   let subtotal = 0;
