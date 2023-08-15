@@ -60,14 +60,16 @@ button {
     color: #64379f;
     font-family: fantasy;
     font-weight: lighter;
-    text-shadow: 6px 4px #75e8e7;
+    text-shadow: 4px 3px #75e8e7;
     letter-spacing: 2pt;
     font-size: 16pt;
+    padding: 10px;
 }
 button:hover, button:active {
     color: #75e8e7;
-    text-shadow: 6px 4px #64379f;
+    text-shadow: 5px 3px #64379f;
         -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0089fa;
+  padding: 10px;
 }
 </style>
