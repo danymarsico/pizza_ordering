@@ -103,10 +103,16 @@ button{
   margin: -5px 0px 0px 0px;
   font-family: fantasy;
   font-size: 18pt;
-  letter-spacing: 1pt;
-  color: #27104e;
-  font-weight: bold;
-  text-shadow: 1px 1px #75e8e7;
+  letter-spacing: 2pt;
+  color: #492586;
+  font-weight: lighter;
+  text-shadow: 3px 2px #75e8e7;
   padding: 10px;
+}
+button:hover, button:active {
+    color: #75e8e7;
+    text-shadow: 6px 4px #492586;
+        -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0089fa;
 }
 </style>

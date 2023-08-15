@@ -88,6 +88,21 @@ export default {
     padding: 10px;
     margin-right: 8px;
   }
+   button {
+    text-decoration: none;
+    color: #492586;
+    font-family: fantasy;
+    font-weight: lighter;
+    text-shadow: 4px 3px #75e8e7;
+    letter-spacing: 2pt;
+    font-size: 24pt;
+}
+button:hover, button:active {
+    color: #75e8e7;
+    text-shadow: 4px 3px #492586;
+        -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0089fa;
+}
   
   </style>
 
