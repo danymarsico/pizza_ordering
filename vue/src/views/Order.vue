@@ -97,6 +97,7 @@
                     class="checkbox"
                     v-bind:value="topping.toppingName"
                     v-model="selectedToppings"
+                    :disabled="disableCheckboxes"
                   />
                   <label>{{ topping.toppingName }}</label>
                 </div>
@@ -113,6 +114,7 @@
                     class="checkbox"
                     v-bind:value="topping.toppingName"
                     v-model="selectedToppings"
+                    
                   />
                   <label>{{ topping.toppingName }}</label>
                 </div>
@@ -253,6 +255,13 @@ export default {
       });
       toppings = toppings.substring(0, toppings.length-2);
       return toppings
+    },
+    disableCheckboxes() {
+      let disabled = false;
+      if(this.selectedPizza != 'Custom Pizza') {
+        disabled = true;
+      }
+      return disabled;
     }
     // toppingToString() {
     //     this.selectedToppings.forEach(topping => {
