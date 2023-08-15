@@ -43,19 +43,21 @@ export default {
 
 .group {
     margin: 25px;
-    text-shadow: #75e8e7 3px 0 5px;
+    text-shadow: #9854cb 3px 0 5px;
 }
 
 h2 {
   color: #27104e;
   font-size: 30px;
   font-family: Verdana;
+  text-shadow: #75e8e7 3px 0 5px;
 }
 
 p {
-  color: #27104e;
+  color: black;
   font-size: 25px;
   font-family: Verdana;
+  
 }
 button {
     background-image: linear-gradient(231deg,#75e8e7,#2099ff);
