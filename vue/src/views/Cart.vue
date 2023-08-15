@@ -36,9 +36,15 @@ export default {
 
 <style scoped>
 h1 {
-    text-align: center;
-    color: #75e8e7;
-    font-size: 50px;
+  text-align: center;
+  color: #75e8e7;
+  font-size: 75px;
+  font-family: monospace;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-shadow: 1px 0px 10px whitesmoke;
+  letter-spacing: 2pt;
+  margin-top: 0;
 }
 #main-section {
   display: flex;
