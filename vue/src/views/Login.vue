@@ -15,7 +15,7 @@
           Thank you for registering, please sign in.
         </div>
         <div id="input-container">
-          <h1>Please Log In</h1>
+          <h1>Let's Get This Party Started</h1>
           <div class="form-input-group">
             <input
               type="text"
@@ -35,11 +35,11 @@
               required
             />
             <div>
-            <button type="submit">Sign in</button>
+            <button type="submit">Transcend</button>
             </div>
             <p>
               <router-link id="signUp" :to="{ name: 'Register' }"
-                >Need an account? Sign up.</router-link
+                >Need an account? Register now!</router-link
               >
             </p>
             

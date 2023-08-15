@@ -17,7 +17,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #apNav {
     margin:5px 20px 5px 20px;
     border: solid 3px #75E8E7;

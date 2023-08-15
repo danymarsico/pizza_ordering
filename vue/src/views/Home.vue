@@ -9,14 +9,14 @@
           <img src="../assets/neonsign-home.jpg">
         </div>
         <div>
-          <h3 class="text-blurb">Step into the neon-drenched realm of N*A*M*E*L*E*S*S*Π Pizza, where culinary innovation merges with retro-futuristic aesthetics! Our menu invites you on an exhilarating journey through time, presenting a symphony of flavors that pay homage to the neon-soaked nostalgia of yesteryears. Savor "The Butcher," a carnivore's delight featuring a tantalizing blend of cheeses, pepperoni, sausage, ham, and prosciutto, all dancing harmoniously atop a perfectly baked crust. Embark on a voyage of taste as you explore the "Create Your Own" option, where you wield the power to curate your very own pixel-perfect pizza masterpiece. Immerse yourself in this gastronomic pixel paradise and uncover the full menu by visiting our Menu page – an extraordinary vaporwave-inspired pizza experience awaits with just a click!</h3>
-          <router-link :to="{name: 'Menu'}"><button>Teleport me to the menu</button></router-link>
+          <h3 class="text-blurb">Experience NAMELESSΠ Pizza's neon world, where culinary innovation meets retro-futuristic style! Our menu takes you on a flavorful journey through time, with a symphony of tastes that evoke nostalgic neon vibes. Try "The Butcher," a carnivore's dream with cheeses, pepperoni, sausage, ham, and prosciutto on a perfect crust. Customize your own pixel-perfect pizza with "Create Your Own." Explore the full menu on our vaporwave-inspired Menu page. Click to immerse yourself in this unique pizza experience!</h3>
+          <router-link :to="{name: 'Menu'}"><button>Teleport Me To The Menu</button></router-link>
         </div>
       </div>
       <div id="group2" class="group-container">
         <div>
           <h3 class="text-blurb">If you've graced our pixelated realm before, welcome back, fellow traveler of the digital cosmos! Consider yourself part of the elite vanguard. Skip the introductory stardust and journey straight to the pulsating heart of flavor – our Order Now page. Synthwave through the formalities and dive headfirst into the neon-tinted symphony of taste.</h3>
-          <router-link :to="{name: 'Order'}"><button>I want pizza NOW</button></router-link>
+          <router-link :to="{name: 'Order'}"><button>I Want Pizza NOW</button></router-link>
         </div>
         <div id="second-img" >
           <img src="../assets/pizzanbeer.png">
@@ -29,13 +29,13 @@
         </div>
         <div>
           <h3 class="text-blurb">Venture beyond the neon horizon and explore the genesis of our cosmic pizzeria on the Backstory page. Unearth the legend of our visionary founder, Frank Franklin, as he forged a path through the digital cosmos to create an epochal pixelated pizzeria experience. Embark on this vaporwave odyssey and let the pixels of our past illuminate your present.</h3>
-          <router-link :to="{name: 'Story'}"><button>Travel back in time</button></router-link>
+          <router-link :to="{name: 'Story'}"><button>Travel Back In Time</button></router-link>
         </div>
       </div>
       <div id="group4" class="group-container">
         <div>
           <h3 class="text-blurb">Dare to ride the neon wave of culinary innovation and reshape the pizza universe with us? Seek the path to pixelated enlightenment and unravel the mysteries of flavor on our Contact Info page. Whether you're a renegade taste explorer or simply want to drop a virtual hi-fi, this is your portal to the vaporwave frontier. Embrace the glitch, ride the vibe, and let's reshape the gastronomic cosmos together.</h3>
-          <router-link :to="{name: 'Contact'}"><button>Let's disrupt the pizza ecosystem</button></router-link>
+          <router-link :to="{name: 'Contact'}"><button>Let's Disrupt The Pizza Ecosystem</button></router-link>
         </div>
         <div id="fourth-img" >
           <img src="../assets/callus-home.gif">
@@ -86,7 +86,7 @@ export default {
   border: ridge 3px #75e8e7;
   border-radius: 25px;
   padding: 15px;
-  width: 800px;
+  width: 40vw;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
 }
@@ -107,7 +107,7 @@ button{
   color: #492586;
   font-weight: lighter;
   text-shadow: 3px 2px #75e8e7;
-  padding: 10px;
+  padding: 12px;
 }
 button:hover, button:active {
     color: #75e8e7;
