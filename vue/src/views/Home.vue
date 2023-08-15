@@ -25,7 +25,7 @@
       </div>
       <div id="group3" class="group-container">
         <div id="third-img" >
-          <img src="../assets/Frank-Franklin.jpg">
+          <img src="../assets/therealfrankfranklin.png">
         </div>
         <div>
           <h3 class="text-blurb">Venture beyond the neon horizon and explore the genesis of our cosmic pizzeria on the Backstory page. Unearth the legend of our visionary founder, Frank Franklin, as he forged a path through the digital cosmos to create an epochal pixelated pizzeria experience. Embark on this vaporwave odyssey and let the pixels of our past illuminate your present.</h3>
