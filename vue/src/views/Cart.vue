@@ -4,7 +4,7 @@
       <Cust-nav />
       <div id="main-section">
           <h1>Your Cart</h1>
-          <div>
+          <div v-show="$store.state.cart.length === 0">
               <h2>
                   Your Cart Is Currently Empty
               </h2>
@@ -28,9 +28,9 @@ export default {
     components: { Header, CustNav },
     data() {
         return {
-            hasOrder: false,
+            isEmpty: true
         }
-    }
+    },
 }
 </script>
 
