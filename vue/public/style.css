@@ -2,7 +2,15 @@
 
 
 body {
-    background-color: #27104E;
+  /* display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center; */
+  text-align: center;
+  width: 80vw;
+  background-color: #27104E;
+  padding: 0px;
+  /* margin-left: 200px; */
 }
 
 
