@@ -1,11 +1,11 @@
 <template>
   <div>
     <div id="pizzaCard">
-      <div class="group">
+      <div class="group1">
         <img :src="pizza.imgsrc" width="200" alt="" />
       </div>
 
-      <div class="group">
+      <div class="group2">
         <h2>{{pizza.pizzaName}}</h2>
         <p>{{pizza.desc}}</p>
         <p>Comes with: {{toppingsToString}}</p>
@@ -49,52 +49,56 @@ export default {
 #pizzaCard {
   display: flex;
   margin: 15px 92px 15px 92px;
-  border: 2px solid red;
   justify-content: space-evenly;
-  border: solid 3px #75e8e7;
-  border-radius: 30px;
-  background-image: linear-gradient(231deg,#e982df, #2099ff);
+  background-image: linear-gradient(231deg,#e982df,#2099ff);
+  color: #75e8e7;
+  background-color: #27104e;
+  border: ridge 3px #75e8e7;
+  border-radius: 25px;
+  padding: 15px;
+  /* width: 40vw; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
 }
-
-.group {
+.group2 {
     margin: 25px;
     text-shadow: #9854cb 3px 0 5px;
+    border: solid 3px #75e8e7;
+    padding: 20px;
+    border-radius: 25px;
+    /* background-color: #27104e; */
+     background-color: rgba(39, 16, 78, 0.7);
 }
-
 h2 {
-  color: #27104e;
+  color: #75e8e7;
   font-size: 30px;
   font-family: Verdana;
-  text-shadow: #75e8e7 3px 0 5px;
+  text-shadow: #2099ff 3px 0 5px;
 }
 
 p {
-  color: black;
+  color: #75e8e7;
   font-size: 25px;
   font-family: Verdana;
   
 }
 button {
-    background-image: linear-gradient(231deg,#75e8e7,#2099ff);
+    background-image: linear-gradient(231deg,#e982df,#2099ff);
     font-family: fantasy;
-    color: #27104e;
-    letter-spacing: 1px;
-    font-size: 15pt;
     padding: 10px;
     margin-left: 83%;
-  }
-  img {
-    margin-top: 50%;
-  }
-  button {
+    opacity: 1.0;
     text-decoration: none;
     color: #64379f;
-    font-family: fantasy;
     font-weight: lighter;
     text-shadow: 4px 3px #75e8e7;
     letter-spacing: 2pt;
     font-size: 18pt;
-}
+    opacity: 1.0;
+  }
+  img {
+    margin-top: 50%;
+  }
 button:hover, button:active {
     color: #75e8e7;
     text-shadow: 4px 3px #64379f;

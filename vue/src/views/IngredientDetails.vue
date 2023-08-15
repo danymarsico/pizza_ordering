@@ -30,7 +30,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 label {
     font-size: 25px;
     font-weight: bold;

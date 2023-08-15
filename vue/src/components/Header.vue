@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #header {
     background-image: url('../assets/banner.jpg');
     background-size: 100%;
@@ -25,6 +25,10 @@ export default {
     color: #75E8E7;
     margin: 20px;
     height: 400px;
+}
+#logo {
+    width: 75vw;
+    margin: -50px;
 }
 
 

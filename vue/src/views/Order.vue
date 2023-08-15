@@ -324,7 +324,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style>
 #main-section {
   display: flex;
   flex-direction: column;
@@ -368,7 +368,8 @@ h2 {
   font-size: 30px;
   text-align: center;
   text-decoration: underline;
-}
+  color: #75E8E7;
+  }
 #sauce-flex{
   display: flex;
   justify-content: center;
@@ -451,5 +452,10 @@ h2 {
   border: solid 3px #75E8E7;
   flex-grow: 1;
   padding: 10px;
+}
+label {
+    font-size: 25px;
+    font-weight: bold;
+    color: #75E8E7;
 }
 </style>

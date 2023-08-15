@@ -50,5 +50,11 @@ a:hover, a:active {
         -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0089fa;
 }
+#nav-list {
+    width: 90vw ;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
 
 </style>

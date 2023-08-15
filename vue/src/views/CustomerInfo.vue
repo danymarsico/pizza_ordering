@@ -100,7 +100,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 #container{
   background-image: url("../assets/cat-dj.gif");
   background-size: 50%;
