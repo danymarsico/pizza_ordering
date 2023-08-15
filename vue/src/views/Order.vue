@@ -347,9 +347,11 @@ h2 {
   text-shadow: 6px 4px #75E8E7;
   letter-spacing: 2pt;
   font-size: 18pt;
+  margin: 10px;
 }
 #sauce-radial {
   width: 10px;
+  transform: scale(3);
 }
 #toppings {
   display: flex;
