@@ -114,6 +114,7 @@
                     class="checkbox"
                     v-bind:value="topping.toppingName"
                     v-model="selectedToppings"
+                    :disabled="disableCheckboxes"
                     
                   />
                   <label>{{ topping.toppingName }}</label>
