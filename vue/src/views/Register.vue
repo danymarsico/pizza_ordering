@@ -3,7 +3,7 @@
     <Header />
     <div id="registration-container">
       <form @submit.prevent="register" id="reg-form">
-        <h1>Create Account</h1>
+        <h1>Who Are You, Really?</h1>
         <div role="alert" v-if="registrationErrors">
           {{ registrationErrorMsg }}
         </div>
@@ -36,10 +36,10 @@
             required
           />
         </div>
-        <button type="submit">Create Account</button>
+        <button type="submit">Join Our Pizza Empire</button>
         <p>
-          <router-link :to="{ name: 'Login' }"
-            >Already have an account? Log in.</router-link
+          <router-link id="HasAccount" :to="{ name: 'Login' }"
+            >Already Have An Account? Log In.</router-link
           >
         </p>
       </form>
@@ -131,9 +131,35 @@ label {
   align-items: center;
   flex-direction: column;
   padding: 15px;
-  width: 25vw;
+  width: 40vw;
   background-color: #64379f;
   border-radius: 15px;
-  border: solid 3px #75e8e7;
+  color: #75e8e7;
+  background-color: #27104e;
+  border: ridge 3px #75e8e7;
+  border-radius: 25px;
+  font-family: monospace;
+  font-weight: lighter;
+  text-shadow: 1px 1px #f31b83;
+}
+#HasAccount {
+   color: #75e8e7;
+}
+button{
+  background-image: linear-gradient(231deg,#e982df,#2099ff);
+  margin: 5px;
+  font-family: fantasy;
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  color: #492586;
+  font-weight: lighter;
+  text-shadow: 3px 2px #75e8e7;
+  padding: 10px;
+}
+h1 {
+  margin-bottom: 30px;
+}
+#confirmPassword {
+  margin-bottom: 10px;
 }
 </style>
