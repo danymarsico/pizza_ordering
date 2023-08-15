@@ -11,12 +11,18 @@
         <img src="../assets/pizza-champion.jpg" class="pizza-slides" />
         <!-- <button>&#10094;</button>
         <button>&#10095;</button> -->
-        <div class="text">
-            <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-            recusandae corrupti ducimus dicta delectus nemo, maiores a nisi
-            aliquid necessitatibus omnis itaque dolore nostrum debitis incidunt
-            error temporibus. Possimus, quaerat?
+        <div id="text-container">
+            <p class="text">
+            text 1
+            </p>
+            <p class="text">
+            text 2
+            </p>
+            <p class="text">
+            text 3
+            </p>
+            <p class="text">
+            text 4
             </p>
         </div>
       </div>
@@ -40,8 +46,10 @@ export default {
     carousel(){
 
       let slides = document.getElementsByClassName("pizza-slides");
+      let text = document.getElementsByClassName("text");
       for(let i = 0; i < slides.length; i++){
         slides[i].style.display = "none";
+        text[i].style.display = "none";
       }
 
       slideIndex++;
@@ -49,6 +57,7 @@ export default {
          slideIndex = 1
          }
       slides[slideIndex -1].style.display = "block";
+      text[slideIndex -1].style.display = "block";
       setTimeout(this.carousel, 8000);
 
     }
@@ -76,17 +85,18 @@ export default {
 }
 #img-container {
   margin: 25px;
+  border: solid 3px #75e8e7;
+  border-radius: 25px;
   width: 80vw;
-  
+  height: 800px;
+  overflow: hidden;
   flex-grow: 1;
   position: relative;
 }
-img {
-  width: 80vw;
-  border: solid 3px #75e8e7;
-  border-radius: 25px;
-  height: 600px;
+img{
+  width:100%;
 }
+
 h1 {
   color: #75e8e7;
   font-size: 75px;
@@ -96,7 +106,7 @@ h1 {
   text-shadow: 1px 0px 10px whitesmoke;
   letter-spacing: 2pt;
 }
-.text {
+#text-container {
   color: white;
   width:50%;
   position: absolute;
