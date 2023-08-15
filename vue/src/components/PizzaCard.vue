@@ -33,7 +33,7 @@ export default {
 <style scoped>
 #pizzaCard {
   display: flex;
-  margin: 10px;
+  margin: 15px 92px 15px 92px;
   border: 2px solid red;
   justify-content: space-evenly;
   border: solid 3px #75e8e7;

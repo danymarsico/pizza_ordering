@@ -87,6 +87,8 @@ export default {
   border-radius: 25px;
   padding: 15px;
   width: 800px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
 }
 
 .group-container img{
@@ -99,7 +101,7 @@ export default {
 button{
   background-image: linear-gradient(231deg,#e982df,#2099ff);
   margin: -50px 0px 0px 0px;
-  font-family: Gerogia;
+  font-family: Georgia;
   font-size: 13pt;
   color: #27104e;
   font-weight: bold;

@@ -3,7 +3,7 @@
     <Header />
     <Cust-nav />
     <div id="story-main" >
-      <h1>Our Story</h1>
+      <h1>Backstory</h1>
       <div id="img-container">
         <img src="../assets/pizza-shop.jpg" class="pizza-slides" />
         <img src="../assets/pizza-shop2.jpg" class="pizza-slides" />
@@ -72,6 +72,7 @@ export default {
   height: 100%;
   background-image: url("../assets/planets-moon-vaporwave-Favim.com-7224376.gif");
   background-size: cover;
+  text-underline-offset: 17px;
 }
 #img-container {
   margin: 25px;
@@ -88,7 +89,12 @@ img {
 }
 h1 {
   color: #75e8e7;
-  font-size: 50px;
+  font-size: 75px;
+  font-family: monospace;
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-shadow: 1px 0px 10px whitesmoke;
+  letter-spacing: 2pt;
 }
 .text {
   color: white;
