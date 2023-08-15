@@ -49,11 +49,13 @@ export default {
 h2 {
   color: #27104e;
   font-size: 30px;
+  font-family: Verdana;
 }
 
 p {
   color: #27104e;
   font-size: 25px;
+  font-family: Verdana;
 }
 button {
     background-image: linear-gradient(231deg,#75e8e7,#2099ff);

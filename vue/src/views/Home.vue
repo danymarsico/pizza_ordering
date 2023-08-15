@@ -87,7 +87,7 @@ export default {
   border-radius: 25px;
   padding: 15px;
   width: 800px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: lighter;
 }
 
@@ -100,11 +100,13 @@ export default {
 
 button{
   background-image: linear-gradient(231deg,#e982df,#2099ff);
-  margin: -50px 0px 0px 0px;
-  font-family: Georgia;
-  font-size: 13pt;
+  margin: -5px 0px 0px 0px;
+  font-family: fantasy;
+  font-size: 18pt;
+  letter-spacing: 1pt;
   color: #27104e;
   font-weight: bold;
   text-shadow: 1px 1px #75e8e7;
+  padding: 10px;
 }
 </style>
