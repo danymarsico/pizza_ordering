@@ -132,14 +132,12 @@ label {
   flex-direction: column;
   padding: 15px;
   width: 40vw;
-  background-color: #64379f;
   border-radius: 15px;
   color: #75e8e7;
   background-color: #27104e;
   border: ridge 3px #75e8e7;
   border-radius: 25px;
   font-family: monospace;
-  font-weight: lighter;
   text-shadow: 1px 1px #f31b83;
 }
 #HasAccount {
@@ -155,6 +153,10 @@ button{
   font-weight: lighter;
   text-shadow: 3px 2px #75e8e7;
   padding: 10px;
+}
+button:hover, button:active {
+    color: #75e8e7;
+    text-shadow: 4px 3px #492586;
 }
 h1 {
   margin-bottom: 30px;

@@ -15,7 +15,7 @@
           Thank you for registering, please sign in.
         </div>
         <div id="input-container">
-          <h1>Please Sign In</h1>
+          <h1>Please Log In</h1>
           <div class="form-input-group">
             <input
               type="text"
@@ -34,12 +34,15 @@
               placeholder="Password"
               required
             />
+            <div>
+            <button type="submit">Sign in</button>
+            </div>
             <p>
-              <router-link :to="{ name: 'Register' }"
+              <router-link id="signUp" :to="{ name: 'Register' }"
                 >Need an account? Sign up.</router-link
               >
             </p>
-            <button type="submit">Sign in</button>
+            
           </div>
           
           
@@ -105,7 +108,9 @@ export default {
 
 <style scoped>
 h1 {
-  color: #27104e;
+  color: #75e8e7;
+  font-family: monospace;
+  text-shadow: 1px 1px #f31b83;
   text-align: center;
 }
 .form-input-group {
@@ -119,8 +124,9 @@ h1 {
   flex-direction: column;
   padding: 15px;
   height: 200px;
-  background-color: #64379f;
-  border-radius: 15px;
+  background-color: #27104e;
+  border-radius: 25px;
+  margin: 20px;
   border: solid 3px #75e8e7;
   
 }
@@ -145,6 +151,27 @@ label {
   margin: 20px;
   border: solid 3px #75e8e7;
   height: 600px;
+}
+#signUp {
+  color: #75e8e7;
+  font-family: monospace;
+  text-shadow: 1px 1px #f31b83;
+  text-align: center;
+}
+button{
+  background-image: linear-gradient(231deg,#e982df,#2099ff);
+  margin-top: 20px;
+  font-family: fantasy;
+  font-size: 12pt;
+  letter-spacing: 2pt;
+  color: #492586;
+  font-weight: lighter;
+  text-shadow: 3px 2px #75e8e7;
+  padding: 8px;
+}
+button:hover, button:active {
+    color: #75e8e7;
+    text-shadow: 4px 3px #492586;
 }
 
 </style>
