@@ -4,12 +4,12 @@
       <Cust-nav />
       <div id="main-section">
           <h1>Your Cart</h1>
-          <div v-show="$store.state.cart.length === 0">
+          <div class="pizza" v-show="$store.state.cart.length === 0">
               <h2>
-                  Your Cart Is Currently Empty
+                  Empty Flavor Space
               </h2>
           </div>
-          <div id="pizza" v-for="pizza in $store.state.cart" v-bind:key="pizza">
+          <div class="pizza" v-for="pizza in $store.state.cart" v-bind:key="pizza">
               <h2>
              Pizza Name: {{pizza.pizzaName}} | Size: {{pizza.pizzaSize}} | Crust: {{pizza.pizzaCrust}} | Sauce: {{pizza.pizzaSauce}} | Toppings: {{pizza.selectedToppings}}              <br>
               Price: {{pizza.price}}
@@ -17,6 +17,11 @@
           </div>
           <router-link :to="{name: 'Order'}"><button>Order More</button></router-link>
           <router-link :to="{name: 'Order'}"><button>Pay Now</button></router-link>
+          <div id="total">
+              <h2>
+                  Your Total is : {{calculateTotal}}
+              </h2>
+          </div>
       </div>
   </div>
 </template>
@@ -31,6 +36,15 @@ export default {
             isEmpty: true
         }
     },
+    computed: {
+        calculateTotal() {
+            let total = 0.00;
+            this.$store.state.cart.forEach(item => {
+                total += item.price;
+            });
+            return total
+        }
+    }
 }
 </script>
 
@@ -59,7 +73,7 @@ h1 {
   border: solid 3px #75e8e7;
   padding: 20px;
 }
-#pizza {
+.pizza {
     display: flex;
   justify-content: center;
   align-items: center;
