@@ -8,7 +8,7 @@
       <div class="group">
         <h2>{{pizza.pizzaName}}</h2>
         <p>{{pizza.desc}}</p>
-        <p>Comes with: {{pizza.specialtyToppings}}</p>
+        <p>Comes with: {{toppingsToString}}</p>
         <p>Starting from: ${{pizza.price}}</p>
         <button @click="selectPizza(pizza)">Order Now</button>
       </div>
@@ -19,12 +19,27 @@
 
 <script>
 export default {
+  data() {
+    return {
+      toppings: ''
+    }
+  },
   props: {
     pizza: Object,
   },
   methods: {
     selectPizza(pizza) {
       this.$router.push({name: 'Order', params: { selectedPizza: pizza.pizzaName}});
+    }
+  },
+  computed : {
+    toppingsToString () {
+      let toppings = '';
+      this.pizza.specialtyToppings.forEach(topping => {
+        toppings += topping + ', ';
+      });
+      toppings = toppings.substring(0, toppings.length-2);
+      return toppings
     }
   }
 };
