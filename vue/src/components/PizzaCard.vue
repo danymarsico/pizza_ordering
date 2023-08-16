@@ -89,7 +89,7 @@ button {
     margin-left: 83%;
     opacity: 1.0;
     text-decoration: none;
-    color: #64379f;
+    color: #492586;
     font-weight: lighter;
     text-shadow: 4px 3px #75e8e7;
     letter-spacing: 2pt;

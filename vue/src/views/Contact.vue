@@ -118,18 +118,9 @@ h3 {
   margin: 50px;
   margin-bottom: 25px;
   margin-top: 25px;
-  text-shadow: 6px 4px #75e8e7;
+  text-shadow: 4px 3px #75e8e7;
   width: 50%;
 }
-/* h1 {
-  color: #75e8e7;
-  font-size: 75px;
-  font-family: monospace;
-  text-decoration-line: underline;
-  text-decoration-style: wavy;
-  text-shadow: 1px 0px 10px whitesmoke;
-  letter-spacing: 2pt;
-} */
 form {
   font-family: fantasy;
   margin: 50px;
@@ -138,27 +129,22 @@ form {
 }
 label {
   color: #64379f;
-  text-shadow: 6px 4px #75e8e7;
+  text-shadow: 2px 1px #75e8e7;
   letter-spacing: 1px;
 }
 
 button {
   background-image: linear-gradient(231deg, #e982df, #2099ff);
   font-family: fantasy;
-  color: #27104e;
-  letter-spacing: 1px;
   font-size: 24pt;
   padding: 10px;
   margin-right: 8px;
-}
-button {
   text-decoration: none;
   color: #492586;
-  font-family: fantasy;
   font-weight: lighter;
   text-shadow: 4px 3px #75e8e7;
   letter-spacing: 2pt;
-  font-size: 24pt;
+  border: solid 1px #9854cb
 }
 button:hover,
 button:active {

@@ -115,7 +115,6 @@
                     v-bind:value="topping.toppingName"
                     v-model="selectedToppings"
                     :disabled="disableCheckboxes"
-                    
                   />
                   <label>{{ topping.toppingName }}</label>
                 </div>
@@ -150,7 +149,12 @@
             type="submit"
             value="Submit"
             @click.prevent="setCurrentPizzaInfo()"
-            :disabled="!selectedPizza || !selectedSize || !selectedCrust || !selectedSauce"
+            :disabled="
+              !selectedPizza ||
+              !selectedSize ||
+              !selectedCrust ||
+              !selectedSauce
+            "
             title="Please select at least a size, sauce, and crust type in order to submit"
           />
         </div>
@@ -185,28 +189,28 @@ export default {
         selectedToppings: this.selectedToppings,
         selectedPizza: this.selectedPizza,
         additionalInfo: this.additionalInfo,
-        price: this.subtotal
+        price: this.subtotal,
       });
-      this.$router.push('/cart')
+      this.$router.push("/cart");
     },
     selectToppings() {
       if (this.selectedPizza === "The Butcher") {
-      this.selectedToppings =
-        this.$store.state.specialtyPizzas[0].specialtyToppings;
-    }
-    if (this.selectedPizza === "The G.O.A.T.") {
-      this.selectedToppings =
-        this.$store.state.specialtyPizzas[1].specialtyToppings;
-    }
-    if (this.selectedPizza === "O.G. NAMELESS") {
-      this.selectedToppings =
-        this.$store.state.specialtyPizzas[2].specialtyToppings;
-    }
-    if (this.selectedPizza === "Playlist Deluxe") {
-      this.selectedToppings =
-        this.$store.state.specialtyPizzas[3].specialtyToppings;
-    }
-    }
+        this.selectedToppings =
+          this.$store.state.specialtyPizzas[0].specialtyToppings;
+      }
+      if (this.selectedPizza === "The G.O.A.T.") {
+        this.selectedToppings =
+          this.$store.state.specialtyPizzas[1].specialtyToppings;
+      }
+      if (this.selectedPizza === "O.G. NAMELESS") {
+        this.selectedToppings =
+          this.$store.state.specialtyPizzas[2].specialtyToppings;
+      }
+      if (this.selectedPizza === "Playlist Deluxe") {
+        this.selectedToppings =
+          this.$store.state.specialtyPizzas[3].specialtyToppings;
+      }
+    },
   },
   computed: {
     regularToppings() {
@@ -247,23 +251,22 @@ export default {
       return (
         this.sizePrice + this.crustPrice + this.saucePrice + this.toppingPrices
       );
-      
     },
-    toppingsToString () {
-      let toppings = '';
-      this.selectedToppings.forEach(topping => {
-        toppings += topping + ', ';
+    toppingsToString() {
+      let toppings = "";
+      this.selectedToppings.forEach((topping) => {
+        toppings += topping + ", ";
       });
-      toppings = toppings.substring(0, toppings.length-2);
-      return toppings
+      toppings = toppings.substring(0, toppings.length - 2);
+      return toppings;
     },
     disableCheckboxes() {
       let disabled = false;
-      if(this.selectedPizza != 'Custom Pizza') {
+      if (this.selectedPizza != "Custom Pizza") {
         disabled = true;
       }
       return disabled;
-    }
+    },
     // toppingToString() {
     //     this.selectedToppings.forEach(topping => {
     //       this.toppingString += topping + ', ';
@@ -305,9 +308,8 @@ export default {
     this.selectedPizza = this.$route.params.selectedPizza;
     //TODO These are hardcoded statements but ideally would be a dynamic function that pull the
     //toppings of the selectedPizza based either on its name or ID
-    
   },
-  mounted () {
+  mounted() {
     if (this.selectedPizza === "The Butcher") {
       this.selectedToppings =
         this.$store.state.specialtyPizzas[0].specialtyToppings;
@@ -324,13 +326,15 @@ export default {
       this.selectedToppings =
         this.$store.state.specialtyPizzas[3].specialtyToppings;
     }
-    if(this.selectedPizza != 'The Butcher' && 
-       this.selectedPizza != 'The G.O.A.T.' &&
-       this.selectedPizza != 'O.G. NAMELESS' &&
-       this.selectedPizza != 'Playlist Deluxe') {
-         this.selectedPizza = 'Custom Pizza'
-       }
-  }
+    if (
+      this.selectedPizza != "The Butcher" &&
+      this.selectedPizza != "The G.O.A.T." &&
+      this.selectedPizza != "O.G. NAMELESS" &&
+      this.selectedPizza != "Playlist Deluxe"
+    ) {
+      this.selectedPizza = "Custom Pizza";
+    }
+  },
 };
 </script>
 <style scoped>
@@ -338,10 +342,10 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #9854CB;
+  background-color: #9854cb;
   border-radius: 25px;
   margin: 20px;
-  border: solid 3px #75E8E7;
+  border: solid 3px #75e8e7;
   height: 100%;
   background-image: url("../assets/planets-moon-vaporwave-Favim.com-7224376.gif");
   background-size: cover;
@@ -353,9 +357,9 @@ export default {
   height: auto;
   width: 100;
   justify-content: space-evenly;
-  background-color: #64379F;
+  background-color: #64379f;
   border-radius: 15px;
-  border: solid 3px #75E8E7;
+  border: solid 3px #75e8e7;
 }
 .selection {
   width: 200px;
@@ -369,33 +373,34 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #64379F;
+  background-color: #64379f;
   border-radius: 15px;
-  border: solid 3px #75E8E7;
+  border: solid 3px #75e8e7;
 }
 h2 {
   font-size: 30px;
   text-align: center;
-  text-decoration: underline;
-  color: #75E8E7;
-  }
-#sauce-flex{
+  /* text-decoration: underline; */
+  color: #75e8e7;
+  font-family: monospace;
+}
+#sauce-flex {
   display: flex;
   justify-content: center;
 }
 #sauce {
   padding: 10px;
   margin: 10px;
-  background-color: #DDACF5;
+  background-color: #ddacf5;
   border-radius: 15px;
-  border: solid 3px #75E8E7;
+  border: solid 3px #75e8e7;
 }
 #sauce label {
   text-decoration: none;
-  color: #64379F;
+  color: #64379f;
   font-family: fantasy;
   font-weight: lighter;
-  text-shadow: 6px 4px #75E8E7;
+  text-shadow: 6px 4px #75e8e7;
   letter-spacing: 2pt;
   font-size: 18pt;
   margin: 10px;
@@ -408,9 +413,9 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #64379F;
+  background-color: #64379f;
   border-radius: 15px;
-  border: solid 3px #75E8E7;
+  border: solid 3px #75e8e7;
   flex-grow: 1;
 }
 #topping-container {
@@ -423,29 +428,31 @@ h2 {
   display: flex;
   margin: 10px;
   padding: 10px;
-  background-color: #DDACF5;
+  background-color: #ddacf5;
   border-radius: 15px;
-  border: solid 3px #75E8E7;
+  border: solid 3px #75e8e7;
+  align-items: center;
 }
 .topping-list label {
   text-decoration: none;
-  color: #64379F;
+  color: #64379f;
   font-family: fantasy;
   font-weight: lighter;
-  text-shadow: 6px 4px #75E8E7;
+  text-shadow: 6px 4px #75e8e7;
   letter-spacing: 2pt;
   font-size: 18pt;
 }
 .checkbox {
   width: 30px;
+  transform: scale(1.75);
 }
 #instructions {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #64379F;
+  background-color: #64379f;
   border-radius: 15px;
-  border: solid 3px #75E8E7;
+  border: solid 3px #75e8e7;
   flex-grow: 1;
 }
 .instructions {
@@ -456,15 +463,34 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #64379F;
+  background-color: #64379f;
   border-radius: 15px;
-  border: solid 3px #75E8E7;
+  border: solid 3px #75e8e7;
   flex-grow: 1;
   padding: 10px;
 }
 label {
-    font-size: 25px;
-    font-weight: bold;
-    color: #75E8E7;
+  font-size: 25px;
+  font-weight: bold;
+  color: #75e8e7;
+  font-family: monospace;
+}
+input {
+  background-image: linear-gradient(231deg, #e982df, #2099ff);
+  margin-top: 20px;
+  font-family: fantasy;
+  font-size: 18pt;
+  letter-spacing: 2pt;
+  color: #492586;
+  font-weight: lighter;
+  text-shadow: 3px 2px #75e8e7;
+  padding: 8px;
+}
+input:hover,
+input:active {
+  color: #75e8e7;
+  text-shadow: 4px 3px #492586;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0089fa;
 }
 </style>

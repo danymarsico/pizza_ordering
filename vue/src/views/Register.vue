@@ -158,6 +158,8 @@ button{
 button:hover, button:active {
     color: #75e8e7;
     text-shadow: 4px 3px #492586;
+            -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0089fa;
 }
 h1 {
   margin-bottom: 30px;
