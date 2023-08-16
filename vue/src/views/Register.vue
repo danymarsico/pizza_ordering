@@ -128,10 +128,11 @@ label {
 #reg-form{
   display: flex;
   justify-content: center;
+  height: 275px;
   align-items: center;
   flex-direction: column;
   padding: 15px;
-  width: 40vw;
+  /* width: 40vw; */
   border-radius: 15px;
   color: #75e8e7;
   background-color: #27104e;
@@ -163,5 +164,8 @@ h1 {
 }
 #confirmPassword {
   margin-bottom: 10px;
+}
+p {
+  padding-bottom: 15px;
 }
 </style>

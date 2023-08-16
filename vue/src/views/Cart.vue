@@ -1,93 +1,94 @@
 <template>
   <div>
-      <Header />
-      <Cust-nav />
-      <div id="main-section">
-          <h1>Your Cart</h1>
-          <div class="pizza" v-show="$store.state.cart.length === 0">
-              <h2>
-                  Empty Flavor Space
-              </h2>
-          </div>
-          <div class="pizza" v-for="pizza in $store.state.cart" v-bind:key="pizza">
-              <h2>
-             Pizza Name: {{pizza.pizzaName}} | Size: {{pizza.pizzaSize}} | Crust: {{pizza.pizzaCrust}} | Sauce: {{pizza.pizzaSauce}} | Toppings: {{pizza.selectedToppings}}              <br>
-              Price: {{pizza.price}}
-              </h2>
-          </div>
-          <router-link :to="{name: 'Order'}"><button>Order More</button></router-link>
-          <button @click="showModal">Pay Now</button>
-          <div id="total">
-              <h2>
-                  Your Total is : $ {{calculateTotal}}
-              </h2>
-          </div>
-          <div id="modal-container" class="modal hide">
-      <span id="close" @click="hideModal">x</span>
-      <form>
-          <div>
-          <h2>First Name: {{customer.firstName}}</h2>
-          <h2>Last Name: {{customer.firstName}}</h2>
-          <h2>Street Address: {{customer.streetAddress}}</h2>
-          <h2>City: {{customer.city}}</h2>
-          <h2>Phone Number: {{customer.phoneNumber}}</h2>
-        </div>
-        <div>
-          <input
-            type="radio"
-            name="is-delivery"
-            class="delivery"
-            checked="checked"
-          />
-          <label for="delivery">Delivery</label>
-          <input type="radio" name="is-delivery" class="delivery" />
-          <label for="delivery">Carry Out</label>
-        </div>
-        <div>
-          <input
-            type="radio"
-            name="payment"
-            class="delivery"
-            checked="checked"
-          />
-          <label for="delivery">Pay Online</label>
-          <input type="radio" name="payment" class="delivery" />
-          <label for="delivery">Pay at Store</label>
-        </div>
-        <div id="cc-info">
-          <label for="credit-card">Credit Card Information</label>
-          <input
-            type="tel"
-            inputmode="numeric"
-            name="credit-card"
-            id="credit-card"
-            autocomplete="cc-number"
-            pattern="[0-9\s]{13,19}"
-            maxlength="19"
-            placeholder="xxxx xxxx xxxx xxxx"
-          />
-          <div>
-            <input
-              type="tel"
-              name="exp-month"
-              id=""
-              placeholder="Expiration Month"
-            />
-            <input
-              type="tel"
-              name="exp-year"
-              id=""
-              placeholder="Expiration Year"
-            />
-          </div>
-          <input type="tel" name="exp-cvv" id="" placeholder="CVV" />
-        </div>
-        <div>
-          <input type="submit" value="Submit" />
-        </div>
-      </form>
-    </div>
+    <Header />
+    <Cust-nav />
+    <div id="main-section">
+      <h1>Your Cart</h1>
+      <div class="pizza" v-show="$store.state.cart.length === 0">
+        <h2>Empty Flavor Space</h2>
       </div>
+      <div class="pizza" v-for="pizza in $store.state.cart" v-bind:key="pizza">
+        <h2>
+          Pizza Name: {{ pizza.pizzaName }} | Size: {{ pizza.pizzaSize }} |
+          Crust: {{ pizza.pizzaCrust }} | Sauce: {{ pizza.pizzaSauce }} |
+          Toppings: {{ pizza.selectedToppings }} <br />
+          Price: {{ pizza.price }}
+        </h2>
+        <h2 v-show="showInstructions">| Additional Instructions: {{ pizza.additionalInfo }}</h2>
+      </div>
+      <router-link :to="{ name: 'Order' }"
+        ><button>Order More</button></router-link
+      >
+      <button @click="showModal">Pay Now</button>
+      <div id="total">
+        <h2>Your Total is : $ {{ calculateTotal }}</h2>
+      </div>
+      <div id="modal-container" class="modal hide">
+        <span id="close" @click="hideModal">x</span>
+        <form>
+          <div>
+            <h2>First Name: {{ customer.firstName }}</h2>
+            <h2>Last Name: {{ customer.firstName }}</h2>
+            <h2>Street Address: {{ customer.streetAddress }}</h2>
+            <h2>City: {{ customer.city }}</h2>
+            <h2>Phone Number: {{ customer.phoneNumber }}</h2>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="is-delivery"
+              class="delivery"
+              checked="checked"
+            />
+            <label for="delivery">Delivery</label>
+            <input type="radio" name="is-delivery" class="delivery" />
+            <label for="delivery">Carry Out</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="payment"
+              class="delivery"
+              checked="checked"
+            />
+            <label for="delivery">Pay Online</label>
+            <input type="radio" name="payment" class="delivery" />
+            <label for="delivery">Pay at Store</label>
+          </div>
+          <div id="cc-info">
+            <label for="credit-card">Credit Card Information</label>
+            <input
+              type="tel"
+              inputmode="numeric"
+              name="credit-card"
+              id="credit-card"
+              autocomplete="cc-number"
+              pattern="[0-9\s]{13,19}"
+              maxlength="19"
+              placeholder="xxxx xxxx xxxx xxxx"
+            />
+            <div>
+              <input
+                type="tel"
+                name="exp-month"
+                id=""
+                placeholder="Expiration Month"
+              />
+              <input
+                type="tel"
+                name="exp-year"
+                id=""
+                placeholder="Expiration Year"
+              />
+            </div>
+            <input type="tel" name="exp-cvv" id="" placeholder="CVV" />
+          </div>
+          <div>
+            <input type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -112,6 +113,15 @@ export default {
             });
             return total
         }
+        },
+        showInstructions() {
+         let show = false;
+         this.$store.state.cart.forEach(pizza => {
+              if(pizza.additionalInfo !== '') {
+                show = true;
+              }
+         });
+         return show;
     },
     methods: {
         showModal() {
@@ -146,13 +156,18 @@ h1 {
   text-shadow: 1px 0px 10px whitesmoke;
   letter-spacing: 2pt;
   margin-top: 0;
+  text-underline-offset: 12pt;
+}
+h2 {
+  font-family: monospace;
+  color: #75e8e7;
 }
 #main-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #9854cb;
-  background-image: url('../assets/planets-moon-vaporwave-Favim.com-7224376.gif');
+  background-image: url("../assets/planets-moon-vaporwave-Favim.com-7224376.gif");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 25px;
@@ -161,31 +176,32 @@ h1 {
   padding: 20px;
 }
 .pizza {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #64379f;
+  background-color: #27104e;
   border-radius: 25px;
   border: solid 3px #75e8e7;
   padding: 10px;
 }
 button {
-    background-image: linear-gradient(231deg,#e982df,#2099ff);
-    width: 150px;
-    text-decoration: none;
-    color: #64379f;
-    font-family: fantasy;
-    font-weight: lighter;
-    text-shadow: 4px 3px #75e8e7;
-    letter-spacing: 2pt;
-    font-size: 16pt;
-    padding: 10px;
+  background-image: linear-gradient(231deg, #e982df, #2099ff);
+  width: 150px;
+  text-decoration: none;
+  color: #64379f;
+  font-family: fantasy;
+  font-weight: lighter;
+  text-shadow: 4px 3px #75e8e7;
+  letter-spacing: 2pt;
+  font-size: 16pt;
+  padding: 10px;
 }
-button:hover, button:active {
-    color: #75e8e7;
-    text-shadow: 5px 3px #64379f;
-        -webkit-text-stroke-width: 1px;
+button:hover,
+button:active {
+  color: #75e8e7;
+  text-shadow: 5px 3px #64379f;
+  -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0089fa;
   padding: 10px;
 }
