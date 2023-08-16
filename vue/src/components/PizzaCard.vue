@@ -67,7 +67,7 @@ export default {
     padding: 20px;
     border-radius: 25px;
     /* background-color: #27104e; */
-     background-color: rgba(39, 16, 78, 0.7);
+    background-color: rgba(39, 16, 78, 0.7);
 }
 h2 {
   color: #75e8e7;
