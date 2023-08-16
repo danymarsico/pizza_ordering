@@ -90,11 +90,14 @@
 <script>
 import Header from '../components/Header.vue'
 import CustNav from '../components/CustNav.vue'
+import CustomerInfoService from '../services/CustomerInfoService'
 export default {
     components: { Header, CustNav },
     data() {
         return {
-            isEmpty: true
+            isEmpty: true,
+            customer: {},
+            userId: this.$store.state.user.id
         }
     },
     computed: {
@@ -117,6 +120,13 @@ export default {
       modal.classList.remove("display");
       modal.classList.add("hide");
     }
+    },
+    created() {
+        const userId = this.$store.state.user.id;
+        CustomerInfoService.getCustomerInfo(userId).then( (response) =>
+        {
+            this.customer = response.data;
+        })
     }
 }
 </script>
