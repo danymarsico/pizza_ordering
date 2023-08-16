@@ -43,4 +43,9 @@ public class CustomerController {
     public Customer getCustomerByCustomerId(@PathVariable int customerId){
         return jdbcCustomerDao.getCustomerById(customerId);
     }
+
+    @RequestMapping(path = "/user/{userId}", method = RequestMethod.GET)
+    public Customer getCustomerByUserId(@PathVariable int userId){
+        return jdbcCustomerDao.getCustomerByUserId(userId);
+    }
 }

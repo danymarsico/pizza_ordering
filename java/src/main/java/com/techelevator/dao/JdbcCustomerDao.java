@@ -76,7 +76,7 @@ public class JdbcCustomerDao implements CustomerDao {
     @Override
     public Customer getCustomerByUserId(int userId) {
 
-        String sql = "SELECT customer_id, first_name, last_name, street_address, city, phone_number\n" +
+        String sql = "SELECT customer_id, first_name, last_name, street_address, city, phone_number, user_id\n" +
                 "FROM customer\n" +
                 "WHERE user_id = ?;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql, userId);

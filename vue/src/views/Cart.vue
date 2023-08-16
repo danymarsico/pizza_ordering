@@ -25,6 +25,13 @@
           <div id="modal-container" class="modal hide">
       <span id="close" @click="hideModal">x</span>
       <form>
+          <div>
+          <h2>First Name: {{customer.firstName}}</h2>
+          <h2>Last Name: {{customer.firstName}}</h2>
+          <h2>Street Address: {{customer.streetAddress}}</h2>
+          <h2>City: {{customer.city}}</h2>
+          <h2>Phone Number: {{customer.phoneNumber}}</h2>
+        </div>
         <div>
           <input
             type="radio"
@@ -46,9 +53,6 @@
           <label for="delivery">Pay Online</label>
           <input type="radio" name="payment" class="delivery" />
           <label for="delivery">Pay at Store</label>
-        </div>
-        <div>
-          <h2>Your Info</h2>
         </div>
         <div id="cc-info">
           <label for="credit-card">Credit Card Information</label>
