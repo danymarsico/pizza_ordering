@@ -4,7 +4,7 @@
     <Cust-nav />
     <div id="story-main" >
       <h1>Backstory</h1>
-      <div id="img-container">
+      <div id="img-container" @mouseover="stopCarousel" @mouseleave="startCarousel"  >
         <img src="../assets/backstory1.jpg" class="pizza-slides" />
         <img src="../assets/backstory2.jpg" class="pizza-slides" />
         <img src="../assets/backstory3.jpg" class="pizza-slides" />
@@ -42,9 +42,14 @@ export default {
     Header,
     CustNav,
   },
+  data(){
+    return{
+      hover: false,
+    };
+    
+  },
   methods: {
     carousel(){
-      
 
       let slides = document.getElementsByClassName("pizza-slides");
       let text = document.getElementsByClassName("text");
@@ -59,12 +64,19 @@ export default {
          }
       slides[slideIndex -1].style.display = "block";
       text[slideIndex -1].style.display = "block";
-      setTimeout(this.carousel, 8000);
+      
 
+    },
+    stopCarousel(){
+      clearTimeout();
+    },
+    startCarousel(){
+      setTimeout(this.carousel, 8000);
     }
   },
   mounted: function(){
     this.carousel();
+    setTimeout(this.carousel, 8000);
   },
 };
 </script>
