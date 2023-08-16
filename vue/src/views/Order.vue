@@ -12,7 +12,6 @@
               class="selection"
               v-model="selectedPizza"
             >
-              <option selected disabled>Choose a pizza</option>
               <option
                 v-for="pizza in $store.state.specialtyPizzas"
                 v-bind:key="pizza.pizzaName"
@@ -61,7 +60,7 @@
         <div id="choice-container">
           <div id="sauce-list">
             <div>
-              <h2>Select Sauce</h2>
+              <h2>Select Sauce:</h2>
             </div>
             <div id="sauce-flex">
               <div
@@ -83,7 +82,7 @@
             </div>
           </div>
           <div id="toppings">
-            <h2>Select Toppings</h2>
+            <h2>Select Toppings:</h2>
             <div id="topping-container">
               <div>
                 <h2>Regular Toppings</h2>
@@ -123,7 +122,7 @@
           </div>
         </div>
         <div id="instructions">
-          <label for="instructions">Additional Instructions</label>
+          <label for="instructions">Additional Instructions:</label>
           <textarea
             name="instructions"
             cols="30"
@@ -133,7 +132,7 @@
           ></textarea>
         </div>
         <div id="my-order">
-          <h2>My Order</h2>
+          <h2>My Pizza:</h2>
           <div>
             <h2 id="order-summary">
               Selected size: {{ selectedSize }} <br />
