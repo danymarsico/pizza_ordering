@@ -333,7 +333,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 #main-section {
   display: flex;
   flex-direction: column;
