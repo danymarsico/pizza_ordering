@@ -1,10 +1,12 @@
 <template>
   <div>
-      <h1 id="title">Current Specialty Pizzas</h1>
+    <h1 id="title">Current Specialty Pizzas</h1>
     <table id="itemList">
       <tbody>
         <tr v-for="(item, index) in items" :key="index">
-          <td id="item"><h2>{{item.name}}</h2></td>
+          <td id="item">
+            <h2>{{ item.name }}</h2>
+          </td>
           <td id="checkbox1">
             <button v-on:click.prevent="toggleAvailability(index)">
               {{ item.buttonText }}
@@ -19,48 +21,67 @@
 
 <script>
 export default {
- data() {
-   return {
-     items: [
-       { name: 'The Butcher', buttonText: 'Make Unavailble' },
-       { name: 'The G.O.A.T.', buttonText: 'Make Unavailble' },
-       { name: 'O.G. NAMELESS', buttonText: 'Make Unavailble' },
-       { name: 'Playlist Deluxe', buttonText: 'Make Unavailble' },
-     ]
+  data() {
+    return {
+      items: [
+        { name: "The Butcher", buttonText: "Make Unavailble" },
+        { name: "The G.O.A.T.", buttonText: "Make Unavailble" },
+        { name: "O.G. NAMELESS", buttonText: "Make Unavailble" },
+        { name: "Playlist Deluxe", buttonText: "Make Unavailble" },
+      ],
     };
-   },
-    methods: {
-   toggleAvailability(index){
-     for(let i =0; i < this.items.length; i++) {
-       if(index === i) {
-         let item = this.items[i];
-         if(item.buttonText != 'Make Available') {
-           item.buttonText = 'Make Available';
-         } else {
-           item.buttonText= 'Make Unavailable';
-         }
-       }
-     }
-
-
-
-   }
- }
-}
+  },
+  methods: {
+    toggleAvailability(index) {
+      for (let i = 0; i < this.items.length; i++) {
+        if (index === i) {
+          let item = this.items[i];
+          if (item.buttonText != "Make Available") {
+            item.buttonText = "Make Available";
+          } else {
+            item.buttonText = "Make Unavailable";
+          }
+        }
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
 #title {
-    margin-left: 20px;
-    color: #75E8E7;
-    text-align: center;
+  margin-left: 20px;
+  color: #75e8e7;
+  text-align: center;
+  font-family: monospace;
 }
 tbody {
-  background-color:#64379f;
+  display: flex;
+  flex-direction: row;
+  background-color: #64379f;
   border-radius: 30px;
 }
 button {
-  margin-top: 8px;
+  background-image: linear-gradient(231deg, #e982df, #2099ff);
+  font-family: fantasy;
+  padding: 10px;
+  margin-left: 100px;
+  opacity: 1;
+  text-decoration: none;
+  color: #492586;
+  font-weight: lighter;
+  text-shadow: 4px 3px #75e8e7;
+  letter-spacing: 2pt;
+  font-size: 14pt;
+  opacity: 1;
+  width: 250px;
+}
+button:hover,
+button:active {
+  color: #75e8e7;
+  text-shadow: 4px 3px #64379f;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0089fa;
 }
 #itemList {
   display: flex;
@@ -68,35 +89,31 @@ button {
   border-radius: 30px;
   vertical-align: middle;
 }
-
 tbody {
   display: grid;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
 }
-
 tr {
   display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
   margin-bottom: 5px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  justify-items: center;
+  border: solid crimson 1px;
+  width: 80vw;
 }
-
 #item {
   align-items: center;
   display: flex;
   width: 100px;
-  justify-content: right;
+  justify-content: center;
 }
-#checkbox1 {
-    padding-left: 22px;
-  }
-  
-  #checkbox2 {
-    margin-left: 5vw;
-  }
+td {
+  font-family: monospace;
+  color: #75e8e7;
+  font-size: 14pt;
+}
 </style>
