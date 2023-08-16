@@ -27,8 +27,9 @@ export default {
     height: 400px;
 }
 #logo {
-    width: 75vw;
-    margin: -50px;
+    width: 90vw;
+    margin: 0 20px 0 20px;
+    
 }
 
 
