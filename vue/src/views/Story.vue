@@ -63,7 +63,7 @@
           <p class="text">
             Guided by Luna, Frank decided to disrupt the pizza ecosystem that
             had long grown stagnant. With a sprinkle of stardust and a dash of
-            pixelated creativity, he founded "NAMELESSΠ", a pizza joint unlike
+            pixelated creativity, he founded N*A*M*E*L*E*S*S*Π, a pizza joint unlike
             any other. The restaurant's ambiance was a symphony of holographic
             posters, glitch art, and holograms playing retro arcade games. Each
             slice of pizza bore a neon resemblance to its former self, the
@@ -73,7 +73,7 @@
           <p class="text">
             As word spread through Tech Elevator City about the enigmatic
             pizzeria, Frank found himself at the forefront of a cultural
-            revolution. NAMELESSΠ became a haven for the city's avant-garde, a
+            revolution. N*A*M*E*L*E*S*S*Π became a haven for the city's avant-garde, a
             place where those seeking a slice of the past and a bite of the
             future could come together in harmonious satisfaction. Frank's
             journey from a stifled corporate drone to a pioneer of gastronomical
