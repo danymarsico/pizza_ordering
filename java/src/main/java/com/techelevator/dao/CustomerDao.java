@@ -13,6 +13,8 @@ public interface CustomerDao {
 
     Customer getCustomerById(int customerId);
 
+    public Customer getCustomerByUserId(int userId);
+
     Customer getCustomerByName(String firstName, String lastName);
 
     List<Customer> getAllCustomers();

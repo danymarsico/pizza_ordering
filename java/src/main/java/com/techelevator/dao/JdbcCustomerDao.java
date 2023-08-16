@@ -56,11 +56,30 @@ public class JdbcCustomerDao implements CustomerDao {
 
     @Override
     public Customer getCustomerById(int customerId) {
+        Customer newCustomer = null;
 
-        String sql = "SELECT first_name, last_name, street_address, city, phone_number, user_id\n" +
+        String sql = "SELECT customer_id, first_name, last_name, street_address, city, phone_number, user_id\n" +
                 "FROM customer\n" +
                 "WHERE customer_id = ?;";
-        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, customerId);
+        try {
+            SqlRowSet results = jdbcTemplate.queryForRowSet(sql, customerId);
+            if (results.next()) {
+                newCustomer = mapRowToCustomer(results);
+            }
+        }catch (Exception ex){
+            System.out.println("something went wrong in customer dao");
+        }
+
+        return newCustomer;
+    }
+
+    @Override
+    public Customer getCustomerByUserId(int userId) {
+
+        String sql = "SELECT customer_id, first_name, last_name, street_address, city, phone_number\n" +
+                "FROM customer\n" +
+                "WHERE user_id = ?;";
+        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, userId);
         if (results.next()) {
             return mapRowToCustomer(results);
         } else {
@@ -82,7 +101,7 @@ public class JdbcCustomerDao implements CustomerDao {
     @Override
     public List<Customer> getAllCustomers() {
         List<Customer> customers = new ArrayList<>();
-        String sql = "SELECT * FROM customer;";
+        String sql = "SELECT customer_id, first_name, last_name, street_address, city, phone_number, user_id FROM customer;";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
         while (results.next()) {
             Customer customer = mapRowToCustomer(results);
@@ -93,12 +112,13 @@ public class JdbcCustomerDao implements CustomerDao {
 
     private Customer mapRowToCustomer(SqlRowSet rs) {
         Customer customer = new Customer();
-        customer.setUserId(rs.getInt("user_id"));
+        customer.setCustomer_id(rs.getInt("customer_id"));
         customer.setFirstName(rs.getString("first_name"));
         customer.setLastName(rs.getString("last_name"));
         customer.setStreetAddress(rs.getString("street_address"));
         customer.setCity(rs.getString("city"));
         customer.setPhoneNumber(rs.getString("phone_number"));
+        customer.setUserId(rs.getInt("user_id"));
         return customer;
     }
 }

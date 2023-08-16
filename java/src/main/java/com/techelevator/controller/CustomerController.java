@@ -17,14 +17,14 @@ import java.util.List;
 public class CustomerController {
 
     @Autowired
-    private JdbcCustomerDao customerDao;
+    private JdbcCustomerDao jdbcCustomerDao;
     @Autowired
     private JdbcUserDao jdbcUserDao;
 
 
     @RequestMapping(path = "", method = RequestMethod.GET)
     public List<Customer> listCustomer() {
-        return customerDao.getAllCustomers();
+        return jdbcCustomerDao.getAllCustomers();
     }
 
     @RequestMapping(path = "/customer-info", method = RequestMethod.POST)
@@ -33,10 +33,14 @@ public class CustomerController {
             String username = principal.getName();
             int newCustUserId = jdbcUserDao.findIdByUsername(username);
 
-            customerDao.create(newCustomer, newCustUserId);
+            jdbcCustomerDao.create(newCustomer, newCustUserId);
         }catch (Exception ex){
             System.out.println("Error in customer controller");
         }
+    }
 
+    @RequestMapping(path = "/{customerId}", method = RequestMethod.GET)
+    public Customer getCustomerByCustomerId(@PathVariable int customerId){
+        return jdbcCustomerDao.getCustomerById(customerId);
     }
 }
