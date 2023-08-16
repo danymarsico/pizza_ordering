@@ -16,7 +16,7 @@ public class SpecialtyPizzaController {
     @Autowired
     private JdbcSpecialtyPizzaDao jdbcSpecialtyPizzaDao;
 
-    @RequestMapping(path="", method = RequestMethod.GET)
+    @RequestMapping(path="/all", method = RequestMethod.GET)
     public ArrayList<String> getPizzas() {
         return jdbcSpecialtyPizzaDao.getPizzas();
     }

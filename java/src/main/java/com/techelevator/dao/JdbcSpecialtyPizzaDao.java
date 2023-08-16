@@ -25,7 +25,7 @@ public class JdbcSpecialtyPizzaDao implements SpecialtyPizzaDao {
     public ArrayList<String> getPizzas() {
         ArrayList<String> pizzaList = new ArrayList<>();
 
-        String sql="SELECT PIZZA_NAME FROM SPECIALTY_PIZZA";
+        String sql="SELECT * FROM SPECIALTY_PIZZA";
 
         try{
             SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
