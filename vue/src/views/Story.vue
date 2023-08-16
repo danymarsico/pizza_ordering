@@ -5,10 +5,10 @@
     <div id="story-main" >
       <h1>Backstory</h1>
       <div id="img-container">
-        <img src="../assets/pizza-shop.jpg" class="pizza-slides" />
-        <img src="../assets/pizza-shop2.jpg" class="pizza-slides" />
-        <img src="../assets/making-pizza.jpg" class="pizza-slides" />
-        <img src="../assets/pizza-champion.jpg" class="pizza-slides" />
+        <img src="../assets/backstory1.jpg" class="pizza-slides" />
+        <img src="../assets/backstory2.jpg" class="pizza-slides" />
+        <img src="../assets/backstory3.jpg" class="pizza-slides" />
+        <img src="../assets/backstory4.jpg" class="pizza-slides" />
         <!-- <button>&#10094;</button>
         <button>&#10095;</button> -->
         <div id="text-container">
@@ -16,13 +16,13 @@
             In the bustling metropolis of Tech Elevator City, where the fusion of technology and innovation propels the cityscape to new heights, a man named Frank Franklin found himself at a crossroads. Frank had always been captivated by the pulsating rhythms of vaporwave culture and the nostalgic allure of the 80s. Yet, he was trapped in a mundane corporate job that left him yearning for something more. One fateful day, as he sipped on a fluorescent-lit latte in a pastel-colored cafe, he met Luna Echo, a life coach with an aura as vibrant as the city itself.
             </p>
             <p class="text">
-            Luna Echo was a beacon of hip wisdom in Tech Elevator City, known for her enigmatic advice and captivating vaporwave-inspired sessions. She sensed Frank's inner turmoil and encouraged him to embrace his passions, to let the retro beats of his heart guide him towards a more fulfilling path. "Dive into the neon sea of your dreams," she urged, her voice a soothing blend of whispering synths. Inspired by her words, Frank embarked on a journey of self-discovery that would reshape his destiny.
+            Luna Echo was a beacon of hip wisdom in Tech Elevator City, known for her enigmatic advice and captivating vaporwave-inspired sessions. She sensed Frank's inner turmoil and encouraged him to embrace his passions, to let the retro beats of his heart guide him towards a more fulfilling path. "Live in the moment because everything is a coin flip", she urged, her voice a soothing blend of whispering synths. Inspired by her words, Frank embarked on a journey of self-discovery that would reshape his destiny.
             </p>
             <p class="text">
-            Guided by Luna, Frank decided to disrupt the pizza ecosystem that had long grown stagnant. With a sprinkle of stardust and a dash of pixelated creativity, he founded "NAMELESS PI," a pizza joint unlike any other. The restaurant's ambiance was a symphony of holographic posters, glitch art, and holograms playing retro arcade games. Each slice of pizza bore a neon resemblance to its former self, the flavors a fusion of classic recipes and futuristic culinary techniques.
+            Guided by Luna, Frank decided to disrupt the pizza ecosystem that had long grown stagnant. With a sprinkle of stardust and a dash of pixelated creativity, he founded "NAMELESSΠ", a pizza joint unlike any other. The restaurant's ambiance was a symphony of holographic posters, glitch art, and holograms playing retro arcade games. Each slice of pizza bore a neon resemblance to its former self, the flavors a fusion of classic recipes and futuristic culinary techniques.
             </p>
             <p class="text">
-            As word spread through Tech Elevator City about the enigmatic pizzeria, Frank found himself at the forefront of a cultural revolution. NAMELESS PI became a haven for the city's avant-garde, a place where those seeking a slice of the past and a bite of the future could come together in harmonious satisfaction. Frank's journey from a stifled corporate drone to a pioneer of gastronomical artistry was a testament to the power of embracing one's true passions, and he owed it all to Luna Echo's transcendent wisdom.
+            As word spread through Tech Elevator City about the enigmatic pizzeria, Frank found himself at the forefront of a cultural revolution. NAMELESSΠ became a haven for the city's avant-garde, a place where those seeking a slice of the past and a bite of the future could come together in harmonious satisfaction. Frank's journey from a stifled corporate drone to a pioneer of gastronomical artistry was a testament to the power of embracing one's true passions, and he owed it all to Luna Echo's transcendent wisdom.
             </p>
         </div>
       </div>
@@ -44,6 +44,7 @@ export default {
   },
   methods: {
     carousel(){
+      
 
       let slides = document.getElementsByClassName("pizza-slides");
       let text = document.getElementsByClassName("text");
@@ -84,17 +85,22 @@ export default {
   text-underline-offset: 17px;
 }
 #img-container {
+  display: flex;
+  justify-content: center;
+  background-color: #27104E;
   margin: 25px;
   border: solid 3px #75e8e7;
   border-radius: 25px;
-  width: 80vw;
-  height: 800px;
+  padding: 20px;
+  height: 90vh;
+  
   overflow: hidden;
   flex-grow: 1;
   position: relative;
 }
 img{
-  width:100%;
+  height: 100%;
+  border-radius: 25px;
 }
 
 h1 {
@@ -105,17 +111,22 @@ h1 {
   text-decoration-style: wavy;
   text-shadow: 1px 0px 10px whitesmoke;
   letter-spacing: 2pt;
+  text-underline-offset: 25px;
 }
 #text-container {
   color: white;
-  width:50%;
+  width:60%;
   position: absolute;
-  bottom: 25px;
-  left: 20vw;
-  background-color: blueviolet;
+  bottom: 30px;
+  left: 8vw;
+  background-color: #27104E;
   border: solid 3px #75e8e7;
   border-radius: 25px;
-  padding:5px 5px 5px 25px;
+  padding:5px 25px 5px 25px;
 
+}
+p{
+  font-family: monospace;
+  color: #75e8e7;
 }
 </style>
