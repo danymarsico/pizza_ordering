@@ -51,4 +51,7 @@ a:active {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0089fa;
 }
+h1 {
+    font-family: fantasy;
+}
 </style>

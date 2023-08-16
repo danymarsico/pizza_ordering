@@ -135,7 +135,7 @@
         <div id="my-order">
           <h2>My Order</h2>
           <div>
-            <h2>
+            <h2 id="order-summary">
               Selected size: {{ selectedSize }} <br />
               Selected crust: {{ selectedCrust }} <br />
               Selected sauce: {{ selectedSauce }} <br />
@@ -357,7 +357,7 @@ export default {
   height: auto;
   width: 100;
   justify-content: space-evenly;
-  background-color: #64379f;
+  background-color: #27104e;
   border-radius: 15px;
   border: solid 3px #75e8e7;
 }
@@ -373,7 +373,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #64379f;
+background-color: #27104e;
   border-radius: 15px;
   border: solid 3px #75e8e7;
 }
@@ -413,7 +413,7 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #64379f;
+ background-color: #27104e;
   border-radius: 15px;
   border: solid 3px #75e8e7;
   flex-grow: 1;
@@ -450,7 +450,7 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #64379f;
+background-color: #27104e;
   border-radius: 15px;
   border: solid 3px #75e8e7;
   flex-grow: 1;
@@ -463,7 +463,7 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #64379f;
+  background-color: #27104e;
   border-radius: 15px;
   border: solid 3px #75e8e7;
   flex-grow: 1;
@@ -492,5 +492,8 @@ input:active {
   text-shadow: 4px 3px #492586;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #0089fa;
+}
+#order-summary {
+  size: 12pt;
 }
 </style>
