@@ -30,7 +30,7 @@
         <form>
           <div>
             <h2>First Name: {{ customer.firstName }}</h2>
-            <h2>Last Name: {{ customer.firstName }}</h2>
+            <h2>Last Name: {{ customer.lastName }}</h2>
             <h2>Street Address: {{ customer.streetAddress }}</h2>
             <h2>City: {{ customer.city }}</h2>
             <h2>Phone Number: {{ customer.phoneNumber }}</h2>
@@ -184,6 +184,7 @@ h2 {
   border-radius: 25px;
   border: solid 3px #75e8e7;
   padding: 10px;
+  margin: 0px 35px 25px 35px
 }
 button {
   background-image: linear-gradient(231deg, #e982df, #2099ff);
