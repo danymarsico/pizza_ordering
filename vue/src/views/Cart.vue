@@ -19,7 +19,7 @@
           <button @click="showModal">Pay Now</button>
           <div id="total">
               <h2>
-                  Your Total is : {{calculateTotal}}
+                  Your Total is : $ {{calculateTotal}}
               </h2>
           </div>
           <div id="modal-container" class="modal hide">
