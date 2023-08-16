@@ -9,7 +9,7 @@
           <img src="../assets/neonsign-home.jpg">
         </div>
         <div>
-          <h3 class="text-blurb">Experience NAMELESSΠ Pizza's neon world, where culinary innovation meets retro-futuristic style! Our menu takes you on a flavorful journey through time, with a symphony of tastes that evoke nostalgic neon vibes. Try "The Butcher," a carnivore's dream with cheeses, pepperoni, sausage, ham, and prosciutto on a perfect crust. Customize your own pixel-perfect pizza with "Create Your Own." Explore the full menu on our vaporwave-inspired Menu page. Click to immerse yourself in this unique pizza experience!</h3>
+          <h3 class="text-blurb">Experience N*A*M*E*L*E*S*S*Π Pizza's neon world, where culinary innovation meets retro-futuristic style! Our menu takes you on a flavorful journey through time, with a symphony of tastes that evoke nostalgic neon vibes. Try "The Butcher," a carnivore's dream with cheeses, pepperoni, sausage, ham, and prosciutto on a perfect crust. Customize your own pixel-perfect pizza with "Create Your Own." Explore the full menu on our vaporwave-inspired Menu page. Click to immerse yourself in this unique pizza experience!</h3>
           <router-link :to="{name: 'Menu'}"><button>Teleport Me To The Menu</button></router-link>
         </div>
       </div>

@@ -39,7 +39,7 @@
         <button type="submit">Join Our Pizza Empire</button>
         <p>
           <router-link id="HasAccount" :to="{ name: 'Login' }"
-            >Already Have An Account? Log In.</router-link
+            >Already have an account? Log in.</router-link
           >
         </p>
       </form>

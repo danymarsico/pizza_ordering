@@ -4,7 +4,8 @@
     <div id="container">
       <div id="info">
         <form v-on:submit.prevent="createCustomer()">
-          <div>
+          <h1 id="header">Transcend Your Infomatrix</h1>
+          <div class="textInp">
             <input
               type="text"
               id="first-name"
@@ -15,7 +16,7 @@
               autofocus
             />
           </div>
-          <div>
+          <div class="textInp">
             <input
               type="text"
               id="last-name"
@@ -26,7 +27,7 @@
               autofocus
             />
           </div>
-          <div>
+          <div class="textInp">
             <input
               type="text"
               id="street-address"
@@ -37,7 +38,7 @@
               autofocus
             />
           </div>
-          <div>
+          <div class="textInp">
             <input
               type="text"
               id="city"
@@ -48,7 +49,7 @@
               autofocus
             />
           </div>
-          <div>
+          <div class="textInp">
             <input
               type="text"
               id="phone-number"
@@ -59,7 +60,7 @@
               autofocus
             />
           </div>
-          <input type="submit" value="Submit" />
+          <input id="submit" type="submit" value="Vibe Dataflow" />
         </form>
       </div>
     </div>
@@ -102,7 +103,7 @@ export default {
 
 <style scoped>
 #container{
-  background-image: url("../assets/cat-dj.gif");
+  background-image: url("../assets/neonpizza.png");
   background-size: 50%;
   display: flex;
   justify-content: center;
@@ -123,8 +124,36 @@ export default {
   padding: 15px;
   height: auto;
   width: 20vw;
-  background-color: #64379f;
+  background-color: #27104E;
   border-radius: 15px;
   border: solid 3px #75e8e7;
+}
+#submit {
+  background-image: linear-gradient(231deg, #e982df, #2099ff);
+  margin-top: 20px;
+  font-family: fantasy;
+  font-size: 18pt;
+  letter-spacing: 2pt;
+  color: #492586;
+  font-weight: lighter;
+  text-shadow: 3px 2px #75e8e7;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+#submit:hover,
+#submit:active {
+  color: #75e8e7;
+  text-shadow: 4px 3px #492586;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0089fa;
+}
+#header {
+  color: #75e8e7;
+  font-family: monospace;
+  text-shadow: 1px 1px #f31b83;
+  text-align: center;
+}
+.textInp {
+  margin-bottom: 5px;
 }
 </style>
