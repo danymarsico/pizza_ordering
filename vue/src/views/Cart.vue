@@ -196,6 +196,7 @@ button {
   letter-spacing: 2pt;
   font-size: 16pt;
   padding: 10px;
+  margin-top: 5px;
 }
 button:hover,
 button:active {

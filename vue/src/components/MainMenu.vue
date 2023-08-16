@@ -23,6 +23,7 @@ export default {
     text-shadow: 1px 0px 10px whitesmoke;
     letter-spacing: 2pt;
     text-underline-offset: 12px;
+    color: #75e8e7;
 }
 #menuDiv {
     margin: 20px;
