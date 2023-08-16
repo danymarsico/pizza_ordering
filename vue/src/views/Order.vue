@@ -373,10 +373,11 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-background-color: #27104e;
+  /* background-color: #27104e; */
   border-radius: 15px;
   border: solid 3px #75e8e7;
   padding-bottom: 23px;
+  background-image: url("../assets/order-backgroundimg1.jpg");
 }
 h2 {
   font-size: 30px;
@@ -452,10 +453,11 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-background-color: #27104e;
+  /* background-color: #27104e; */
   border-radius: 15px;
   border: solid 3px #75e8e7;
   flex-grow: 1;
+  background-image: url("../assets/order-backgroundimg1.jpg");
 }
 #instructions label {
   font-size: 28px;
