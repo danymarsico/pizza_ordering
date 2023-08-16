@@ -11,10 +11,12 @@
         <h2>
           Pizza Name: {{ pizza.pizzaName }} | Size: {{ pizza.pizzaSize }} |
           Crust: {{ pizza.pizzaCrust }} | Sauce: {{ pizza.pizzaSauce }} |
-          Toppings: {{ pizza.selectedToppings }} <br />
+          Toppings: {{ toppingsToString(pizza.selectedToppings) }} <br />
           Price: {{ pizza.price }}
         </h2>
-        <h2 v-show="showInstructions">| Additional Instructions: {{ pizza.additionalInfo }}</h2>
+        <h2 v-show="pizza.additionalInfo">
+          Additional Instructions: {{ pizza.additionalInfo }}
+        </h2>
       </div>
       <router-link :to="{ name: 'Order' }"
         ><button>Order More</button></router-link
@@ -93,38 +95,29 @@
 </template>
 
 <script>
-import Header from '../components/Header.vue'
-import CustNav from '../components/CustNav.vue'
-import CustomerInfoService from '../services/CustomerInfoService'
+import Header from "../components/Header.vue";
+import CustNav from "../components/CustNav.vue";
+import CustomerInfoService from "../services/CustomerInfoService";
 export default {
-    components: { Header, CustNav },
-    data() {
-        return {
-            isEmpty: true,
-            customer: {},
-            userId: this.$store.state.user.id
-        }
+  components: { Header, CustNav },
+  data() {
+    return {
+      isEmpty: true,
+      customer: {},
+      userId: this.$store.state.user.id,
+    };
+  },
+  computed: {
+    calculateTotal() {
+      let total = 0.0;
+      this.$store.state.cart.forEach((item) => {
+        total += item.price;
+      });
+      return total;
     },
-    computed: {
-        calculateTotal() {
-            let total = 0.00;
-            this.$store.state.cart.forEach(item => {
-                total += item.price;
-            });
-            return total
-        }
-        },
-        showInstructions() {
-         let show = false;
-         this.$store.state.cart.forEach(pizza => {
-              if(pizza.additionalInfo !== '') {
-                show = true;
-              }
-         });
-         return show;
-    },
-    methods: {
-        showModal() {
+  },
+  methods: {
+    showModal() {
       let modal = document.getElementById("modal-container");
       modal.classList.remove("hide");
       modal.classList.add("display");
@@ -133,16 +126,23 @@ export default {
       let modal = document.getElementById("modal-container");
       modal.classList.remove("display");
       modal.classList.add("hide");
-    }
     },
-    created() {
-        const userId = this.$store.state.user.id;
-        CustomerInfoService.getCustomerInfo(userId).then( (response) =>
-        {
-            this.customer = response.data;
-        })
-    }
-}
+    toppingsToString(toppings) {
+        let toppingString = '';
+        toppings.forEach((topping) => {
+          toppingString += topping + ", ";
+        });
+      toppingString = toppingString.substring(0, toppingString.length - 2);
+      return toppingString;
+    },
+  },
+  created() {
+    const userId = this.$store.state.user.id;
+    CustomerInfoService.getCustomerInfo(userId).then((response) => {
+      this.customer = response.data;
+    });
+  },
+};
 </script>
 
 <style scoped>
