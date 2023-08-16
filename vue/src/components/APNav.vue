@@ -18,6 +18,12 @@ export default {
 </script>
 
 <style scoped>
+#nav-list {
+    width: 90vw ;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
 #apNav {
     margin:5px 20px 5px 20px;
     border: solid 3px #75E8E7;

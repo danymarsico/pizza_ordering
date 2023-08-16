@@ -40,34 +40,5 @@ export default {
 #checkbox2 {
   margin-left: 5vw;
 }
-#itemList {
-  display: flex;
-  border: solid 3px #75e8e7;
-  border-radius: 30px;
-  vertical-align: middle;
-}
 
-tbody {
-  display: grid;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-tr {
-  display: flex;
-  flex-grow: 1;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  justify-content: center;
-  align-items: center;
-}
-
-#item {
-  align-items: center;
-  display: flex;
-  width: 100px;
-  justify-content: right;
-}
 </style>
