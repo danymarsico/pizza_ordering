@@ -68,7 +68,7 @@ export default new Vuex.Store({
       {
         pizzaName: 'Custom Pizza',
         price: 10.00,
-        desc:'Embark on a neon-infused flavor odyssey with "Create Your Own" – an edible artist\'s playground where every topping combination becomes a work of vaporwave-inspired culinary art. Unleash your taste bud creativity and curate a symphony of flavors that defy convention and tantalize the senses. From pixelated pepperoni to glitched-out gold leaf, this customizable adventure invites you to sculpt your own taste masterpiece in a kaleidoscope of delicious possibilities',
+        desc:'Embark on a neon-infused flavor odyssey with your own "Custom Pizza" – an edible artist\'s playground where every topping combination becomes a work of vaporwave-inspired culinary art. Unleash your taste bud creativity and curate a symphony of flavors that defy convention and tantalize the senses. From pixelated pepperoni to glitched-out gold leaf, this customizable adventure invites you to sculpt your own taste masterpiece in a kaleidoscope of delicious possibilities',
         specialtyToppings:['Add your toppings'],
         imgsrc: require('@/assets/custompizza.png')
       }

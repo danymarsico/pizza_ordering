@@ -3,6 +3,9 @@
     <Header />
     <div id="container">
       <div id="info">
+        <audio id="my_audio" controls>
+          <source :src="audioPath" type="audio/mpeg" />
+        </audio>
         <form v-on:submit.prevent="createCustomer()">
           <h1 id="header">Transcend Your Infomatrix</h1>
           <div class="textInp">
@@ -78,6 +81,7 @@ export default {
   name: "CustomerInfo",
   data() {
     return {
+      audioPath: require("@/assets/Moonlight.mp3"),
       customer: {
         firstName: "",
         lastName: "",
@@ -98,6 +102,12 @@ export default {
       });
     },
   },
+  mounted() {
+    window.onload = function () {
+      document.getElementById("my_audio").play();
+    };
+  },
+  
 };
 </script>
 

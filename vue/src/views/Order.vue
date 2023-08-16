@@ -125,7 +125,7 @@
           <label for="instructions">Additional Instructions:</label>
           <textarea
             name="instructions"
-            cols="30"
+            cols="112"
             rows="10"
             class="instructions"
             v-model="additionalInfo"
@@ -135,13 +135,13 @@
           <h2>My Pizza:</h2>
           <div>
             <h2 id="order-summary">
-              Selected size: {{ selectedSize }} <br />
-              Selected crust: {{ selectedCrust }} <br />
-              Selected sauce: {{ selectedSauce }} <br />
+              Selected Size: {{ selectedSize }} <br />
+              Selected Crust: {{ selectedCrust }} <br />
+              Selected Sauce: {{ selectedSauce }} <br />
               Selected Toppings: {{ toppingsToString }} <br />
               <br />
               <br />
-              Subtotal: {{ subtotal.toFixed(2) }}
+              Subtotal: $ {{ subtotal.toFixed(2) }}
             </h2>
           </div>
           <input
@@ -362,6 +362,7 @@ export default {
 }
 .selection {
   width: 200px;
+  height: 30px;
   margin: 10px;
 }
 #choice-container {
@@ -375,6 +376,7 @@ export default {
 background-color: #27104e;
   border-radius: 15px;
   border: solid 3px #75e8e7;
+  padding-bottom: 23px;
 }
 h2 {
   font-size: 30px;
@@ -446,6 +448,7 @@ h2 {
   transform: scale(1.75);
 }
 #instructions {
+  padding: 23px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -453,6 +456,9 @@ background-color: #27104e;
   border-radius: 15px;
   border: solid 3px #75e8e7;
   flex-grow: 1;
+}
+#instructions label {
+  font-size: 28px;
 }
 .instructions {
   border: solid black 3px;
@@ -467,6 +473,7 @@ background-color: #27104e;
   border: solid 3px #75e8e7;
   flex-grow: 1;
   padding: 10px;
+  padding-bottom: 30px;
 }
 label {
   font-size: 25px;

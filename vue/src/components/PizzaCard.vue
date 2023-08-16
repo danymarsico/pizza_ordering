@@ -97,7 +97,7 @@ button {
     opacity: 1.0;
   }
   img {
-    margin-top: 50%;
+    margin-top: 70%;
   }
 button:hover, button:active {
     color: #75e8e7;
