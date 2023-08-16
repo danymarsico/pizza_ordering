@@ -14,7 +14,7 @@ export default {
 <style scoped>
 #header {
     background-image: url('../assets/banner.jpg');
-    background-size: 100%;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
