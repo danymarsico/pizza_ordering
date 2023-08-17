@@ -23,7 +23,13 @@ Add new pizza
 3. PIZZA HATS ON 
 
 Anastassia
-//State project objective// 
+//State project objective//  
+//Introductions//
+Anastassia
+Dan
+David
+Marina
+
 -Create a futuristic pizza ordering website for hungry club- and partygoers in Tech Elevator City for our wonderful 
 angel investor and entertainment mogul, Frank Franklin. Party-people hungry for pizza should be able to log in and 
 make and modify an order, and of course, live in the moment. 
@@ -40,8 +46,10 @@ Marina
 //Illustrate a user story through the demo//
 The login process helps you seamlessly transition from the dance floor. And if you don't have an account, you can get registered. 
 
-Choose your username that speaks to your soul and a super-secure password. And, while you're filling out the registration, 
-there's even more jams to keep you hyped. 
+Choose your username that speaks to your soul and a super-secure password. 
+**MUSIC STARTS - WAIT FOR VOLUME TO GO DOWN**
+
+And, while you're filling out the registration, there's even more jams to keep you hyped. 
 
 And the good vibes continue at our main splash page. GLASSES OFF, PIZZA HAT BACK ON
 
