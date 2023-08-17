@@ -37,7 +37,7 @@ export default {};
 a:link,
 a:visited {
   text-decoration: none;
-  color: #64379f;
+  color: #492586;
   font-family: fantasy;
   font-weight: lighter;
   text-shadow: 6px 4px #75e8e7;

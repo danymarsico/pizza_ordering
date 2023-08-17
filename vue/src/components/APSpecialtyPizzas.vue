@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 id="title">Current Specialty Pizzas</h1>
+    <h1 id="title">Manage Specialty Pizzas</h1>
     <table id="itemList">
       <tbody>
         <tr v-for="(item, index) in items" :key="index">
@@ -54,10 +54,10 @@ export default {
   color: #75e8e7;
   text-align: center;
   font-family: monospace;
+  font-size: 35pt;
+  text-shadow: 2px 1px #0089fa;
 }
 tbody {
-  display: flex;
-  flex-direction: row;
   background-color: #64379f;
   border-radius: 30px;
 }
@@ -65,7 +65,7 @@ button {
   background-image: linear-gradient(231deg, #e982df, #2099ff);
   font-family: fantasy;
   padding: 10px;
-  margin-left: 100px;
+  margin-left: 60px;
   opacity: 1;
   text-decoration: none;
   color: #492586;
@@ -86,8 +86,12 @@ button:active {
 #itemList {
   display: flex;
   border: solid 3px #75e8e7;
-  border-radius: 30px;
-  vertical-align: middle;
+  border-radius: 25px;
+  vertical-align: middle;;
+    display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: center;
 }
 tbody {
   display: grid;
@@ -102,14 +106,14 @@ tr {
   align-items: center;
   justify-content: center;
   justify-items: center;
-  border: solid crimson 1px;
   width: 80vw;
 }
 #item {
   align-items: center;
   display: flex;
-  width: 100px;
-  justify-content: center;
+  width: 300px;
+  justify-content: left;
+  text-shadow: 1px 1px #0089fa;
 }
 td {
   font-family: monospace;
