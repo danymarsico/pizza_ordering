@@ -17,6 +17,8 @@ Add new pizza
 
 ***BEFORE MEETING***
 1. David opens website with additional "cover" page
+--Start music on login page at 12 second
+--Share sound
 2. Everyone opens Avatar window and move to another screen
 3. PIZZA HATS ON 
 
@@ -46,9 +48,9 @@ And the good vibes continue at our main splash page. GLASSES OFF, PIZZA HAT BACK
 Party people can use these buttons to jump to the menu, order page, backstory, and contact information. 
 Here's our founder and inspiration, Frank Franklin. Obviously you want to know more about him.
 
-We used AI to help tell the Nameless Pi story, and styled his celestial journey in a carousel. 
-From burnt-out tech icon...to making major progress with his life coach, Luna Echo...Nameless Pi has taken over the pizza ecosystem...
-in Tech Elevator city. 
+We used AI to help tell the Nameless Pi story, and styled his celestial journey in a carousel. Users can mouse over the images to pause and read the story.
+From burnt-out tech icon...to making major progress with his life coach, Luna Echo...Nameless Pi has taken over the pizza ecosystem in tech elevator city...
+And I bet you're wondering how we timed this so seamlessly. Users can mouse over the images to pause the carousel and read the story. 
 
 Anastassia
 If you're anything like us, you're feeling really inspired right now. 
