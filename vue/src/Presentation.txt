@@ -48,7 +48,7 @@ And the good vibes continue at our main splash page. GLASSES OFF, PIZZA HAT BACK
 Party people can use these buttons to jump to the menu, order page, backstory, and contact information. 
 Here's our founder and inspiration, Frank Franklin. Obviously you want to know more about him.
 
-We used AI to help tell the Nameless Pi story, and styled his celestial journey in a carousel. Users can mouse over the images to pause and read the story.
+We used AI to help tell the Nameless Pi story, and styled his celestial journey in a carousel.
 From burnt-out tech icon...to making major progress with his life coach, Luna Echo...Nameless Pi has taken over the pizza ecosystem in tech elevator city...
 And I bet you're wondering how we timed this so seamlessly. Users can mouse over the images to pause the carousel and read the story. 
 
