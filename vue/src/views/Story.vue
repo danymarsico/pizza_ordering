@@ -5,8 +5,8 @@
     <div id="story-main">
       <h1>Backstory</h1>
 
-      <div  id="img-container">
-        <img src="../assets/backstory4.jpg" id="img-slides" />
+      <div  id="img-container"  @mouseleave="startCarousel">
+        <img  id="img-slides" @mouseover="stopCarousel()" />
 
         <div >
           <p id="text-container"></p>
@@ -29,6 +29,8 @@ import Header from "../components/Header.vue";
 import CustNav from "../components/CustNav.vue";
 
 let arrayIndex = 0;
+let intervalID;
+
 
 export default {
   components: {
@@ -93,11 +95,19 @@ export default {
       }
 
     },
+    stopCarousel(){
+      window.clearInterval(intervalID);
+      console.log("stopped")
+    },
+    startCarousel(){
+      intervalID = setInterval(this.carousel, 2000)
+      console.log("started")
+    },
     
   },
   mounted: function () {
     this.carousel();
-    setInterval(this.carousel, 4000)
+    intervalID = setInterval(this.carousel, 2000)
     
   },
 };
