@@ -18,13 +18,13 @@
           Additional Instructions: {{ pizza.additionalInfo }}
         </h2>
       </div>
+      <div id="total">
+      <h2>Your Total is : $ {{ calculateTotal }} </h2>
+      </div>
       <router-link :to="{ name: 'Order' }"
         ><button>Order More</button></router-link
       >
       <button @click="showModal">Pay Now</button>
-      <div id="total">
-        <h2>Your Total is : $ {{ calculateTotal }}</h2>
-      </div>
       <div id="modal-container" class="modal hide">
         <span id="close" @click="hideModal">x</span>
         <form>
@@ -166,6 +166,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: #9854cb;
   background-image: url("../assets/planets-moon-vaporwave-Favim.com-7224376.gif");
   background-repeat: no-repeat;
@@ -184,7 +185,8 @@ h2 {
   border-radius: 25px;
   border: solid 3px #75e8e7;
   padding: 10px;
-  margin: 0px 35px 25px 35px
+  margin: 0px 35px 25px 35px;
+  width: 70vw;
 }
 button {
   background-image: linear-gradient(231deg, #e982df, #2099ff);
