@@ -19,11 +19,11 @@
         </h2>
       </div>
       <div id="total">
-      <h2>Your Total is : $ {{ calculateTotal }} </h2>
+      <h2>Your Total Is : $ {{ calculateTotal }} </h2>
       </div>
-      <router-link :to="{ name: 'Order' }"
-        ><button>Order More</button></router-link
-      >
+      <router-link :to="{ name: 'Order' }">
+        <button>Order More</button>
+        </router-link>
       <button @click="showModal">Pay Now</button>
       <div id="modal-container" class="modal hide">
         <span id="close" @click="hideModal">x</span>
@@ -35,7 +35,7 @@
             <h2>City: {{ customer.city }}</h2>
             <h2>Phone Number: {{ customer.phoneNumber }}</h2>
           </div>
-          <div>
+          <div id="delivPay">
             <input
               type="radio"
               name="is-delivery"
@@ -46,7 +46,7 @@
             <input type="radio" name="is-delivery" class="delivery" />
             <label for="delivery">Carry Out</label>
           </div>
-          <div>
+          <div id="pay">
             <input
               type="radio"
               name="payment"
@@ -70,23 +70,17 @@
               placeholder="xxxx xxxx xxxx xxxx"
             />
             <div>
+              <label for="expiration">Exp. Date</label>
               <input
-                type="tel"
-                name="exp-month"
-                id=""
-                placeholder="Expiration Month"
-              />
-              <input
-                type="tel"
-                name="exp-year"
-                id=""
-                placeholder="Expiration Year"
+                type="month"
+                name="expiration"
+                id="expiration"
               />
             </div>
-            <input type="tel" name="exp-cvv" id="" placeholder="CVV" />
+            <input type="tel" name="exp-cvv" id="cvv" placeholder="CVV" />
           </div>
           <div>
-            <input type="submit" value="Submit" />
+            <input id="submit" type="submit" value="Submit" />
           </div>
         </form>
       </div>
@@ -188,6 +182,13 @@ h2 {
   margin: 0px 35px 25px 35px;
   width: 70vw;
 }
+#total {
+  background-color: #27104e;
+  border-radius: 25px;
+  border: solid 3px #75e8e7;
+  padding: 15px;
+  margin-bottom: 15px;
+}
 button {
   background-image: linear-gradient(231deg, #e982df, #2099ff);
   width: 150px;
@@ -238,6 +239,9 @@ button:active {
   text-align: center;
   margin: 15px;
 }
+#modal-container label {
+  color: #75e8e7;
+}
 #close {
   float: right;
   margin: 10px;
@@ -253,5 +257,42 @@ button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: monospace;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#submit {
+   background-image: linear-gradient(231deg, #e982df, #2099ff);
+  width: 150px;
+  text-decoration: none;
+  color: #64379f;
+  font-family: fantasy;
+  font-weight: lighter;
+  text-shadow: 4px 3px #75e8e7;
+  letter-spacing: 2pt;
+  font-size: 16pt;
+  padding: 10px;
+  margin-top: 5px;
+}
+#submit:hover,
+#submit:active {
+  color: #75e8e7;
+  text-shadow: 5px 3px #64379f;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #0089fa;
+  padding: 10px;
+}
+#cvv {
+  width: 40px;;
+}
+#delivPay {
+  font-family: monospace;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+#pay {
+  font-family: monospace;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 </style>

@@ -348,7 +348,7 @@ export default {
   height: 100%;
   background-image: url("../assets/planets-moon-vaporwave-Favim.com-7224376.gif");
   background-size: cover;
-  padding: 50px;
+  padding: 100px;
 }
 #top-selections {
   display: flex;
