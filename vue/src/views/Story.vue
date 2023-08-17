@@ -4,13 +4,12 @@
     <Cust-nav />
     <div id="story-main">
       <h1>Backstory</h1>
+
       <div
         id="img-container"
         @mouseover="stopCarousel"
         @mouseleave="startCarousel"
       >
-        <!-- <button class="button" @click="prevSlide">&#10094;</button> -->
-
         <img
           src="../assets/backstory1.jpg"
           class="pizza-slides"
@@ -35,8 +34,6 @@
           @mouseover="hover = true"
           @mouseleave="hover = false"
         />
-
-        <!-- <button class="button" @click="nextSlide">&#10095;</button> -->
 
         <div id="text-container">
           <p class="text">
@@ -80,8 +77,17 @@
             artistry was a testament to the power of embracing one's true
             passions, and he owed it all to Luna Echo's transcendent wisdom.
           </p>
+
           <div style="text-align: center"><p v-if="hover">Paused</p></div>
         </div>
+      </div>
+      <div id="slide-buttons">
+        <button class="button" @click="prevSlide">&#10094;</button>
+        <input type="radio" name="" id="">
+        <input type="radio" name="" id="">
+        <input type="radio" name="" id="">
+        <input type="radio" name="" id="">
+        <button class="button" @click="nextSlide">&#10095;</button>
       </div>
     </div>
   </div>
@@ -119,20 +125,26 @@ export default {
         slideIndex = 1;
       }
       if (slideIndex < 1) {
-        slideIndex = 4;
+        slideIndex = slides.length;
       }
 
       slides[slideIndex - 1].style.display = "block";
       text[slideIndex - 1].style.display = "block";
     },
     stopCarousel() {
-      clearTimeout();
+      clearInterval();
+      console.log("hover active");
     },
     startCarousel() {
-      setTimeout(this.carousel, 8000);
+      clearInterval();
+      setInterval(this.carousel, 8000);
+      console.log("hover inactive");
     },
     nextSlide() {
+      clearInterval();
       slideIndex++;
+
+      console.log("button hit");
     },
     prevSlide() {
       slideIndex--;
@@ -140,7 +152,7 @@ export default {
   },
   mounted: function () {
     this.carousel();
-    setTimeout(this.carousel, 8000);
+    this.startCarousel();
   },
 };
 </script>
@@ -206,6 +218,13 @@ p {
   color: #75e8e7;
 }
 .button {
-  height: 60px;
+  height: 30px;
+
+}
+#slide-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  width: 50vw;
+  margin: 20px;
 }
 </style>
