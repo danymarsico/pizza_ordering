@@ -6,9 +6,9 @@
       <h1>Backstory</h1>
 
       <div  id="img-container"  @mouseleave="startCarousel">
-        <img  id="img-slides" @mouseover="stopCarousel()" />
+        <img :src="src" id="img-slides" @mouseover="stopCarousel()" />
         <div id="text-container">
-          <p id="text"></p>
+          <p id="text">{{ text }}</p>
           <p id="paused"></p>
         </div>
       </div>
@@ -28,7 +28,7 @@
 import Header from "../components/Header.vue";
 import CustNav from "../components/CustNav.vue";
 
-let arrayIndex = 0;
+// let 
 let intervalID;
 
 
@@ -40,17 +40,15 @@ export default {
   data() {
     return {
       hover: false,
-    };
-  },
-  methods: {
-    carousel() {
-      let imgArray = [
-        "/img/backstory1.b552cb31.jpg",
-        "/img/backstory2.7e33b4d5.jpg",
-        "/img/backstory3.4e786624.jpg",
-        "/img/backstory4.ddedeaaa.jpg",
-      ];
-      let textArray = [
+
+
+      imgArray: [
+        require("../assets/backstory1.jpg"),
+        require("../assets/backstory2.jpg"),
+        require("../assets/backstory3.jpg"),
+        require("../assets/backstory4.jpg"),
+      ],
+      textArray: [
         `In the bustling metropolis of Tech Elevator City, where the fusion
             of technology and innovation propels the cityscape to new heights, a
             man named Frank Franklin found himself at a crossroads. Frank had
@@ -85,14 +83,28 @@ export default {
             gastronomical artistry was a testament to the power of embracing
             one's true passions, and he owed it all to Luna Echo's transcendent
             wisdom.`,
-      ];
-      document.getElementById("img-slides").src = imgArray[arrayIndex];
-      document.getElementById("text").innerHTML = textArray[arrayIndex];
-      arrayIndex++;
+      ],
 
-      if(arrayIndex > imgArray.length -1){
-        arrayIndex = 0;
+      arrayIndex: 0,
+      src: "",
+      text: "",
+    };
+  },
+  methods: {
+    carousel() {
+
+      console.log(this.arrayIndex);
+      if(this.arrayIndex > this.imgArray.length -1){
+        this.arrayIndex = 0;
       }
+      const src = this.imgArray[this.arrayIndex];
+      const text = this.textArray[this.arrayIndex];
+      this.arrayIndex++;
+
+      this.src = src;
+      this.text = text;
+      this.$forceUpdate();
+
 
     },
     stopCarousel(){
