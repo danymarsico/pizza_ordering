@@ -158,11 +158,11 @@ h1 {
   border: solid 3px #75e8e7;
   border-radius: 25px;
   padding: 5px 25px 5px 25px;
-}
-p {
   font-family: monospace;
   color: #75e8e7;
+  padding: 25px;
 }
+
 .button {
   height: 30px;
 }
