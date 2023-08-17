@@ -16,55 +16,44 @@ Add new pizza
 
 
 ***FROM GRADUATION SHEET***
-//State project objective//
+Anastassia
+//State project objective// 
 -Create a futuristic pizza ordering website for hungry club- and partygoers in Tech Elevator City for our wonderful angel investor and entertainment mogul, Frank Franklin. Party-people hungry for pizza should be able to log in and make and modify an order, and of course, live in the moment. 
 
-//Identify users//
+Dan
+//Identify users// 
 We built this website and application with late-nights and neon in mind. The colors and styling reflect fun, retro-futurism, and of course, an easy ordering process. Without further ado, we present: NAMELESS PI *queue music*
 
+Marina
 //Illustrate a user story through the demo//
-The login process helps to transition you seamlessly transition from the dance floor 
+The login process helps to you seamlessly from the dance floor. And if you don't have an account, you can get registered. 
 And the good vibes continue at our main splash page. Here's our founder and inspiration, Frank Franklin. Party people can use these buttons to jump to the menu, order page, backstory, and contact information. 
 
-
-______OPTION 1______
-But we know why we're here now--let's order some pizza. 
-
-Our menu features an array (!) of delicious specialty pies, with classics such as our OG Nameless: cheese and gold leaf--amazing. It's making me hungry, so let's order one. 
-
-Our order page allows users to choose their own size, sauce, and crust, and automatically selects the toppings. Let's add another one--and this energetic website is inspiring me, let's create our own custom pizza. (make custom with additional instructions)
-
-Let's go back to the cart: All our pizzas and their information are populated automatically, so we're ready to check out. Our checkout page imports the information I registered with. Customers can choose pick-up or instore, input their payment info, and submit their order. Totally cool.
-
-While we wait for our pizzas, let's learn more about how Nameless Pi got started. We used AI to help tell Frank Franklin's story, and styled his celestial journey in a carousel. From burnt-our tech icon, to making major progress with his life coach, Luna Echo, Nameless Pi has taken over the pizza ecosystem in Tech Elevator city. 
-
-Looks like our pizza is ready--while it cools, we can show you a sneak peek of things on the admin side. 
-
-The dreamers, doers, and makers at Nameless Pi can log in as admins (same awesome log in experience) and are taken to the employee portal. Here, Nameless employees can mark pizzas as available or unavailable, and can even add new pizzas.
-
-And while some pies might sell out, the ultra-cool vibes of Nameless Pie never do. (back to home).
-
-We're ready for questions!
-
-
-______OPTION 2______
+David 
 So obviously you want to know more about our founder, Frank Franklin. 
 
-We used AI to help tell the Nameless Pi story, and styled his celestial journey in a carousel. From burnt-our tech icon, to making major progress with his life coach, Luna Echo, Nameless Pi has taken over the pizza ecosystem in Tech Elevator city. 
+Marina
+We used AI to help tell the Nameless Pi story, and styled his celestial journey in a carousel. From burnt-out tech icon, to making major progress with his life coach, Luna Echo, Nameless Pi has taken over the pizza ecosystem in Tech Elevator city. 
 
+Anastassia
 If you're anything like us, you're feeling really inspired right now. (Contact page) Call or send us a message to start talking about how you can disrupt the pizza ecosystem. 
 
+Dan 
 It's hard to be a disruptor on an empty stomach though, so let's order some of this amazing pizza!
 
 Our menu features an array (!) of delicious specialty pies, with classics such as our OG Nameless: cheese and gold leaf--amazing. It's making me hungry, so let's order one. 
 
+David 
 Our order page allows users to choose their own size, sauce, and crust, and automatically selects the toppings. Let's add another one--and this energetic website is inspiring me, let's create our own custom pizza. (make custom with additional instructions)
 
+Anastassia
 Let's go back to the cart: All our pizzas and their information are populated automatically, so we're ready to check out. Our checkout page imports the information I registered with. Customers can choose pick-up or instore, input their payment info, and submit their order. Totally cool.
 
-And while some pies might sell out, the ultra-cool vibes of Nameless Pie never do. (back to home).
+Marina
+After seeing the amazing pizzas from Nameless Pi, we hope you're excited to join our pizza empire.
 
-We're ready for questions!
+Dan
+And now we'd like to open up for questions. 
 
 
 
