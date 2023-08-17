@@ -47,9 +47,9 @@ Marina
 The login process helps you seamlessly transition from the dance floor. And if you don't have an account, you can get registered. 
 
 Choose your username that speaks to your soul and a super-secure password. 
-**MUSIC STARTS - WAIT FOR VOLUME TO GO DOWN**
 
-And, while you're filling out the registration, there's even more jams to keep you hyped. 
+And, while you're filling out the registration, there's even more jams to keep you hyped.
+**MUSIC STARTS - WAIT FOR VOLUME TO GO DOWN** 
 
 And the good vibes continue at our main splash page. GLASSES OFF, PIZZA HAT BACK ON
 
@@ -85,7 +85,7 @@ Anastassia
 Okay we're back in the cart: All our pizzas and their information are 
 populated automatically, so we're ready to check out. Our checkout page
 imports the information we registered with. Customers can choose pick-up 
-or instore, input their payment info, and submit their order. Totally cool.
+or delivery, input their payment info, and submit their order. Totally cool.
 
 Marina
 After seeing the amazing pizzas from Nameless Pi, we hope you're excited to 
