@@ -7,9 +7,9 @@
 
       <div  id="img-container"  @mouseleave="startCarousel">
         <img  id="img-slides" @mouseover="stopCarousel()" />
-
-        <div >
-          <p id="text-container"></p>
+        <div id="text-container">
+          <p id="text"></p>
+          <p id="paused"></p>
         </div>
       </div>
       <!-- <div id="slide-buttons">
@@ -87,7 +87,7 @@ export default {
             wisdom.`,
       ];
       document.getElementById("img-slides").src = imgArray[arrayIndex];
-      document.getElementById("text-container").innerHTML = textArray[arrayIndex];
+      document.getElementById("text").innerHTML = textArray[arrayIndex];
       arrayIndex++;
 
       if(arrayIndex > imgArray.length -1){
@@ -97,17 +97,18 @@ export default {
     },
     stopCarousel(){
       window.clearInterval(intervalID);
-      console.log("stopped")
+      document.getElementById("paused").innerHTML = "Paused";
     },
     startCarousel(){
-      intervalID = setInterval(this.carousel, 2000)
-      console.log("started")
+      intervalID = setInterval(this.carousel, 2000);
+      document.getElementById("paused").innerHTML = "Playing";
     },
     
   },
   mounted: function () {
     this.carousel();
     intervalID = setInterval(this.carousel, 2000)
+    document.getElementById("paused").innerHTML = "Playing";
     
   },
 };
@@ -181,5 +182,8 @@ h1 {
   justify-content: space-evenly;
   width: 50vw;
   margin: 20px;
+}
+#paused{
+  text-align: center;
 }
 </style>
