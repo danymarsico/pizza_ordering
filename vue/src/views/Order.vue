@@ -377,7 +377,8 @@ export default {
   border-radius: 15px;
   border: solid 3px #75e8e7;
   padding-bottom: 23px;
-  background-image: url("../assets/order-backgroundimg1.jpg");
+  background-image: url("../assets/order-backgroundimg2.jpg");
+  background-size: 25%;
 }
 h2 {
   font-size: 30px;
@@ -457,7 +458,8 @@ h2 {
   border-radius: 15px;
   border: solid 3px #75e8e7;
   flex-grow: 1;
-  background-image: url("../assets/order-backgroundimg1.jpg");
+  background-image: url("../assets/order-backgroundimg2.jpg");
+  background-size: 25%;
 }
 #instructions label {
   font-size: 28px;
