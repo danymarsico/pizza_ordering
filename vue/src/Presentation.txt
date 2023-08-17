@@ -25,6 +25,9 @@ We built this website and application with late-nights and neon in mind. The col
 //Illustrate a user story through the demo//
 The login process helps to transition you seamlessly transition from the dance floor 
 And the good vibes continue at our main splash page. Here's our founder and inspiration, Frank Franklin. Party people can use these buttons to jump to the menu, order page, backstory, and contact information. 
+
+
+______OPTION 1______
 But we know why we're here now--let's order some pizza. 
 
 Our menu features an array (!) of delicious specialty pies, with classics such as our OG Nameless: cheese and gold leaf--amazing. It's making me hungry, so let's order one. 
@@ -42,3 +45,26 @@ The dreamers, doers, and makers at Nameless Pi can log in as admins (same awesom
 And while some pies might sell out, the ultra-cool vibes of Nameless Pie never do. (back to home).
 
 We're ready for questions!
+
+
+______OPTION 2______
+So obviously you want to know more about our founder, Frank Franklin. 
+
+We used AI to help tell the Nameless Pi story, and styled his celestial journey in a carousel. From burnt-our tech icon, to making major progress with his life coach, Luna Echo, Nameless Pi has taken over the pizza ecosystem in Tech Elevator city. 
+
+If you're anything like us, you're feeling really inspired right now. (Contact page) Call or send us a message to start talking about how you can disrupt the pizza ecosystem. 
+
+It's hard to be a disruptor on an empty stomach though, so let's order some of this amazing pizza!
+
+Our menu features an array (!) of delicious specialty pies, with classics such as our OG Nameless: cheese and gold leaf--amazing. It's making me hungry, so let's order one. 
+
+Our order page allows users to choose their own size, sauce, and crust, and automatically selects the toppings. Let's add another one--and this energetic website is inspiring me, let's create our own custom pizza. (make custom with additional instructions)
+
+Let's go back to the cart: All our pizzas and their information are populated automatically, so we're ready to check out. Our checkout page imports the information I registered with. Customers can choose pick-up or instore, input their payment info, and submit their order. Totally cool.
+
+And while some pies might sell out, the ultra-cool vibes of Nameless Pie never do. (back to home).
+
+We're ready for questions!
+
+
+
